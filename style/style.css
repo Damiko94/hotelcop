@@ -1,0 +1,33 @@
+header, section{
+    height: 900px;
+    width: auto;
+}
+
+footer{
+    height: 300px;
+    width: auto;
+}
+
+header{
+    background-image: url(../images/osaxr-bar-3082-hor-wide.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.nav-item a{
+    color: black;
+}
+.nav-item a span:hover{
+    border-bottom: 1px solid chocolate;
+    transition: .5s;
+    transition-timing-function: linear;
+}
+
+#chambre-index{
+    height: 700px;
+    background-image: url(../images/osaxr-deluxe-suite-4519-hor-feat.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100%;
+}
