@@ -2,8 +2,7 @@ body {
   font-family: "Alegreya Sans", sans-serif;
 }
 
-header,
-section {
+header{
   height: 400px;
   width: auto;
 }
@@ -85,14 +84,46 @@ footer a:hover {
   transition: 0.5s;
   transition-timing-function: linear;
 }
-
-#chambre-index {
-  /* height: 700px; */
+/*****section chambres*******/
+#chambre{
+  position: relative;
+}
+#chambre-index{
+  
+  height: 500px;
+  width: 80%;
+  /* 
   background-image: url(../images/osaxr-deluxe-suite-4519-hor-feat.jpg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 100%;
+  background-position: 100%; */
+  background: url(../images/chambre3.jpg);
 }
+#chambres{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 40%;
+  background-color: white;
+}
+/*****section restaurant*******/
+#restaurant{
+  position: relative;
+}
+#resto{
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 40%;
+  background-color: white;
+}
+#resto-index{
+  
+  height: 500px;
+  width: 80%;
+  background: url(../images/resto.jpeg);
+}
+/*****section spa*******/
 
 /***************/
 /* MEDIA QUERY */
