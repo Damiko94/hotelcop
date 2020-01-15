@@ -98,8 +98,12 @@ footer a:hover {
 /* MEDIA QUERY */
 /***************/
 @media (max-width: 576px) {
+  /*passage des elements du footer en colonne en dessous d'une width de 576px*/
   #colonne {
     flex-direction: column;
+  }
+  !#newsl{
+    max-width: 75%;
   }
 }
 /****************/

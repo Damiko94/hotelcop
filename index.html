@@ -13,7 +13,7 @@
     />
     <!-- FONT AWESOME -->
     <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css" />
-    
+
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css"/>
     <title>Hotel Cop</title>
@@ -118,7 +118,7 @@
               <i class="fas fa-map-marker-alt"></i>
               1 avenue Montaigne 75008 Paris
             </p>
-            
+
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -139,13 +139,15 @@
 
           <div class="col-sm-12 col-lg-5">
             <p class="d-bloc">Newsletter</p>
-            <form class="d-flex">
+            <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+            <form  id="newsl" class="d-flex">
               <input
                 type="email"
-                class="form-control mr-sm-2"
+                class="form-control-lg mr-sm-2"
                 name="mailNewsletter"
                 id="mailNewsletter"
                 placeholder="Saisir votre email"
+
               />
               <button id="btnNewsletter" type="submit" class="btn btn-primary">
                 Valider
