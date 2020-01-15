@@ -7,15 +7,19 @@ section {
   height: 400px;
   width: auto;
 }
-
+/* ******* */
+/* SECTION */
+/* ******* */
 section {
   color: #1b3e82;
 }
 
+/*********/
+/* FONTS */
+/*********/
 h1,
 #etoiles {
   font-family: "Cinzel", serif;
-  /* font-weight: bold; */
   font-size: 3.3em;
 }
 
@@ -24,6 +28,9 @@ h2 {
   font-family: "Cinzel", serif;
 }
 
+/**********/
+/* FOOTER */
+/**********/
 footer {
   width: auto;
 }
@@ -39,6 +46,7 @@ footer {
 /* #header-index div {
   background: blur(0.5em);
 } */
+
 nav,
 footer {
   background-color: #0d1f41;
@@ -49,6 +57,9 @@ footer a {
   color: #dde2ed;
 }
 
+/* ******* */
+/* BUTTONS */
+/* ******* */
 .btn-primary {
   background-color: #dde2ed;
   border: #dde2ed;
@@ -65,6 +76,9 @@ footer a {
   color: #1b3e82;
 } */
 
+/*****************/
+/* LINKS : HOVER */
+/*****************/
 .nav-item a span:hover,
 footer a:hover {
   border-bottom: 1px solid darkgoldenrod;
@@ -79,6 +93,10 @@ footer a:hover {
   background-size: contain;
   background-position: 100%;
 }
+
+/***************/
+/* MEDIA QUERY */
+/***************/
 @media (max-width: 576px) {
   #colonne {
     flex-direction: column;
