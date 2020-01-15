@@ -1,3 +1,7 @@
+body {
+  font-family: "Alegreya Sans", sans-serif;
+}
+
 header,
 section {
   height: 400px;
@@ -11,11 +15,12 @@ section {
 h1,
 #etoiles {
   font-family: "Cinzel", serif;
-  font-weight: bold;
-  font-size: 3em;
+  /* font-weight: bold; */
+  font-size: 3.3em;
 }
 
 h2 {
+  font-size: 2.5em;
   font-family: "Cinzel", serif;
 }
 
@@ -31,6 +36,10 @@ footer {
   background-position: 50%;
 }
 
+/* Flou sur bg header text */
+/* #header-index div {
+  background: blur(0.5em);
+} */
 nav,
 footer {
   background-color: #1b3e82;
@@ -57,7 +66,7 @@ footer {
 } */
 
 .nav-item a span:hover {
-  border-bottom: 1px solid chocolate;
+  border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
 }
