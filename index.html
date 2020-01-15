@@ -1,95 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	
-	<meta charset="UTF-8">
-	<!-- BOOSTRAP -->
-	<link rel="stylesheet" href="style/bootstrap.min.css">
-	<!-- BOOSTRAP MATERIAL DESIGN -->
-	<link rel="stylesheet" href="style/bootstrap-material-design.min.css">
-	<!-- CSS -->
-	<link rel="stylesheet" href="style/style.css">
-	<title>Hotel Cop</title>
-</head>
-<body>
-	<header id="header-index" class="text-center text-light">
-		<h1>Hotel Cop <span>*****</span></h1>
-		<p>Paris</p>
-	</header>
-	<nav class="navbar justify-content-center sticky-top bg-light text-dark">
-		<!-- <a href="#" class="navbar-brand">HC</a>-->
-		<div id="navbarNav">
-			<ul class="nav justify-content-center">
-				<li class="nav-item">
-					<a href="#about" class="nav-link"><span>Notre Histoire</span></a>
-				</li>
-				<li class="nav-item">
-					<a href="#chambre" class="nav-link"><span>Nos chambres</span></a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link"><span>Réserver</span></a>
-				</li>
-				<li class="nav-item">
-					<a href="#restaurant" class="nav-link"><span>Notre restaurant</span></a>
-				</li>
-				<li class="nav-item">
-					<a href="spa" class="nav-link"><span>Notre spa</span></a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link"><span>Les avis</span></a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <!-- BOOSTRAP MATERIAL DESIGN -->
+    <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
+    <!-- GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Arapey|Cinzel|Cormorant+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Hotel Cop</title>
+  </head>
+  <body>
+    <nav class="navbar justify-content-center sticky-top text-light">
+      <!-- <a href="#" class="navbar-brand">HC</a>-->
+      <div id="navbarNav">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><span>Notre Histoire</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#chambre" class="nav-link"><span>Nos chambres</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>Réserver</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#restaurant" class="nav-link"
+              ><span>Notre restaurant</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="spa" class="nav-link"><span>Notre spa</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>Les avis</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header
+      id="header-index"
+      class="text-light d-flex align-items-center justify-content-center bg-gradient-light"
+    >
+      <div class="d-flex flex-column justify-content-center ">
+        <h1 class="my-0 mx-auto">Hotel Cop</h1>
+        <span class="d-bloc my-0 mx-auto">*****</span>
+        <p class="my-0 mx-auto">Paris</p>
+      </div>
+    </header>
 
-	<section id="about" class="text-center"><h2>Notre histoire</h2></section>
-	<section id="chambre" class="text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2>Nos chambres</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea expedita distinctio veniam inventore laborum laudantium quaerat eius consequatur cum consequuntur!</p>
-				</div>
-				<div class="col" id="chambre-index">
+    <section id="about" class="text-center"><h2>Notre histoire</h2></section>
+    <section id="chambre" class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Nos chambres</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+              expedita distinctio veniam inventore laborum laudantium quaerat
+              eius consequatur cum consequuntur!
+            </p>
+          </div>
+          <div class="col" id="chambre-index"></div>
+        </div>
+      </div>
+    </section>
+    <section id="restaurant" class="text-center">
+      <h2>Notre restaurant</h2>
+    </section>
+    <section id="spa" class="text-center"><h2>Notre spa</h2></section>
 
-				</div>
-			</div>
-
-		</div>
-	</section>
-	<section id="restaurant" class="text-center"><h2>Notre restaurant</h2></section>
-	<section id="spa" class="text-center"><h2>Notre spa</h2></section>
-	
-
-	<footer class="text-center bg-light text-muted">
-		<div class="container">
-			<div class="row">			
-				<div class="col">
-					<p>HotelCop 2020 - Tous Droits réservés</p>
-				</div>
-				<div class="col">
-					<form>
-						<div class="form-inline">
-							<label for="mailNewsletter">Newsletter</label>
-							<input type="email" class="form-control" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email">
-							<button type="submit" class="btn btn-primary">Valider</button>
-						</div>
-					</form>
-				</div>
-			</div>		
-			
-		</div>
-	</footer>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>HotelCop 2020 - Tous Droits réservés</p>
+          </div>
+          <div class="col">
+            <form>
+              <div class="form-inline">
+                <label for="mailNewsletter">Newsletter</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="mailNewsletter"
+                  id="mailNewsletter"
+                  placeholder="Saisir votre email"
+                />
+                <button type="submit" class="btn btn-primary">Valider</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- JQUERY -->
-	<!-- <script src="script/jquery/jquery-3.4.1.slim.min.js"></script> -->
-	<!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
-    
+    <!-- <script src="script/jquery/jquery-3.4.1.slim.min.js"></script> -->
+    <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
+
     <!-- BOOTSTRAP MATERIAL DESIGN -->
     <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
     <!-- BOOTSTRAP -->
     <!-- <script src="script/js/bootstrap.bundle.min.js"></script> -->
     <!-- SCRIPT -->
-    <script src="script/js/script.js"></script>	
-</body>
+    <script src="script/js/script.js"></script>
+  </body>
 </html>

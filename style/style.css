@@ -1,33 +1,71 @@
-header, section{
-    height: 900px;
-    width: auto;
+header,
+section {
+  height: 400px;
+  width: auto;
 }
 
-footer{
-    height: 300px;
-    width: auto;
+section {
+  color: #1b3e82;
 }
 
-header{
-    background-image: url(../images/osaxr-bar-3082-hor-wide.jpg);    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
+h1,
+#etoiles {
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  font-size: 3em;
 }
 
-.nav-item a{
-    color: black;
-}
-.nav-item a span:hover{
-    border-bottom: 1px solid chocolate;
-    transition: .5s;
-    transition-timing-function: linear;
+h2 {
+  font-family: "Cinzel", serif;
 }
 
-#chambre-index{
-    height: 700px;
-    background-image: url(../images/osaxr-deluxe-suite-4519-hor-feat.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 100%;
+footer {
+  height: 300px;
+  width: auto;
+}
+
+#header-index {
+  background-image: url(../images/osaxr-bar-3082-hor-wide.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+nav,
+footer {
+  background-color: #1b3e82;
+}
+.nav-item a,
+footer {
+  color: #dde2ed;
+}
+
+.btn-primary {
+  background-color: #dde2ed;
+  border: #dde2ed;
+  color: #1b3e82;
+}
+
+.btn-primary:hover {
+  background-color: #bec8db;
+  color: #1b3e82;
+}
+/* 
+.btn-primary:focus {
+  background-color: #dde2ed;
+  color: #1b3e82;
+} */
+
+.nav-item a span:hover {
+  border-bottom: 1px solid chocolate;
+  transition: 0.5s;
+  transition-timing-function: linear;
+}
+
+#chambre-index {
+  /* height: 700px; */
+  background-image: url(../images/osaxr-deluxe-suite-4519-hor-feat.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100%;
 }
