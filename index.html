@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap"
       rel="stylesheet"
     />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="style/fontawesome-css/solid.css" />
+    <link rel="stylesheet" href="style/fontawesome-css/brands.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style/style.css" />
     <title>Hotel Cop</title>
@@ -20,14 +23,17 @@
       <!-- <a href="#" class="navbar-brand">HC</a>-->
       <div class="d-flex" id="navbarNav">
         <ul class="nav justify-content-center">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#about" class="nav-link"><span>Notre Histoire</span></a>
+          </li> -->
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary">
+              Réserver
+            </button>
+            <!-- <a href="#" class="nav-link"><span>Réserver</span></a> -->
           </li>
           <li class="nav-item">
             <a href="#chambre" class="nav-link"><span>Nos chambres</span></a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><span>Réserver</span></a>
           </li>
           <li class="nav-item">
             <a href="#restaurant" class="nav-link"
@@ -67,12 +73,12 @@
 
     <section id="about" class="text-center">
       <div class="container">
-        <h2>Notre histoire</h2>
+        <h2>Bienvenue</h2>
         <p>
           Raffinement du savoir-vivre à la française, élégance d’un décor Belle
           Époque, les chambres et suites au confort absolu portent les noms de
           Coco Chanel, F. Scott Fitzgerald ou encore Marcel Proust, qui étaient
-          au Ritz « comme à la maison ».
+          au Cop « comme à la maison ».
         </p>
       </div>
     </section>
@@ -86,6 +92,11 @@
               Jardin, au son d’un piano jazzy, le Ritz Paris est aussi le lieu
               de toutes les envies.!
             </p>
+            <p>
+              <a type="button" class="btn btn-primary" href="#"
+                >Voir nos gammes de chambres</a
+              >
+            </p>
           </div>
           <div class="col" id="chambre-index"></div>
         </div>
@@ -96,37 +107,59 @@
     </section>
     <section id="spa" class="text-center"><h2>Notre spa</h2></section>
 
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col">
+    <footer class="text-left">
+      <!-- le flex column sert à disposer le copyright en dessus -->
+      <div class="container-lg d-flex flex-column">
+        <!-- pour le format mobile, mettre les div en flex-direction column -->
+        <div id="colonne" class="row mt-5">
+          <div class="col-sm-12 col-lg-3">
+            <p>Hotel Cop</p>
             <p>
-              HotelCop 2020 - Tous Droits réservés
+              <img
+                src="style/svgs/map-marker-alt.svg"
+                alt=""
+                height="15px"
+                width="15px"
+              />
+              1 avenue Montaigne 75008 Paris
             </p>
-          </div>
-          <div class="col">
-            <form>
-              <div class="form-inline">
-                <label for="mailNewsletter">Newsletter</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="mailNewsletter"
-                  id="mailNewsletter"
-                  placeholder="Saisir votre email"
-                />
-                <button type="submit" class="btn btn-primary">Valider</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
             <a href="#"><i class="fab fa-facebook">Facebook</i></a>
             <a href="#"><i class="fab fa-instagram">Instagram</i></a>
             <a href="#"><i class="fab fa-twitter">Twitter</i></a>
             <a href="#"><i class="fab fa-youtube">Youtube</i></a>
           </div>
+
+          <div class="col-sm-12 col-lg-2">
+            <p><a href="#">Contact et accès</a></p>
+            <p><a href="#">Presse</a></p>
+            <p><a href="#">Evénements et actualités</a></p>
+          </div>
+
+          <div class="col-sm-12 col-lg-2">
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="#">CGV</a></p>
+            <p><a href="#">Plan du site</a></p>
+          </div>
+
+          <div class="col-sm-12 col-lg-5">
+            <p class="d-bloc">Newsletter</p>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control mr-sm-2"
+                name="mailNewsletter"
+                id="mailNewsletter"
+                placeholder="Saisir votre email"
+              />
+              <button id="btnNewsletter" type="submit" class="btn btn-primary">
+                Valider
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col mt-5 text-center">
+          <p>Hotel Cop 2020 - Tous Droits réservés</p>
         </div>
       </div>
     </footer>

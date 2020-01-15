@@ -25,7 +25,6 @@ h2 {
 }
 
 footer {
-  height: 300px;
   width: auto;
 }
 
@@ -42,10 +41,11 @@ footer {
 } */
 nav,
 footer {
-  background-color: #1b3e82;
+  background-color: #0d1f41;
 }
 .nav-item a,
-footer {
+footer,
+footer a {
   color: #dde2ed;
 }
 
@@ -65,7 +65,8 @@ footer {
   color: #1b3e82;
 } */
 
-.nav-item a span:hover {
+.nav-item a span:hover,
+footer a:hover {
   border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
@@ -77,4 +78,9 @@ footer {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100%;
+}
+@media (max-width: 576px) {
+  #colonne {
+    flex-direction: column;
+  }
 }
