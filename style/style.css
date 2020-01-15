@@ -102,3 +102,11 @@ footer a:hover {
     flex-direction: column;
   }
 }
+/****************/
+/* MODIF DAMIEN */
+/****************/
+.fab{
+  width: 40px;
+  /*pour changer la taille des icones*/
+  font-size: x-large ;
+}
