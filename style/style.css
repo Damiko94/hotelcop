@@ -61,7 +61,9 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
-.btn, .form-control{
+.btn, 
+.form-control, 
+.dropdown-menu{
   border-radius: 0;
 }
 .btn-primary {
@@ -92,11 +94,22 @@ footer a {
   background-color: #0d1f41;
 }
 
+.dropdown-menu{
+  background-color: #0d1f41;
+}
+.dropdown-item:focus, 
+.dropdown-item:hover {
+  color: #dde2ed;
+  /* text-decoration: none; */
+  background-color: transparent;
+}
+
 /*****************/
 /* LINKS : HOVER */
 /*****************/
 .nav-item a span:hover,
-footer a:hover {
+footer a:hover,
+.dropdown-item span:hover   {
   border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
