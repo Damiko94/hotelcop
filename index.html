@@ -20,7 +20,8 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md sticky-top text-light">
-      <!-- <a href="#" class="navbar-brand">HC</a>-->
+      <!-- Logo s'affiche qu'avec le burger button -->
+      <a href="#" class="navbar-brand text-light d-md-none">HC</a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,7 +29,7 @@
         <ul class="navbar-nav">
           <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary">
+            <button type="button" class="btn btn-resa">
               Réserver
             </button>
             <!-- <a href="#" class="nav-link"><span>Réserver</span></a> -->
@@ -37,9 +38,7 @@
             <a href="#chambre" class="nav-link"><span>Nos chambres</span></a>
           </li>
           <li class="nav-item text-light">
-            <a href="#restaurant" class="nav-link"
-              ><span>Notre restaurant</span></a
-            >
+            <a href="#restaurant" class="nav-link"><span>Notre restaurant</span></a>
           </li>
           <li class="nav-item text-light">
             <a href="spa" class="nav-link"><span>Notre spa</span></a>
@@ -56,6 +55,10 @@
         </form>
       </div>
     </nav>
+    
+    <div class="position-absolute fixed-top text-right text-light pr-5" id="switch-lang">
+      <span id="lang-fr">FR</span><span> | </span><span id="lang-en">EN</span>
+    </div>
     <header id="header-index" class="text-light d-flex  align-items-center justify-content-center bg-gradient-light">
       <div class="d-flex flex-column ">
         <h1 class="my-0 mx-auto">Hotel Cop</h1>

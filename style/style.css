@@ -64,13 +64,14 @@ footer a {
 }
 .btn-primary {
   background-color: #dde2ed;/*dde2ed*/
-  border: #dde2ed;
+  border-color: #dde2ed;
   color: #1b3e82;
 }
 
 .btn-primary:hover {
-  background-color: #bec8db;
-  color: #1b3e82;
+  background-color: #0d1f41;
+  border-color: #dde2ed;
+  color: #dde2ed;
 }
 /* 
 .btn-primary:focus {
@@ -78,9 +79,15 @@ footer a {
   color: #1b3e82;
 } */
 
-.btn-outline-primary {
-  color: #007bff;
-  border-color:#007bff;
+.btn-resa {
+  color: #1b3e82;
+  background-color: darkgoldenrod;
+  border-color:darkgoldenrod;
+}
+
+.btn-resa:hover {
+  color: darkgoldenrod;
+  background-color: #0d1f41;
 }
 
 /*****************/
