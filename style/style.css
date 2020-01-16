@@ -2,6 +2,10 @@ body {
   font-family: "Alegreya Sans", sans-serif;
 }
 
+.container {
+  max-width: 1400px;
+}
+
 header {
   height: 400px;
   width: auto;
@@ -11,6 +15,12 @@ header {
 /* ******* */
 section {
   color: #1b3e82;
+}
+section div {
+  padding: 40px;
+}
+section div p {
+  padding: 20px;
 }
 
 /*********/
@@ -59,11 +69,12 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
-.btn, .form-control{
+.btn,
+.form-control {
   border-radius: 0;
 }
 .btn-primary {
-  background-color: #dde2ed;/*dde2ed*/
+  background-color: #dde2ed; /*dde2ed*/
   border: #dde2ed;
   color: #1b3e82;
 }
@@ -80,7 +91,7 @@ footer a {
 
 .btn-outline-primary {
   color: #007bff;
-  border-color:#007bff;
+  border-color: #007bff;
 }
 
 /*****************/
@@ -95,7 +106,7 @@ footer a:hover {
 /*****section chambres*******/
 
 #chambre-index {
-  height: 500px;
+  max-height: 500px;
 
   background: url(../images/chambre3.jpg);
 }
@@ -103,7 +114,7 @@ footer a:hover {
 /*****section restaurant*******/
 
 #resto-index {
-  height: 500px;
+  max-height: 500px;
 
   background: url(../images/resto.jpeg);
 }
@@ -111,7 +122,7 @@ footer a:hover {
 /*****section spa*******/
 
 #spa-index {
-  height: 500px;
+  max-height: 500px;
 
   background: url(../images/spa.jpeg);
 }
@@ -129,9 +140,13 @@ footer a:hover {
     max-width: 75%;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 990px) {
   #restaurant {
     flex-direction: column-reverse;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
   }
 }
 
