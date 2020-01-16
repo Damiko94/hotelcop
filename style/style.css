@@ -43,6 +43,11 @@ footer {
   font-weight: bold;
 }
 
+#header-title{
+  /* Ajout d'une légère bordure pour faire ressortir le titre, les étoiles */
+  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
+}
+
 /* Flou sur bg header text */
 /* #header-index div {
   background: blur(0.5em);
