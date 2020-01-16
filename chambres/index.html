@@ -61,7 +61,7 @@
       </div>
     </header>
     <!-- FIN HEADER -->
-
+    <!-- BREADCRUMB -->
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -70,12 +70,38 @@
             </ol>
           </nav>        
     </div>
+    <!-- FIN BREADCRUMB -->
 
     <section id="gammes-chambres">
         <div class="container text-center ">
             <h2>Nos gammes de chambres</h2>
             <p>Découvrez l’un des hôtels les plus raffinés de Paris et d’Ile de France. Retrouvez l’ambiance légendaire du Palace et les touches contemporaines du Pavillon.</p>
         </div>
+        <!-- FORM INLINE -->
+        <div class="container d-flex justify-content-center mt-5">
+          <form class="form-row">
+            <div class="form-group col-3 text-center">
+              <label for="dateArrivee">Date d'arrivée</label>
+              <input type="date" class="form-control" id="dateArrivee" value="2020-01-16" min="2020-01-16" max="2025-01-16">
+            </div>
+            <div class="form-group col-3 text-center">
+              <label for="dateDepart">Date de départ</label>
+              <input type="date" class="form-control" id="dateDepart" value="2020-01-17" min="2020-01-17" max="2025-01-17">
+            </div>
+            <div class="form-group col-2 text-center">
+              <label for="nbChambres">Chambres</label>
+              <input type="number" class="form-control" id="nbChambres" value="1" min="0" max="10">
+            </div>
+            <div class="form-group col-2 text-center">
+              <label for="nbPersonnes">Personnes</label>
+              <input type="number" class="form-control" id="nbPersonnes" value="1" min="0" max="10">
+            </div>
+            <div class="form-group col-2">
+              <input type="button" class="btn btn-primary h-100" value="Rechercher">          
+            </div>
+          </form>
+        </div>
+        <!-- FIN FORM INLINE -->
         <div class="container">
             <!-- row-cols-1 : 1 card par ligne jusqu'à md -->
             <!-- row-cols-md-2 : 2 cards par ligne à partir de md -->
