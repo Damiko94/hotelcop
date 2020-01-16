@@ -2,7 +2,7 @@ body {
   font-family: "Alegreya Sans", sans-serif;
 }
 
-header{
+header {
   height: 400px;
   width: auto;
 }
@@ -85,55 +85,29 @@ footer a:hover {
   transition-timing-function: linear;
 }
 /*****section chambres*******/
-#chambre, #restaurant, #spa{
-  position: relative;
-}
-#chambre-index{
-  
+
+#chambre-index {
   height: 500px;
-  width: 80%;
-  /* 
-  background-image: url(../images/osaxr-deluxe-suite-4519-hor-feat.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 100%; */
+
   background: url(../images/chambre3.jpg);
 }
-#chambres{
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 40%;
-  background-color: white;
-}
+
 /*****section restaurant*******/
-#resto{
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width: 40%;
-  background-color: white;
-}
-#resto-index{
-  
+
+#resto-index {
   height: 500px;
-  width: 80%;
+
   background: url(../images/resto.jpeg);
 }
-#spas{
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 40%;
-  background-color: white;
-}
-#spa-index{
-  
+
+/*****section spa*******/
+
+#spa-index {
   height: 500px;
-  width: 80%;
+
   background: url(../images/spa.jpeg);
 }
-/*****section spa*******/
+/*******reglages dispo div dans section*******/
 
 /***************/
 /* MEDIA QUERY */
@@ -143,15 +117,21 @@ footer a:hover {
   #colonne {
     flex-direction: column;
   }
-  !#newsl{
+  #newsl {
     max-width: 75%;
   }
 }
+@media (max-width: 767.98px) {
+  #restaurant {
+    flex-direction: column-reverse;
+  }
+}
+
 /****************/
 /* MODIF DAMIEN */
 /****************/
-.fab{
+.fab {
   width: 40px;
   /*pour changer la taille des icones*/
-  font-size: x-large ;
+  font-size: x-large;
 }
