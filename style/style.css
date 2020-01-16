@@ -59,8 +59,11 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
+.btn, .form-control{
+  border-radius: 0;
+}
 .btn-primary {
-  background-color: #dde2ed;
+  background-color: #dde2ed;/*dde2ed*/
   border: #dde2ed;
   color: #1b3e82;
 }
@@ -74,6 +77,11 @@ footer a {
   background-color: #dde2ed;
   color: #1b3e82;
 } */
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color:#007bff;
+}
 
 /*****************/
 /* LINKS : HOVER */
