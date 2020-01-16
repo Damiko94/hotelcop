@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  height: 400px;
+  height: 550px;
   width: auto;
 }
 /* ******* */
@@ -39,6 +39,8 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 /* Flou sur bg header text */
