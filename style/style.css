@@ -43,6 +43,13 @@ h2 {
 footer {
   width: auto;
 }
+/* comportement responsive du footer
+on met une width en px pour utiliser le flex-wrap */
+.foot-resp {
+  width: 310px;
+  margin: 30px 0;
+}
+/*********HEADER***********/
 
 #header-index {
   background-image: url(../images/osaxr-bar-3082-hor-wide.jpg);
@@ -106,38 +113,58 @@ footer a:hover {
 /*****section chambres*******/
 
 #chambre-index {
-  max-height: 500px;
+  min-height: 500px;
 
-  background: url(../images/chambre3.jpg);
+  background: url(../images/chambres/chambre3lg.jpg);
 }
 
 /*****section restaurant*******/
 
 #resto-index {
-  max-height: 500px;
+  min-height: 500px;
 
-  background: url(../images/resto.jpeg);
+  background: url(../images/resto/resto-lg.jpeg);
 }
 
 /*****section spa*******/
 
 #spa-index {
-  max-height: 500px;
+  min-height: 500px;
 
-  background: url(../images/spa.jpeg);
+  background: url(../images/spa/spa.jpeg);
 }
 /*******reglages dispo div dans section*******/
 
 /***************/
 /* MEDIA QUERY */
 /***************/
+
+/* ajout dans les media query de differentes tailles d'images pour les sections chambres ,restaurant et spa */
 @media (max-width: 576px) {
   /*passage des elements du footer en colonne en dessous d'une width de 576px*/
   #colonne {
     flex-direction: column;
   }
-  #newsl {
-    max-width: 75%;
+
+  #chambre-index {
+    background: url(../images/chambres/chambre3sm.jpg);
+  }
+  #resto-index {
+    background: url(../images/resto/resto-sm.jpeg);
+  }
+  #spa-index {
+    background: url(../images/spa/spa-sm.jpeg);
+  }
+}
+@media (max-width: 768px) {
+  #chambre-index {
+    background: url(../images/chambres/chambre3md.jpg);
+  }
+  #resto-index {
+    background: url(../images/resto/resto-md.jpeg);
+  }
+  #spa-index {
+    background: url(../images/spa/spa-md.jpeg);
   }
 }
 @media (max-width: 990px) {
@@ -156,5 +183,5 @@ footer a:hover {
 .fab {
   width: 40px;
   /*pour changer la taille des icones*/
-  font-size: x-large;
+  font-size: 25px;
 }

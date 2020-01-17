@@ -101,7 +101,7 @@
       id="chambre"
       class=" container d-lg-flex d-md-bloc text-center align-items-center mb-sm-5 mt-sm-5 px-0 my-5"
     >
-      <div id="chambres" class="col-lg-4">
+      <div id="chambres" class="col-lg-4 flex-wrap">
         <h2>Nos chambres</h2>
         <p>
           Sous le ciel de la verrière, à l’ombre des tilleuls du Grand Jardin,
@@ -114,14 +114,14 @@
           >
         </p>
       </div>
-      <div id="chambre-index" class="col-lg-8"></div>
+      <div id="chambre-index" class="col-lg-8 flex-wrap"></div>
     </section>
     <section
       id="restaurant"
       class=" container d-flex text-center align-items-center mb-sm-5 mt-sm-5 px-0 my-5"
     >
-      <div id="resto-index" class="col-lg-8"></div>
-      <div id="resto" class="col-lg-4">
+      <div id="resto-index" class="col-lg-8 flex-wrap"></div>
+      <div id="resto" class="col-lg-4 flex-wrap">
         <h2>Notre restaurant</h2>
         <p>
           Le Restaurant Jardin Délices. Au cours d’une journée au Hotelcop
@@ -141,7 +141,7 @@
       id="spa"
       class="container d-lg-flex d-md-bloc text-center align-items-center mb-sm-5 mt-sm-5 px-0 my-5"
     >
-      <div id="spas" class="col-lg-4">
+      <div id="spas" class="col-lg-4 flex-wrap">
         <h2>Notre spa</h2>
         <p>
           Les bains de poseidon, espace idéale pour une détente optimale.
@@ -154,60 +154,61 @@
           >
         </p>
       </div>
-      <div id="spa-index" class="col-lg-8"></div>
+      <div id="spa-index" class="col-lg-8 flex-wrap"></div>
     </section>
 
-    <footer class="text-left">
-      <!-- le flex column sert à disposer le copyright en dessus -->
-      <div class="container-lg d-lg-flex d-md-bloc flex-column">
-        <!-- pour le format mobile, mettre les div en flex-direction column -->
-        <div id="colonne" class="row mt-5">
-          <div class="col-sm-12 col-lg-3">
-            <p>Hotel Cop</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              1 avenue Montaigne 75008 Paris
-            </p>
+    <footer class="text-center">
+      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+      <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
+        <div class="foot-resp">
+          <p>Hotel Cop</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            1 avenue Montaigne 75008 Paris
+          </p>
 
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-
-          <div class="col-sm-12 col-lg-2">
-            <p><a href="#">Contact et accès</a></p>
-            <p><a href="#">Presse</a></p>
-            <p><a href="#">Evénements et actualités</a></p>
-          </div>
-
-          <div class="col-sm-12 col-lg-2">
-            <p><a href="#">Mentions légales</a></p>
-            <p><a href="#">CGV</a></p>
-            <p><a href="#">Plan du site</a></p>
-          </div>
-
-          <div class="col-sm-12 col-lg-5">
-            <p class="d-bloc">Newsletter</p>
-            <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-            <form id="newsl" class="form-inline d-lg-flex d-md-bloc">
-              <input
-                type="email"
-                class="form-control mr-sm-2"
-                name="mailNewsletter"
-                id="mailNewsletter"
-                placeholder="Saisir votre email"
-              />
-              <button id="btnNewsletter" type="submit" class="btn btn-primary">
-                Valider
-              </button>
-            </form>
-          </div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
 
-        <div class="col mt-5 text-center">
-          <p>Hotel Cop 2020 - Tous Droits réservés</p>
+        <div class="foot-resp">
+          <p><a href="#">Contact et accès</a></p>
+          <p><a href="#">Presse</a></p>
+          <p><a href="#">Evénements et actualités</a></p>
         </div>
+
+        <div class="foot-resp">
+          <p><a href="#">Mentions légales</a></p>
+          <p><a href="#">CGV</a></p>
+          <p><a href="#">Plan du site</a></p>
+        </div>
+
+        <div class="foot-resp ">
+          <p class="d-bloc">Newsletter</p>
+          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+          <form id="newsl" class="form-inline d-lg-flex d-md-bloc ">
+            <input
+              type="email"
+              class="d-bloc form-control mr-sm-2 "
+              name="mailNewsletter"
+              id="mailNewsletter"
+              placeholder="Saisir votre email"
+            />
+            <button
+              id="btnNewsletter"
+              type="submit"
+              class=" d-bloc btn btn-primary mx-auto"
+            >
+              Valider
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col mt-5 text-center">
+        <p>Hotel Cop 2020 - Tous Droits réservés</p>
       </div>
     </footer>
 
