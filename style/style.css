@@ -207,9 +207,10 @@ footer a:hover,
 /****************/
 /* MODIF DAMIEN */
 /****************/
+/*pour changer la taille des icones
+du FOOTER*/
 footer .fab,
 footer .fas {
   width: 40px;
-  /*pour changer la taille des icones*/
   font-size: 25px;
 }
