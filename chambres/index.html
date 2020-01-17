@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <!-- BOOSTRAP MATERIAL DESIGN -->
+    <!-- <link rel="stylesheet" href="../style/bootstrap-material-design.min.css" /> -->
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap" rel="stylesheet"/>
+    <!-- FONT AWESOME -->
+    <link type="text/css" rel="stylesheet" href="../style/fontawesome-css/all.min.css" />
+    
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="../style/style.css"/>
+    <title>Hotel Cop</title>
+  </head>
+  <body>
+    <nav class="navbar justify-content-center sticky-top text-light">
+      <!-- <a href="#" class="navbar-brand">HC</a>-->
+      <div class="d-flex" id="navbarNav">
+        <ul class="nav justify-content-center">
+          <!-- <li class="nav-item">
+            <a href="#about" class="nav-link"><span>Notre Histoire</span></a>
+          </li> -->
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-primary">
+              Réserver
+            </button>
+            <!-- <a href="#" class="nav-link"><span>Réserver</span></a> -->
+          </li>
+          <li class="nav-item">
+            <a href="#chambre" class="nav-link"><span>Nos chambres</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#restaurant" class="nav-link"
+              ><span>Notre restaurant</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="spa" class="nav-link"><span>Notre spa</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>Les avis</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Saisir votre recherche" aria-label="Search"/>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Rechercher
+          </button>
+        </form>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header id="header-index" class="text-light d-flex align-items-center justify-content-center bg-gradient-light">
+      <div class="d-flex flex-column justify-content-center ">
+        <h1 class="my-0 mx-auto">Hotel Cop</h1>
+        <span class="d-bloc my-0 mx-auto">*****</span>
+        <p class="my-0 mx-auto">Paris</p>
+      </div>
+    </header>
+    <!-- FIN HEADER -->
+    <!-- BREADCRUMB -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Nos gammes de suites et de chambres</li>
+            </ol>
+          </nav>        
+    </div>
+    <!-- FIN BREADCRUMB -->
+
+    <section id="gammes-chambres">
+        <div class="container text-center ">
+            <h2>Nos gammes de chambres</h2>
+            <p>Découvrez l’un des hôtels les plus raffinés de Paris et d’Ile de France. Retrouvez l’ambiance légendaire du Palace et les touches contemporaines du Pavillon.</p>
+        </div>
+        <!-- FORM ROW -->
+        <div class="container d-flex justify-content-center mt-5">
+          <form class="form-row text-center">
+            <div class="form-group col-3 col-sm-6">
+              <label for="dateArrivee">Date d'arrivée</label>
+              <input type="date" class="form-control" id="dateArrivee" value="2020-01-16" min="2020-01-16" max="2025-01-16">
+            </div>
+            <div class="form-group col-3 col-sm-6">
+              <label for="dateDepart">Date de départ</label>
+              <input type="date" class="form-control" id="dateDepart" value="2020-01-17" min="2020-01-17" max="2025-01-17">
+            </div>
+            <div class="form-group col-2 col-sm-6">
+              <label for="nbChambres">Chambres</label>
+              <input type="number" class="form-control" id="nbChambres" value="1" min="0" max="10">
+            </div>
+            <div class="form-group col-2 col-sm-6">
+              <label for="nbPersonnes">Personnes</label>
+              <input type="number" class="form-control" id="nbPersonnes" value="1" min="0" max="10">
+            </div>
+            <div class="form-group col-2">
+              <input type="button" class="btn btn-primary h-100" value="Rechercher">          
+            </div>
+          </form>
+        </div>
+        <!-- FIN FORM INLINE -->
+        <div class="container">
+            <!-- row-cols-1 : 1 card par ligne jusqu'à md -->
+            <!-- row-cols-md-2 : 2 cards par ligne à partir de md -->
+            <div class="row row-cols-1 row-cols-md-2 mt-5">
+                <div class="col d-flex justify-content-center">
+                    <div class="card">
+                        <img src="../images/pavillion-bedroom-430x310.jpg" alt="Image chambre" class="card-img-top">
+                        <!-- <div class="card-header">Chambre</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Nos Suites</h5>
+                            <p class="card-text">
+                                Ces suites de 20 à 25 m² à l’élégance moderne ont été récemment rénovées, et sont équipées de meubles contemporains tout en dégageant une atmosphere de luxe. La Suite Prestige peut accueillir jusqu’à 2 personnes, y compris des enfants.
+                            </p>
+                        </div>
+                        <a type="button" href="suites.html" class="btn text-dark">
+                            <div class="card-footer bg-transparent">En savoir plus</div>
+                        </a> 
+                    </div>                    
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="card">
+                        <img src="../images/pavillon-room-430x310.jpg" alt="Image chambre" class="card-img-top">
+                        <!-- <div class="card-header">Chambre</div> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Nos Chambres</h5>
+                            <p class="card-text">
+                                Ces chambres de 20 à 25 m² à l’élégance moderne ont été récemment rénovées, et sont équipées de meubles contemporains tout en dégageant une atmosphere de luxe. La Chambre Deluxe peut accueillir jusqu’à 2 personnes, y compris des enfants.
+                            </p>
+                        </div>
+                        <a type="button" href="chambres.html" class="btn text-dark">
+                            <div class="card-footer bg-transparent">En savoir plus</div>
+                        </a> 
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="msg-important">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center">Informations complémentaires</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-left">
+        <!-- le flex column sert à disposer le copyright en dessus -->
+        <div class="container-lg d-flex flex-column">
+          <!-- pour le format mobile, mettre les div en flex-direction column -->
+          <div id="colonne" class="row mt-5">
+            <div class="col-sm-12 col-lg-3">
+              <p>Hotel Cop</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                1 avenue Montaigne 75008 Paris
+              </p>
+              
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+  
+            <div class="col-sm-12 col-lg-2">
+              <p><a href="#">Contact et accès</a></p>
+              <p><a href="#">Presse</a></p>
+              <p><a href="#">Evénements et actualités</a></p>
+            </div>
+  
+            <div class="col-sm-12 col-lg-2">
+              <p><a href="#">Mentions légales</a></p>
+              <p><a href="#">CGV</a></p>
+              <p><a href="#">Plan du site</a></p>
+            </div>
+  
+            <div class="col-sm-12 col-lg-5">
+              <p class="d-bloc">Newsletter</p>
+              <form class="d-flex">
+                <input
+                  type="email"
+                  class="form-control mr-sm-2"
+                  name="mailNewsletter"
+                  id="mailNewsletter"
+                  placeholder="Saisir votre email"
+                />
+                <button id="btnNewsletter" type="submit" class="btn btn-primary">
+                  Valider
+                </button>
+              </form>
+            </div>
+          </div>
+  
+          <div class="col mt-5 text-center">
+            <p>Hotel Cop 2020 - Tous Droits réservés</p>
+          </div>
+        </div>    
+    </footer>
+  
+      <!-- JQUERY -->
+      <!-- <script src="../script/jquery/jquery-3.4.1.slim.min.js"></script> -->
+      <!-- <script src="../script/jquery/jquery-ui.min.js"></script> -->
+  
+      <!-- BOOTSTRAP MATERIAL DESIGN -->
+      <!-- <script src="../script/js/bootstrap-material-design.min.js"></script> -->
+      <!-- BOOTSTRAP -->
+      <!-- <script src="../script/js/bootstrap.bundle.min.js"></script> -->
+      <!-- SCRIPT -->
+      <script src="../script/js/script.js"></script>
+    </body>
+  </html>  
