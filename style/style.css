@@ -17,26 +17,24 @@ section div p {
 }
 
 section,
-section a div h2,
-section a {
+section div a {
   color: #1b3e82;
   text-decoration: none !important;
 }
-/***********section event actu presse************/
+/***********section event actu presse***********/
 #event {
   background: url(../images/section_event/event.jpg);
   opacity: 0.5;
+  height: 400px;
 }
-
 #actua {
   background-image: url(../images/section_event/actu.jpg);
   opacity: 0.5;
+  height: 400px;
 }
 #press {
   background-image: url(../images/section_event/press.jpg);
   opacity: 0.5;
-}
-.actu {
   height: 400px;
 }
 
