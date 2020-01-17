@@ -15,10 +15,25 @@
     <title>Hotel Cop Paris - Avenue Montaigne</title>
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!-- 
+    -- NAVBAR --
+    Etendue en affichage large
+    Réduite en médium et centré
+    -->
     <nav class="navbar navbar-expand-lg sticky-top text-light">
       
+      <!-- 
+      -- LOGO --
+      Toujours visible
+      -->
       <a href="#" class="navbar-brand text-light">HC</a>
+      <!-- 
+      -- BTN RESERVER --
+      Toujours visible
+      Envoie user vers page de réservation
+      JS : Change text en RESERVATION(1) si user a commencé à réserver 
+      avec (1) nb prestations sélectionnées. Ici 1.
+      -->
       <button type="button" class="btn btn-resa">Réserver</button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,14 +43,22 @@
           <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
           <li class="nav-item pr-4">
           </li>
+          <!-- 
+          -- MENU --
+          Menu des différentes sections du site, chang. de langue, rech. dans le site
+          -->
           <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
             <!-- 
+            -- DROPDOWN ITEMS --
+            Liens amenants vers les pages nommées
+            -->
+            <!-- 
               text-center: centré dans le menu reduit
               text-lg-left:left dans le menu étendu
-            -->
+            -->            
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#"><span>Qui sommes nous ?</span></a>
               <a class="dropdown-item" href="#"><span>Evénements</span></a>
@@ -52,7 +75,7 @@
               <span>Chambres</span>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><span>Découvrir nos gammes de chambres</span></a>
+              <a class="dropdown-item" href="#"><span>Découvrir nos chambres</span></a>
               <a class="dropdown-item" href="#"><span>Classique</span></a>
               <a class="dropdown-item" href="#"><span>Confort</span></a>              
               <a class="dropdown-item" href="#"><span>Deluxe</span></a>
@@ -76,7 +99,7 @@
               <span>Spa</span>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><span>Découvrir nos gammes de soins</span></a>
+              <a class="dropdown-item" href="#"><span>Découvrir notre spa</span></a>
               <a class="dropdown-item" href="#"><span>Soin Détente</span></a>
               <a class="dropdown-item" href="#"><span>Soin Découverte</span></a>              
               <a class="dropdown-item" href="#"><span>Soin Relaxant</span></a>
@@ -101,22 +124,7 @@
       </div>
     </nav>
     <!-- FIN NAVBAR -->
-    
     <!-- HEADER -->
-    <!-- <header id="header-index" class="text-light d-flex  align-items-center justify-content-center bg-gradient-light">
-      <div class="d-flex flex-column" id="header-title">
-        <h1 class="my-0 mx-auto">Hotel Cop</h1>
-        <span class="d-bloc my-0 mx-auto">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </span>
-        <p class="my-0 mx-auto">Paris</p>
-      </div>
-    </header> -->
-
     <header>
       <div id="carousel-indic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -171,7 +179,6 @@
           <span class="sr-only">Suivant</span>
         </a>
       </div>
-
     </header>
     <!-- FIN HEADER -->
 
@@ -220,9 +227,7 @@
           la journée.
         </p>
         <p>
-          <a type="button" class="btn btn-primary" href="#"
-            >Voir nos diffrents menus</a
-          >
+          <a type="button" class="btn btn-primary" href="#">Voir nos diffrents menus</a>
         </p>
       </div>
     </section>
@@ -251,11 +256,11 @@
       <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
         <div class="foot-resp">
           <p>Hotel Cop</p>
-          <p>+33(0) 1 75 00 00 00</p>
           <p>
             <i class="fas fa-map-marker-alt"></i>
             1 avenue Montaigne 75008 Paris
           </p>
+          <p><a href="tel:+33175000000">+33(0) 1 75 00 00 00</a></p>
 
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -302,7 +307,7 @@
         </div>
       </div>
 
-      <div class="col mt-5 text-center">
+      <div class="col pb-3 mt-5 text-center">
         <p>Hotel Cop 2020 - Tous Droits réservés</p>
       </div>
     </footer>
