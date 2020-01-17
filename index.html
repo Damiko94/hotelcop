@@ -17,57 +17,84 @@
   <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top text-light">
-      <!-- Logo s'affiche qu'avec le burger button -->
-      <a href="#" class="navbar-brand text-light d-lg-none">HC</a>
+      
+      <a href="#" class="navbar-brand text-light">HC</a>
+      <button type="button" class="btn btn-resa">Réserver</button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
-      <div class="collapse navbar-collapse text-center justify-content-around" id="navbarNav">
+      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
           <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
           <li class="nav-item pr-4">
-            <button type="button" class="btn btn-resa">Réserver</button>
           </li>
           <li class="nav-item dropdown pr-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Nous découvrir</span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- 
+              text-center: centré dans le menu reduit
+              text-lg-left:left dans le menu étendu
+            -->
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#"><span>Qui sommes nous ?</span></a>
               <a class="dropdown-item" href="#"><span>Evénements</span></a>
               <a class="dropdown-item" href="#"><span>Actualités</span></a>
               <a class="dropdown-item" href="#"><span>Presse</span></a>
+              <a class="dropdown-item" href="#"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="#"><span>Recrutement</span></a>
               <a class="dropdown-item" href="#"><span>Contact et accès</span></a>
             </div>
           </li>
           
           <li class="nav-item dropdown pr-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Nos chambres</span>
+              <span>Chambres</span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><span>Nos gammes chambres</span></a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><span>Découvrir nos gammes de chambres</span></a>
               <a class="dropdown-item" href="#"><span>Classique</span></a>
               <a class="dropdown-item" href="#"><span>Confort</span></a>              
               <a class="dropdown-item" href="#"><span>Deluxe</span></a>
               <a class="dropdown-item" href="#"><span>Suite</span></a>
             </div>
           </li>
-          <li class="nav-item pr-4 text-light">
-            <a href="#restaurant" class="nav-link"><span>Notre restaurant</span></a>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Restaurant</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><span>Découvrir notre restaurant</span></a>
+              <a class="dropdown-item" href="#"><span>Brasserie</span></a>
+              <a class="dropdown-item" href="#"><span>Dégustation</span></a>              
+              <a class="dropdown-item" href="#"><span>Restaurant</span></a>
+              <a class="dropdown-item" href="#"><span>Nos menus</span></a>
+            </div>
           </li>
-          <li class="nav-item pr-4 text-light">
-            <a href="spa" class="nav-link"><span>Notre spa</span></a>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Spa</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><span>Découvrir nos gammes de soins</span></a>
+              <a class="dropdown-item" href="#"><span>Soin Détente</span></a>
+              <a class="dropdown-item" href="#"><span>Soin Découverte</span></a>              
+              <a class="dropdown-item" href="#"><span>Soin Relaxant</span></a>
+              <a class="dropdown-item" href="#"><span>Soin Plaisir</span></a>
+              <a class="dropdown-item" href="#"><span>Soin Evasion</span></a>
+            </div>
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR et EN -->
           <!-- JS : Click affiche FR ou EN -->
-          <li class="nav-item pr-4 text-light">
+          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+          <li class="nav-item pr-4 text-light text-nowrap">
             <a href="#" class="nav-link"><span>EN</span> <i class="fas fa-globe-europe"></i></a>
           </li>          
         </ul>
         <!-- BARRE DE RECHERCHE -->
         <!-- Mini form inline -->
-        <form class="form-inline my-2 my-lg-0 justify-content-center">
+        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche"aria-label="Search"/>
           <button class="btn btn-primary my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
@@ -224,6 +251,7 @@
       <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
         <div class="foot-resp">
           <p>Hotel Cop</p>
+          <p>+33(0) 1 75 00 00 00</p>
           <p>
             <i class="fas fa-map-marker-alt"></i>
             1 avenue Montaigne 75008 Paris
@@ -233,11 +261,15 @@
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fas fa-sms"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
 
         <div class="foot-resp">
           <p><a href="#">Contact et accès</a></p>
           <p><a href="#">Presse</a></p>
+          <p><a href="#">Recrutement</a></p>
           <p><a href="#">Evénements et actualités</a></p>
         </div>
 
@@ -245,12 +277,13 @@
           <p><a href="#">Mentions légales</a></p>
           <p><a href="#">CGV</a></p>
           <p><a href="#">Plan du site</a></p>
+          <p><a href="#">Imprimer la page</a></p>
         </div>
 
         <div class="foot-resp ">
           <p class="d-bloc">Newsletter</p>
           <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-          <form id="newsl" class="form-inline d-lg-flex d-md-bloc ">
+          <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
             <input
               type="email"
               class="d-bloc form-control mr-sm-2 "
@@ -261,7 +294,7 @@
             <button
               id="btnNewsletter"
               type="submit"
-              class=" d-bloc btn btn-primary mx-auto"
+              class=" d-bloc btn btn-primary"
             >
               Valider
             </button>

@@ -135,6 +135,7 @@ footer a:hover,
   border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
+  color: #dde2ed;
 }
 /*****section chambres*******/
 
@@ -206,7 +207,8 @@ footer a:hover,
 /****************/
 /* MODIF DAMIEN */
 /****************/
-.fab {
+.fab,
+.fas {
   width: 40px;
   /*pour changer la taille des icones*/
   font-size: 25px;
