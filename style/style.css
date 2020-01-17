@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  height: 400px;
+  height: 550px;
   width: auto;
 }
 /* ******* */
@@ -39,6 +39,13 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#header-title{
+  /* Ajout d'une légère bordure pour faire ressortir le titre, les étoiles */
+  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
 }
 
 /* Flou sur bg header text */
@@ -59,18 +66,21 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
-.btn, .form-control{
+.btn, 
+.form-control, 
+.dropdown-menu{
   border-radius: 0;
 }
 .btn-primary {
   background-color: #dde2ed;/*dde2ed*/
-  border: #dde2ed;
+  border-color: #dde2ed;
   color: #1b3e82;
 }
 
 .btn-primary:hover {
-  background-color: #bec8db;
-  color: #1b3e82;
+  background-color: #0d1f41;
+  border-color: #dde2ed;
+  color: #dde2ed;
 }
 /* 
 .btn-primary:focus {
@@ -78,16 +88,33 @@ footer a {
   color: #1b3e82;
 } */
 
-.btn-outline-primary {
-  color: #007bff;
-  border-color:#007bff;
+.btn-resa {
+  color: #1b3e82;
+  background-color: darkgoldenrod;
+  border-color:darkgoldenrod;
+}
+
+.btn-resa:hover {
+  color: darkgoldenrod;
+  background-color: #0d1f41;
+}
+
+.dropdown-menu{
+  background-color: #0d1f41;
+}
+.dropdown-item:focus, 
+.dropdown-item:hover {
+  color: #dde2ed;
+  /* text-decoration: none; */
+  background-color: transparent;
 }
 
 /*****************/
 /* LINKS : HOVER */
 /*****************/
 .nav-item a span:hover,
-footer a:hover {
+footer a:hover,
+.dropdown-item span:hover   {
   border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
