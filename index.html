@@ -107,13 +107,19 @@
               <a class="dropdown-item" href="#"><span>Soin Evasion</span></a>
             </div>
           </li>
-          <!-- OPTION CHANGEMENT DE LANGUE : FR et EN -->
-          <!-- JS : Click affiche FR ou EN -->
+          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item pr-4 text-light text-nowrap">
-            <a href="#" class="nav-link"><span>EN</span> <i class="fas fa-globe-europe"></i></a>
-          </li>          
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>FR</span> <i class="fas fa-globe-europe"></i>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><span>English</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
+            </div>
+          </li>             
         </ul>
+        
         <!-- BARRE DE RECHERCHE -->
         <!-- Mini form inline -->
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
