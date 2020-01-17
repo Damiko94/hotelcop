@@ -6,16 +6,16 @@ body {
   max-width: 1400px;
 }
 
-header {
-  /* height: 550px; */
-  /* width: auto; */
-}
 /* ******* */
 /* SECTION */
 /* ******* */
-section {
+section,
+section a div h2,
+section a {
   color: #1b3e82;
+  text-decoration: none !important;
 }
+
 section div {
   padding: 40px;
 }
@@ -36,7 +36,9 @@ h2 {
   font-size: 2.5em;
   font-family: "Cinzel", serif;
 }
-
+#actu {
+  height: 300px;
+}
 /**********/
 /* FOOTER */
 /**********/
@@ -60,7 +62,7 @@ on met une width en px pour utiliser le flex-wrap */
   font-weight: bold;
 }
 
-#header-title{
+#header-title {
   /* Ajout d'une légère bordure pour faire ressortir le titre, les étoiles */
   text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
 }
@@ -83,13 +85,13 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
-.btn, 
-.form-control, 
-.dropdown-menu{
+.btn,
+.form-control,
+.dropdown-menu {
   border-radius: 0;
 }
 .btn-primary {
-  background-color: #dde2ed;/*dde2ed*/
+  background-color: #dde2ed; /*dde2ed*/
   border-color: #dde2ed;
   color: #1b3e82;
 }
@@ -108,7 +110,7 @@ footer a {
 .btn-resa {
   color: #1b3e82;
   background-color: darkgoldenrod;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
 }
 
 .btn-resa:hover {
@@ -116,10 +118,10 @@ footer a {
   background-color: #0d1f41;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: #0d1f41;
 }
-.dropdown-item:focus, 
+.dropdown-item:focus,
 .dropdown-item:hover {
   color: #dde2ed;
   /* text-decoration: none; */
@@ -131,7 +133,7 @@ footer a {
 /*****************/
 .nav-item a span:hover,
 footer a:hover,
-.dropdown-item span:hover   {
+.dropdown-item span:hover {
   border-bottom: 1px solid darkgoldenrod;
   transition: 0.5s;
   transition-timing-function: linear;
