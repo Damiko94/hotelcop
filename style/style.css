@@ -9,18 +9,35 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
+section div {
+  padding: 40px;
+}
+section div p {
+  padding: 20px;
+}
+
 section,
 section a div h2,
 section a {
   color: #1b3e82;
   text-decoration: none !important;
 }
-
-section div {
-  padding: 40px;
+/***********section event actu presse************/
+#event {
+  background: url(../images/section_event/event.jpg);
+  opacity: 0.5;
 }
-section div p {
-  padding: 20px;
+
+#actua {
+  background-image: url(../images/section_event/actu.jpg);
+  opacity: 0.5;
+}
+#press {
+  background-image: url(../images/section_event/press.jpg);
+  opacity: 0.5;
+}
+.actu {
+  height: 400px;
 }
 
 /*********/
@@ -36,9 +53,7 @@ h2 {
   font-size: 2.5em;
   font-family: "Cinzel", serif;
 }
-#actu {
-  height: 300px;
-}
+
 /**********/
 /* FOOTER */
 /**********/
@@ -161,6 +176,7 @@ footer a:hover,
 
   background: url(../images/spa/spa.jpeg);
 }
+
 /*******reglages dispo div dans section*******/
 
 /***************/
