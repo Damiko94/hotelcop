@@ -29,7 +29,7 @@
       <!-- Envoie user vers page de réservation -->
       <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
       <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-resa">Réserver</a>
+      <a href="reservations.html" class="btn btn-primary">Réserver</a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
@@ -50,8 +50,7 @@
             <!-- text-lg-left:left dans le menu étendu-->            
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="events.html"><span>Evénements</span></a>
-              <a class="dropdown-item" href="actualites.html"><span>Actualités</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
               <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
               <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
@@ -114,7 +113,7 @@
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Rechercher</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
       </div>
     </nav>
@@ -236,7 +235,7 @@
           combleront toutes vos attentes.
         </p>
         <p>
-          <a href="spa.html" class="btn btn-primary">Voir notre gammes de soins</a>
+          <a href="spa.html" class="btn btn-primary">Voir nos gammes de soins</a>
         </p>
       </div>
       <div id="spa-index" class="col-lg-8 flex-wrap"></div>
@@ -247,11 +246,8 @@
       <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
         <div class="foot-resp">
           <p>Hotel Cop</p>
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            1 avenue Montaigne 75008 Paris
-          </p>
-          <p><a href="tel:+33175000000">+33(0) 1 75 00 00 00</a></p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
 
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -266,8 +262,8 @@
           <p><a href="contact-acces.html">Contact et accès</a></p>
           <p><a href="presse.html">Presse</a></p>
           <p><a href="recrutement.html">Recrutement</a></p>
-          <p><a href="events.html">Evénements</a></p>
-          <p><a href="actualites.html">Actualités</a></p>
+          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+          <!-- <p><a href="actualites.html">Actualités</a></p> -->
         </div>
 
         <div class="foot-resp">
@@ -291,7 +287,7 @@
             <button
               id="btnNewsletter"
               type="submit"
-              class=" d-bloc btn btn-primary"
+              class=" d-bloc btn btn-secondary"
             >
               Valider
             </button>
