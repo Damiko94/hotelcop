@@ -9,7 +9,8 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
-section {
+section,
+section tr {
   color: #1b3e82;
 }
 section div {
@@ -123,7 +124,11 @@ footer a {
 /*****************/
 /* LINKS : HOVER */
 /*****************/
-.nav-item a:hover,
+a:hover{
+  text-decoration: none;
+}
+
+section a:hover, .nav-item a span:hover,
 footer a:hover,
 .dropdown-item:hover   {
   text-decoration: none;
