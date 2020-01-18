@@ -24,17 +24,17 @@ section div a {
 /***********section event actu presse***********/
 #event {
   background: url(../images/section_event/event.jpg);
-  opacity: 0.5;
+  ;
   height: 400px;
 }
 #actua {
   background-image: url(../images/section_event/actu.jpg);
-  opacity: 0.5;
+  
   height: 400px;
 }
 #press {
   background-image: url(../images/section_event/press.jpg);
-  opacity: 0.5;
+  
   height: 400px;
 }
 
