@@ -18,28 +18,29 @@ Le résultat attendu est une **adresse url** menant vers votre site web (à héb
 
 ## PRESENTATION
 
-L'Hôtel **HOTELCOP** ***** est un hôtel de grand standing venant de s'implanter à Paris il y a un mois.\
+L'Hôtel **HOTELCOP** ***** est un hôtel de grand standing venant de s'implanter à Paris il y a un mois.
 
-Les 3 points forts de l'hôtel résident en ses chambres haut de gamme, la qualité de son restaurant ainsi que de son service spa.\
+Les 3 points forts de l'hôtel résident en ses chambres haut de gamme, la qualité de son restaurant ainsi que de son service spa.
 
-Les objectifs attendus sont :\
+Les objectifs attendus sont :
 * La création d’une nouvelle charte graphique afin de séduire et capter l’attention des clients.
 * La création d’un nouveau site vitrine et des fonctionnalités complémentaires.
-Le cœur du site reposera sur une vitrine qui permettra de mettre en valeur les points forts de l’hôtel.\
+
+Le cœur du site reposera sur une vitrine qui permettra de mettre en valeur les points forts de l’hôtel.
 
 ## INTEGRATION
 
-L’ensemble du portail devra être compatible avec les dernières versions des navigateurs les plus utilisés du marché, soit : *Chrome*, *Firefox*, *Edge*, *Safari*, *Opéra* Le site devra être compatible tous supports, y compris tablette et smartphone. Il serait donc judicieux de prévoir une base responsive design.\
+L’ensemble du portail devra être compatible avec les dernières versions des navigateurs les plus utilisés du marché, soit : *Chrome*, *Firefox*, *Edge*, *Safari*, *Opéra* Le site devra être compatible tous supports, y compris tablette et smartphone. Il serait donc judicieux de prévoir une base responsive design.
 
-Le code-source du site devra être valide w3c et également indenté, commenté pour faciliter le travail collaboratif ou la reprise de projet.\
+Le code-source du site devra être valide w3c et également indenté, commenté pour faciliter le travail collaboratif ou la reprise de projet.
 
-La réalisation du site se fera sans moteur de gestion de contenu (CMS), sans l’aide de modèle-thème-TEMPLATE. Dans le cadre de ce projet, le client souhaite obtenir un site unique qui nécessite un nouveau développement. Les librairies et Frameworks comme Jquery et Bootstrap sont autorisés.\
+La réalisation du site se fera sans moteur de gestion de contenu (CMS), sans l’aide de modèle-thème-TEMPLATE. Dans le cadre de ce projet, le client souhaite obtenir un site unique qui nécessite un nouveau développement. Les librairies et Frameworks comme Jquery et Bootstrap sont autorisés.
 
-Le langage JavaScript (ou librairies dérivés) devra être utilisé pour rendre plus vivant le site web avec notamment des animations, effets et de l’interaction avec l’internaute.\
+Le langage JavaScript (ou librairies dérivés) devra être utilisé pour rendre plus vivant le site web avec notamment des animations, effets et de l’interaction avec l’internaute.
 
-Le client ne fournit pas de maquette graphique ou visuels : logo, images, photos, vidéos, pas de code couleur, etc. Il attend que l’on soit force de proposition. Vous aurez donc « carte blanche » sur l’aspect graphique des autres pages. Il ne s'agit pas forcément d'un scénario éloigné d’une situation réelle, il arrive parfois qu’un client commande un site à plusieurs prestataires et que son attente repose sur la force de proposition des différentes mises en forme afin qu’il en soit séduit.\
+Le client ne fournit pas de maquette graphique ou visuels : logo, images, photos, vidéos, pas de code couleur, etc. Il attend que l’on soit force de proposition. Vous aurez donc « carte blanche » sur l’aspect graphique des autres pages. Il ne s'agit pas forcément d'un scénario éloigné d’une situation réelle, il arrive parfois qu’un client commande un site à plusieurs prestataires et que son attente repose sur la force de proposition des différentes mises en forme afin qu’il en soit séduit.
 
-Le site doit être hébergé et mis en ligne pour la présentation du projet.\
+Le site doit être hébergé et mis en ligne pour la présentation du projet.
 
 ## REFERENCEMENT
 
@@ -112,47 +113,49 @@ Page composée d’un formulaire de contact (il s’agit de la même page que H�
 
 ## PAGE D'ACCUEIL
 
-La page d’Accueil est l’une des plus importantes car il s’agit de la page qui s’affiche lorsqu’un internaute accède au site. Il arrive souvent que les visiteurs ne dépassent pas cette page. Pour éviter cela, il faut capter et séduire l’internaute en lui donnant envie de poursuivre sa visite sur le site. En quelques secondes, nous devons lui donner une vision de ce qu’il peut attendre de l’Hôtel. Tout malentendu à ce niveau peut frustrer l’internaute, interrompre la visite et entacher l’image de L’HÔTELCOP.\
+La page d’Accueil est l’une des plus importantes car il s’agit de la page qui s’affiche lorsqu’un internaute accède au site. Il arrive souvent que les visiteurs ne dépassent pas cette page. Pour éviter cela, il faut capter et séduire l’internaute en lui donnant envie de poursuivre sa visite sur le site. En quelques secondes, nous devons lui donner une vision de ce qu’il peut attendre de l’Hôtel. Tout malentendu à ce niveau peut frustrer l’internaute, interrompre la visite et entacher l’image de L’HÔTELCOP.
 
 Cette page sera composée de textes, de blocs d’informations contenant des liens vers différents contenus mis en avant ainsi qu’une animation faisant défiler les photos (hôtel, restaurant, spa, chambres, quartier, etc.). il est impératif que certaines parties du contenu soient clairement distinguées. 
 
 ## PAGE : CHAMBRES ET GAMMES
 
-Listing des gammes de chambres avec photos ainsi que le tarif indicatif pour une nuit à la période actuelle.\
+Listing des gammes de chambres avec photos ainsi que le tarif indicatif pour une nuit à la période actuelle.
 
-Les gammes de chambres peuvent être déclinées sur la même page ou peuvent faire l’objet d’une page à part entière chacune.\
+Les gammes de chambres peuvent être déclinées sur la même page ou peuvent faire l’objet d’une page à part entière chacune.
 
 ## PAGE : RESTAURANT ET CARTE
 
-Page présentant le restaurant à l’aide de textes et de photos.\
+Page présentant le restaurant à l’aide de textes et de photos.
 
-L’objectif est de donner envie aux internautes de réserver une chambre et cela passe aussi par les services qu’offrent l’hôtel.\
+L’objectif est de donner envie aux internautes de réserver une chambre et cela passe aussi par les services qu’offrent l’hôtel.
 
-Il ne faut donc pas négliger cette partie. Il serait judicieux d’y inscrire ce que l’on peut y trouver au menu avec l’aide d’une carte directement intégrée au site ou téléchargeable au format PDF.\
+Il ne faut donc pas négliger cette partie. Il serait judicieux d’y inscrire ce que l’on peut y trouver au menu avec l’aide d’une carte directement intégrée au site ou téléchargeable au format PDF.
 
 ## PAGE : SPA ET FICHE DETAILLE D'UN SOIN
 
-Page présentant le spa à l’aide de textes et de photos.\
+Page présentant le spa à l’aide de textes et de photos.
 
-De la même manière que pour le restaurant, l’objectif est de donner envie aux internautes de réserver une chambre, le spa est donc un autre service qu’offre l’Hôtel à ne pas négliger.\
+De la même manière que pour le restaurant, l’objectif est de donner envie aux internautes de réserver une chambre, le spa est donc un autre service qu’offre l’Hôtel à ne pas négliger.
 
-Il serait judicieux d’y exposer les descriptifs et la durée des soins pratiqués pour chacun d’entre eux.\
+Il serait judicieux d’y exposer les descriptifs et la durée des soins pratiqués pour chacun d’entre eux.
 
 ## PAGE : RESERVATION
 
-Cette page contient un formulaire permettant à l’internaute de réserver une chambre à une période de son choix directement en ligne.\
+Cette page contient un formulaire permettant à l’internaute de réserver une chambre à une période de son choix directement en ligne.
 
-Pour cela, il est indispensable de lui proposer un minimum de champs : date d’arrivée, date de départ, nombre de personnes, recherche.\
+Pour cela, il est indispensable de lui proposer un minimum de champs : date d’arrivée, date de départ, nombre de personnes, recherche.
 
 ## PAGE : AVIS
 
-Page affichant les derniers avis déposés sur le site internet au sujet des services de l’hôtel.\
+Page affichant les derniers avis déposés sur le site internet au sujet des services de l’hôtel.
+
 A l’aide d’onglets, l’internaute doit avoir le choix d’afficher :
   * les commentaires sur l’Hôtel Cop en général
   * les commentaires pour les chambres
   * les commentaires pour le restaurant.
   * les commentaires pour les soins.
-Il est nécessaire de prévoir un formulaire car l’internaute qui consulte le site doit également pouvoir y déposer son avis.\
+
+Il est nécessaire de prévoir un formulaire car l’internaute qui consulte le site doit également pouvoir y déposer son avis.
 
 ## PAGE : HOTEL / QUI SOMMES-NOUS ?
 
@@ -162,7 +165,7 @@ Une page imagée récapitulant l’historique de l’hôtel ainsi que la straté
 
 Une GoogleMap devra être intégrée pour afficher les informations d’accès.\
 Adresse de l’hôtel: *1 avenue Montaigne, 75008 Paris*\
-Sur le site cette image sera un plan dynamique.\
+Sur le site cette image sera un plan dynamique.
 
 ## PAGE : HOTEL / CONTACT
 
@@ -192,36 +195,36 @@ Un formulaire de contact sera accessible sur le site pour toute candidature spon
 ## PAGE : HOTEL / EVENEMENTS
 
 Page de vidéos récapitulant les derniers événements.\
-Les vidéos pourront être directement téléchargées sur le serveur ou être diffusées via l’intermédiaire de site comme YouTube ou Dailymotion.\
+Les vidéos pourront être directement téléchargées sur le serveur ou être diffusées via l’intermédiaire de site comme YouTube ou Dailymotion.
 
 ## PAGE : HOTEL / PRESSE
 
 Page présentant les références (articles de journaux, etc.).\
-Prévoir du faux contenu en attendant que l’hôtel nous transmette les bonnes informations.\
+Prévoir du faux contenu en attendant que l’hôtel nous transmette les bonnes informations.
 
 ## PAGE : ACTUALITES
 
-Un page d’actualités sous forme de brèves sera mis en place pour agrémenter le contenu du site et parler du domaine d’activité en général.\
+Un page d’actualités sous forme de brèves sera mis en place pour agrémenter le contenu du site et parler du domaine d’activité en général.
 
-Les administrateurs du site pourront publier des articles sur l'actualité de leur domaine d'activité, sur des idées novatrices ou encore sur l'évolution de l'hôtel.\
+Les administrateurs du site pourront publier des articles sur l'actualité de leur domaine d'activité, sur des idées novatrices ou encore sur l'évolution de l'hôtel.
 
-Afin d’améliorer le référencement et leur positionnement. Il serait judicieux de mettre des liens entres les actualités et le site, et vice versa.\
+Afin d’améliorer le référencement et leur positionnement. Il serait judicieux de mettre des liens entres les actualités et le site, et vice versa.
 
 ## AUTRES PAGES ET DEMANDES
 
-Les autres pages non mentionnées dans ce cahier des charges sont des pages de textes quelconques accompagnés d’images.\
+Les autres pages non mentionnées dans ce cahier des charges sont des pages de textes quelconques accompagnés d’images.
 
-Multilingue : L’internaute pourra choisir la langue dans laquelle il souhaite afficher le site en cliquant sur un lien visible sur toutes les pages.\
+Multilingue : L’internaute pourra choisir la langue dans laquelle il souhaite afficher le site en cliquant sur un lien visible sur toutes les pages.
 
-La traduction des pages doit être réalisée/fournie par l’hôtel, ce qui implique uniquement de prévoir les liens pour le moment.\
+La traduction des pages doit être réalisée/fournie par l’hôtel, ce qui implique uniquement de prévoir les liens pour le moment.
 
-Newsletter : Une newsletter permet de tenir toute personne qui le désire informée et peut présenter des avantages pour l’entreprise qui la diffuse.\
+Newsletter : Une newsletter permet de tenir toute personne qui le désire informée et peut présenter des avantages pour l’entreprise qui la diffuse.
 
-Moteur de recherche interne : Une zone permettant la recherche de contenus ou de termes par mots-clés devra être mise en place afin de trouver l’information plus rapidement.\
+Moteur de recherche interne : Une zone permettant la recherche de contenus ou de termes par mots-clés devra être mise en place afin de trouver l’information plus rapidement.
 
-Panier : Page listant les produits mis dans le panier et permettant de payer et valider la commande. Une case à cocher doit être proposée à l’internaute afin qu’il puisse accepter les CGV (Conditions Générales de Vente) avant de payer.\
+Panier : Page listant les produits mis dans le panier et permettant de payer et valider la commande. Une case à cocher doit être proposée à l’internaute afin qu’il puisse accepter les CGV (Conditions Générales de Vente) avant de payer.
 
-Liens de partage : Des liens permanents de partage seront mis en place afin de favoriser la communication autour du site.\
+Liens de partage : Des liens permanents de partage seront mis en place afin de favoriser la communication autour du site.
 
 ## METHODOLOGIE
 
@@ -257,18 +260,19 @@ Le client attache particulièrement d’importance au respect des dates et du d�
 
 ## FONCTIONNALITES
 
-Les fonctionnalités nécessitant une base de données, ainsi que les langages de programmation (sql, php, etc.) seront conçus en interface mais ne seront pas à développer au niveau des traitements.\
-Exemple :\
-Formulaire de réservation et calendrier………………………………………………………………. Interface (HTML / CSS)\
-Formulaire pour déposer un avis / Lecture des avis…………………………………. Interface (HTML / CSS)\
+Les fonctionnalités nécessitant une base de données, ainsi que les langages de programmation (sql, php, etc.) seront conçus en interface mais ne seront pas à développer au niveau des traitements.
 
-## NOTATION
+Exemple :
+Formulaire de réservation et calendrier……………………………………………………. Interface (HTML / CSS)\
+Formulaire pour déposer un avis / Lecture des avis…………………………………. Interface (HTML / CSS)
 
-Le site sera jugé bien évidemment sur la qualité de l'intégration (code-source).\
+## NOTATIO
 
-Il y aura également une attention particulière sur la navigation générale, l’ergonomie et l’ux design.\
+Le site sera jugé bien évidemment sur la qualité de l'intégration (code-source).
 
-Un regard sera porté sur la cohérence des textes et des images en rapport avec l’activité de l’Hôtel Cop et le respect du sujet.\
+Il y aura également une attention particulière sur la navigation générale, l’ergonomie et l’ux design.
+
+Un regard sera porté sur la cohérence des textes et des images en rapport avec l’activité de l’Hôtel Cop et le respect du sujet.
 
 ## CONSEILS
 
