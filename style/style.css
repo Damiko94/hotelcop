@@ -9,7 +9,8 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
-section {
+section,
+section tr {
   color: #1b3e82;
 }
 section div {

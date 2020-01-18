@@ -247,41 +247,64 @@
       <section id="acces" class="text-center my-sm-5">
         <h2>Plan d'accès</h2>
         <div class="container">
-          <div class="row">
+          <div class="row d-flex justify-content-center">
+            
+            <!-- TAILLE -->
+            <!-- SM-MD : w-100 -->
+            <!-- >LG : col-6 -->
+
             <!-- ORDRE AFFICHAGE -->
-            <!-- SM : info, map -->
-            <!-- LG : map, info -->
-            <div class="col-lg-6 order-lg-1">
+            <!-- SM-LG : info, map -->
+            <!-- >XL : map, info -->
+            <!-- order-xl évite que table se trouve superposé à la map -->
+            <div class="col-lg-6 order-xl-1">
               <h3>Informations complémentaires</h3>
-              
-              <!-- TAF : Mettre dans un tableau sans bordures -->
-              <ul class="ml-5 text-left">
-                <li>Métro
-                  <ul>
-                    <li>Franklin D. Roosevelt : 1, 8</li>
-                    <li>Alma-Marceau : 9</li>                    
-                  </ul>
-                </li>
-                <li>RER
-                  <ul>
-                    <li>Pont de l'Alma : C</li>
-                  </ul>
-                </li>
-                <li>Bus
-                  <ul>
-                    <li>Alma-marceau : 42, 63, 72, 80, 92</li>                    
-                  </ul>
-                </li>
-                <li>Vélib'
-                  <ul>
-                    <li>Place de la Reine Astrid : Station n°8045</li>
-                    <li>Marceau - Président Wilson : Station n°8046</li>
-                    <li>François 1er - Montaigne : Station n°8038</li>
-                  </ul>
-                </li>
-              </ul>
+              <table class="table table-sm table-hover">
+                <tbody>
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Stations</th>
+                      <th>Lignes</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>Bus</td>
+                    <td>Pont de l'Alma</td>
+                    <td>42, 63, 72, 80, 92</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="align-middle">Métro</td>
+                    <td>Franklin D. Roosevelt</td>
+                    <td>1, 8</td>
+                  </tr>
+                  <tr>
+                    <td>Alma-Marceau</td>
+                    <td>9</td>
+                  </tr>
+                  <tr>
+                    <td>RER</td>
+                    <td>Pont de l'Alma</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" class="align-middle">Vélib'</td>
+                    <td>Place de la Reine Astrid</td>
+                    <td>Station n°8045</td>
+                  </tr>
+                  <tr>
+                    <td>Marceau - Président Wilson</td>
+                    <td>Station n°8046</td>
+                  </tr>
+                  <tr>
+                    <td>François 1er - Montaigne</td>
+                    <td>Station n°8038</td>
+                  </tr>
+                </tbody>
+              </table>
+
             </div>
-            <div class="col-lg-6 order-lg-0">
+            <div class="col-xl-6 order-xl-0">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6401922469768!2d2.299889716019119!3d48.86507117928803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd0dd39a4d%3A0x508194b82b12f012!2s1%20Avenue%20Montaigne%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1579355482142!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="true"></iframe>
             </div>
           </div>
