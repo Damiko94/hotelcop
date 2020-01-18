@@ -177,11 +177,17 @@
     </header>
     <!-- FIN HEADER -->
 
-    <section id="contact" class="text-center mb-sm-5 mt-sm-5">
-        
+    <section id="contact" class="text-center my-sm-5">        
           <h2>Nous contacter</h2>
+          <h3>Nous serons ravis de vous aider</h3>
+          <p>
+            Pour toute demande d’informations ou de réservations, merci de prendre contact avec l’équipe de l'HotelCop grâce au formulaire ci-dessous. <br>Un membre de l’équipe reviendra vers vous dans les plus brefs délais.            
+          </p>
           <div class="container">
             <!-- FORM CONTACT -->
+            <!-- Taille form -->
+            <!-- SM-MD : large -->
+            <!-- LG : reduit sur col-6 -->
             <form action="post">
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-1 py-1">
@@ -223,8 +229,61 @@
                   <small id="msgHelp" class="form-text text-left"></small>
                 </div>
               </div>
+              <div class="form-row justify-content-center py-0">
+                <!-- CAPTCHA -->
+                <!-- Vérif user non bot -->
+                <!-- A remplacer par Google Captcha -->
+                <div class="col-lg-6 py-1">
+                  <input type="text" name="ct-objet-email" id="objet" placeholder="(Captcha) Combien font 2x2 ?" class="form-control">
+                  <small id="captchaHelp" class="form-text text-left"></small>
+                </div>
+              </div>
               <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="acces" class="text-center my-sm-5">
+        <h2>Plan d'accès</h2>
+        <div class="container">
+          <div class="row">
+            <!-- ORDRE AFFICHAGE -->
+            <!-- SM : info, map -->
+            <!-- LG : map, info -->
+            <div class="col-lg-6 order-lg-1">
+              <h3>Informations complémentaires</h3>
+              
+              <!-- TAF : Mettre dans un tableau sans bordures -->
+              <ul class="ml-5 text-left">
+                <li>Métro
+                  <ul>
+                    <li>Franklin D. Roosevelt : 1, 8</li>
+                    <li>Alma-Marceau : 9</li>                    
+                  </ul>
+                </li>
+                <li>RER
+                  <ul>
+                    <li>Pont de l'Alma : C</li>
+                  </ul>
+                </li>
+                <li>Bus
+                  <ul>
+                    <li>Alma-marceau : 42, 63, 72, 80, 92</li>                    
+                  </ul>
+                </li>
+                <li>Vélib'
+                  <ul>
+                    <li>Place de la Reine Astrid : Station n°8045</li>
+                    <li>Marceau - Président Wilson : Station n°8046</li>
+                    <li>François 1er - Montaigne : Station n°8038</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-lg-0">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6401922469768!2d2.299889716019119!3d48.86507117928803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd0dd39a4d%3A0x508194b82b12f012!2s1%20Avenue%20Montaigne%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1579355482142!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="true"></iframe>
+            </div>
           </div>
         </div>
       </section>
