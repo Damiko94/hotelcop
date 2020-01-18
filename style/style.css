@@ -66,6 +66,13 @@ footer a {
   color: #dde2ed;
 }
 
+/* Met en évidence le lien de la navbar correspondant à la page visitée */
+.nav-item .active, 
+.nav-link .active{
+  background-color: #0d1f41;
+  color: darkgoldenrod;
+}
+
 /* ******* */
 /* BUTTONS */
 /* ******* */
