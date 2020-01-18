@@ -41,7 +41,7 @@
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
           <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+            <a class="nav-link active dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
             <!-- DROPDOWN ITEMS -->
@@ -55,7 +55,7 @@
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
               <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
               <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
-              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+              <a class="dropdown-item active" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
           
@@ -176,29 +176,56 @@
       </div>
     </header>
     <!-- FIN HEADER -->
+
     <section id="contact" class="text-center mb-sm-5 mt-sm-5">
-        <div class="container">
+        
           <h2>Nous contacter</h2>
-          
-          <form action="post">
-            <div class="form-row justify-content-center">
-              <div class="col-4">
-                <select name="ct-civilite" id="civilite" class="form-control">
-                  <option value="m" selected>M.</option>
-                  <option value="mme">Mme.</option>
-                </select>
-                <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
-                <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
-                <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email">
-                <input type="email" name="ct-email2" id="email2" class="form-control" placeholder="Confirmer votre email">
+          <div class="container">
+            <!-- FORM CONTACT -->
+            <form action="post">
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-1 py-1">
+                  <select name="ct-civilite" id="civilite" class="form-control">
+                    <option value="m" selected>M.</option>
+                    <option value="mme">Mme.</option>
+                  </select>
+                </div>
+                <div class="col-lg-5 py-1">
+                  <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
+                  <small id="nomHelp" class="form-text text-left"></small>
+                </div>
               </div>
-              <div class="col-4">
-                <input type="email" name="ct-objet-email" id="objet" placeholder="Objet du message" class="form-control">
-                <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-6 py-1">
+                  <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
+                  <small id="prenomHelp" class="form-text text-left"></small>
+                </div>
               </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-          </form>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-3 py-1">
+                  <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email">
+                  <small id="emailHelp" class="form-text text-left"></small>
+                </div>
+                <div class="col-lg-3 py-1">
+                  <input type="email" name="ct-email2" id="email2" class="form-control" placeholder="Confirmer votre email">
+                  <small id="email2Help" class="form-text text-left"></small>
+                </div>
+              </div>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-6 py-1">
+                  <input type="text" name="ct-objet-email" id="objet" placeholder="Objet du message" class="form-control">
+                  <small id="objetHelp" class="form-text text-left"></small>
+                </div>
+              </div>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-6 py-1">
+                  <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+                  <small id="msgHelp" class="form-text text-left"></small>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
         </div>
       </section>
     <!-- FOOTER -->
