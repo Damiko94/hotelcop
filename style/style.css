@@ -126,7 +126,11 @@ footer a {
 /*****************/
 /* LINKS : HOVER */
 /*****************/
-.nav-item a span:hover,
+a:hover{
+  text-decoration: none;
+}
+
+section a:hover, .nav-item a span:hover,
 footer a:hover,
 .dropdown-item span:hover   {
   border-bottom: 1px solid darkgoldenrod;
