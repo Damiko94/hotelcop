@@ -17,25 +17,44 @@ section div p {
   padding: 20px;
 }
 
-section,
-section div a {
+a {
   text-decoration: none !important;
 }
 /***********section event actu presse***********/
+#event,
+#actua,
+#press{
+  height: 400px;
+  cursor: pointer;
+}
+
 #event {
   background: url(../images/section_event/event.jpg);
-  ;
-  height: 400px;
 }
+
 #actua {
   background-image: url(../images/section_event/actu.jpg);
-  
-  height: 400px;
 }
 #press {
   background-image: url(../images/section_event/press.jpg);
-  
-  height: 400px;
+}
+
+figure#event,
+figure#actua,
+figure#press{
+  padding-left: 0;
+  padding-right: 0;
+  color: #FFF;
+}
+figcaption{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.400);
+}
+figure:hover figcaption{
+  color: #1b3e82;
+  background-color: rgba(218, 165, 32, 0.500);
+  transition: 0.3s ease-in-out;
 }
 
 /*********/
