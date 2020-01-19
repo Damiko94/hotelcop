@@ -1,5 +1,6 @@
 body {
   font-family: "Alegreya Sans", sans-serif;
+  color: #1b3e82;
 }
 
 .container {
@@ -18,7 +19,6 @@ section div p {
 
 section,
 section div a {
-  color: #1b3e82;
   text-decoration: none !important;
 }
 /***********section event actu presse***********/
