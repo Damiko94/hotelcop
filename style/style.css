@@ -9,7 +9,8 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
-section {
+section,
+section tr {
   color: #1b3e82;
 }
 section div {
@@ -67,8 +68,8 @@ footer a {
 }
 
 /* Met en évidence le lien de la navbar correspondant à la page visitée */
-.nav-item .active, 
-.nav-link .active{
+.nav-item .active,
+.nav-link .active {
   background-color: #0d1f41;
   color: darkgoldenrod;
 }
@@ -76,13 +77,15 @@ footer a {
 /* ******* */
 /* BUTTONS */
 /* ******* */
-.btn, 
-.form-control, 
-.dropdown-menu{
+.btn,
+.form-control,
+.dropdown-menu,
+.custom-file-input,
+.custom-file-label {
   border-radius: 0;
 }
 .btn-secondary {
-  background-color: #dde2ed;/*dde2ed*/
+  background-color: #dde2ed; /*dde2ed*/
   border-color: #dde2ed;
   color: #1b3e82;
 }
@@ -101,23 +104,26 @@ footer a {
 .btn-primary {
   color: #1b3e82;
   background-color: darkgoldenrod;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
 }
 
 .btn-primary:hover {
   color: darkgoldenrod;
   background-color: #0d1f41;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: #0d1f41;
 }
-.dropdown-item:focus, 
+.dropdown-item:focus,
 .dropdown-item:hover {
   color: #dde2ed;
   /* text-decoration: none; */
   background-color: transparent;
+}
+.custom-file-input:lang(fr) ~ .custom-file-label::after {
+  content: "Fichier";
 }
 
 /*****************/
@@ -125,7 +131,7 @@ footer a {
 /*****************/
 .nav-item a:hover,
 footer a:hover,
-.dropdown-item:hover   {
+.dropdown-item:hover {
   text-decoration: none;
   transition: 0.3s;
   color: darkgoldenrod;
