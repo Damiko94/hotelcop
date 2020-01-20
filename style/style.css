@@ -56,16 +56,6 @@ on met une width en px pour utiliser le flex-wrap */
   font-weight: bold;
 }
 
-#header-title{
-  /* Ajout d'une légère bordure pour faire ressortir le titre, les étoiles */
-  text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black;
-}
-
-/* Flou sur bg header text */
-/* #header-index div {
-  background: blur(0.5em);
-} */
-
 nav,
 footer {
   background-color: #0d1f41;
@@ -76,6 +66,13 @@ footer a {
   color: #dde2ed;
 }
 
+/* Met en évidence le lien de la navbar correspondant à la page visitée */
+.nav-item .active, 
+.nav-link .active{
+  background-color: #0d1f41;
+  color: darkgoldenrod;
+}
+
 /* ******* */
 /* BUTTONS */
 /* ******* */
@@ -84,32 +81,33 @@ footer a {
 .dropdown-menu{
   border-radius: 0;
 }
-.btn-primary {
+.btn-secondary {
   background-color: #dde2ed;/*dde2ed*/
   border-color: #dde2ed;
   color: #1b3e82;
 }
 
-.btn-primary:hover {
+.btn-secondary:hover {
   background-color: #0d1f41;
   border-color: #dde2ed;
   color: #dde2ed;
 }
 /* 
-.btn-primary:focus {
+.btn-secondary:focus {
   background-color: #dde2ed;
   color: #1b3e82;
 } */
 
-.btn-resa {
+.btn-primary {
   color: #1b3e82;
   background-color: darkgoldenrod;
   border-color:darkgoldenrod;
 }
 
-.btn-resa:hover {
+.btn-primary:hover {
   color: darkgoldenrod;
   background-color: #0d1f41;
+  border-color:darkgoldenrod;
 }
 
 .dropdown-menu{
@@ -125,13 +123,12 @@ footer a {
 /*****************/
 /* LINKS : HOVER */
 /*****************/
-.nav-item a span:hover,
+.nav-item a:hover,
 footer a:hover,
-.dropdown-item span:hover   {
-  border-bottom: 1px solid darkgoldenrod;
-  transition: 0.5s;
-  transition-timing-function: linear;
-  color: #dde2ed;
+.dropdown-item:hover   {
+  text-decoration: none;
+  transition: 0.3s;
+  color: darkgoldenrod;
 }
 /*****section chambres*******/
 
