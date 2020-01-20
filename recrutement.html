@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
     <link rel="stylesheet" href="style/bootstrap.min.css" />
     <!-- BOOSTRAP MATERIAL DESIGN -->
     <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
     <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
@@ -23,13 +26,15 @@
       
       <!-- LOGO -->
       <!-- Toujours visible -->
-      <a href="index.html" class="navbar-brand text-light">HC</a>
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+      </a>
       <!-- BTN RESERVER -->
       <!-- Toujours visible -->
       <!-- Envoie user vers page de réservation -->
       <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
       <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-resa">Réserver</a>
+      <a href="reservations.html" class="btn btn-primary">Réserver</a>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
@@ -41,7 +46,7 @@
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
           <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link active dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+            <a class="nav-link dropdown-toggle active" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
             <!-- DROPDOWN ITEMS -->
@@ -50,12 +55,11 @@
             <!-- text-lg-left:left dans le menu étendu-->            
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="events.html"><span>Evénements</span></a>
-              <a class="dropdown-item" href="actualites.html"><span>Actualités</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
               <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
-              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
-              <a class="dropdown-item active" href="contact-acces.html"><span>Contact et accès</span></a>
+              <a class="dropdown-item active" href="recrutement.html"><span>Recrutement</span></a>
+              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
           
@@ -114,7 +118,7 @@
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Rechercher</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
       </div>
     </nav>
@@ -176,6 +180,7 @@
       </div>
     </header>
     <!-- FIN HEADER -->
+
     <!-- SECTION RECRUTEMENT -->
     <section id="recrutement" class="text-center my-sm-5">        
       <h2>Nous rejoindre</h2>
@@ -278,27 +283,24 @@
       <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
         <div class="foot-resp">
           <p>Hotel Cop</p>
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            1 avenue Montaigne 75008 Paris
-          </p>
-          <p><a href="tel:+33175000000">+33(0) 1 75 00 00 00</a></p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
 
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
           <a href="#"><i class="fas fa-sms"></i></a>
           <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
 
         <div class="foot-resp">
           <p><a href="contact-acces.html">Contact et accès</a></p>
           <p><a href="presse.html">Presse</a></p>
           <p><a href="recrutement.html">Recrutement</a></p>
-          <p><a href="events.html">Evénements</a></p>
-          <p><a href="actualites.html">Actualités</a></p>
+          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+          <!-- <p><a href="actualites.html">Actualités</a></p> -->
         </div>
 
         <div class="foot-resp">
@@ -312,13 +314,16 @@
           <p class="d-bloc">Newsletter</p>
           <!-- ajout de -lg à form-control pour reduire la width de l'input-->
           <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-            <input type="email" class="d-bloc form-control mr-sm-2 " name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
-            <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-primary">Valider</button>
+            <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit"class=" d-bloc btn btn-secondary">Valider</button>
           </form>
         </div>
       </div>
 
       <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+        </a></p>
         <p>Hotel Cop 2020 - Tous Droits réservés</p>
       </div>
     </footer>
