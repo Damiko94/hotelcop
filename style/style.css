@@ -47,14 +47,13 @@ on met une width en px pour utiliser le flex-wrap */
   margin: 30px 0;
 }
 /*********HEADER***********/
+.carousel-inner{
+  height: 650px;
+}
 
-#header-index {
-  background-image: url(../images/osaxr-bar-3082-hor-wide.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  font-size: x-large;
-  font-weight: bold;
+#img-1{
+  background-size: auto 400px;
+  
 }
 
 nav,
@@ -108,6 +107,18 @@ footer a {
 .btn-primary:hover {
   color: darkgoldenrod;
   background-color: #0d1f41;
+  border-color:darkgoldenrod;
+}
+
+.btn-outline-primary{
+  color: darkgoldenrod;
+  border-color:darkgoldenrod;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover{
+  color: #1b3e82;
+  background-color: darkgoldenrod;
   border-color:darkgoldenrod;
 }
 
