@@ -240,13 +240,14 @@
               <small id="objetHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
-            <div class="col-lg-6 py-1">
-              <input type="file" class="form-control" id="rh-cv" title="Sélectionnez votre CV" accept=".pdf, .doc, .docx" required>
-              <small id="cvHelp" class="form-text text-left"></small>
+          <div class="form-row justify-content-center py-1 px-5">
+            <div class="col-lg-6 py-1 px-2 custom-file">
+              <small id="cvHelp" class="form-text text-left">Manque un fichier</small>
+              <input type="file" class="custom-file-input px-0" id="inputFichier" lang="fr">
+              <label class="custom-file-label text-left" for="inputFichier">Sélectionner un fichier</label>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row justify-content-center py-1">
             <div class="col-lg-6 py-1">
               <textarea name="rh-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
               <small id="msgHelp" class="form-text text-left"></small>
@@ -261,7 +262,11 @@
               <small id="captchaHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 text-left py-1">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
