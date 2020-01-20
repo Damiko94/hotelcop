@@ -158,9 +158,11 @@ footer a:hover,
 
   background: url(../images/spa/spa.jpeg);
 }
-#chambre-index, #resto-index, #spa-index, #chbcl, #chbco, #chbde, #chbsu{
+
+#chambre-index, #resto-index, #spa-index{
   height: 500px;
 }
+
 /*******reglages dispo div dans section*******/
 
 /***************/
