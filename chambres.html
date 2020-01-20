@@ -164,62 +164,84 @@
     <!-- FIN HEADER -->
 
     <!-- PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
-    <main class="container my-5">
-       
-            <h1 class="text-center mb-5">Nos gammes de chambres</h1>
-       
-        <div class="d-flex flex-wrap text-center">
-            <section class="col-lg-6 col-md-12 my-5">
 
-                <img src="images/classique.jpg" alt="suite">
-                <div> 
-                    <h2>Chambres classique</h2>
-                    <p>Nos chambres classique respire l'élégance et le luxe propre à l'hotelcop paris, une introduction à la sophistication du style hotelcop</p>
-                    <p class="mt-0 p-0">          
-                        <a href="#classique" class="btn btn-primary">Voir nos chambres classique</a>
-                    </p>
-                </div>
-                
-            </section>
-            <section class="col-lg-6 col-md-12 my-5">
+    <h1 class="text-center mb-5">Nos gammes de chambres</h1>
 
-                <img src="images/pavillon.jpg" alt="suite">
-                <div> 
-                    <h2>Chambres confort</h2>
-                    <p>Notre gamme confort vous satifera par son raffinement, pour un séjour agréable au coeur de la ville des lumière</p>
-                    <p class="mt-0 p-0">          
-                        <a href="#confort" class="btn btn-primary">Voir nos chambres confort</a>
-                    </p>
-                </div>
-               
-            </section>
-            <section class="col-lg-6 col-md-12 my-5">
-
-                <img src="images/deluxe.jpg" alt="suite">
-                <div> 
-                    <h2>Chambres Deluxe</h2>
-                    <p>Les chambres de la gamme Deluxe, offre une plongée dasn le raffinement de notre palace parisien, le haut de gamme de vos séjour à Paris</p>
-                    <p class="mt-0 p-0">          
-                        <a href="#deluxe" class="btn btn-primary">Voir nos chambres Deluxe</a>
-                    </p>
-                </div>
-                
-            </section>
-            <section class="col-lg-6 col-md-12 my-5">
-
-                <img src="images/suite.jpg" alt="suite">
-                <div> 
-                    <h2>Suites palace</h2>
-                    <p>Pour le summum du luxe et de la sophistication, séjourner dans nos suites est l'expérience exclusive que vous reserve l'Hotelcop Paris </p>
-                    <p class="mt-0 p-0">          
-                        <a href="#suite" class="btn btn-primary">Voir nos Suites</a>
-                    </p>
-                </div>
-                
-            </section>
+    <section class="container text-center align-items-center px-0 my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <h2>Chambres classique</h2>
+          <p>
+            Nos chambres classique respire l'élégance et le luxe propre à l'hotelcop paris, une introduction à la sophistication du style hotelcop
+          </p>
+          <p>          
+            <a href="#classique" class="btn btn-primary">Voir nos chambres classiques</a>
+          </p>
         </div>
+        <div id="chbcl" class="col-lg-8">
+          <img  class="img-fluid" src="images/classique2.jpg" alt="chambre classique">
+        </div>
+      </div>
+    </section>
 
-        <!-- sections pour les caracteristiques de la chambres classique -->
+    <section class="container text-center align-items-center px-0 my-5">
+      <div class="row align-items-center">
+        
+        <div class="col-lg-4 order-md-1">
+          
+          <h2>Chambres confort</h2>
+          <p>
+            Notre gamme confort vous satifera par son raffinement, pour un séjour agréable au coeur de la ville des lumière
+          </p>
+          <p>          
+            <a href="#confort" class="btn btn-primary">Voir nos chambres confort</a>
+          </p>
+        </div>
+        <div id="chbco" class="col-lg-8 order-md-0">
+          <img class="img-fluid" src="images/pavillon2.jpg" alt="chambre confort">
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="container text-center align-items-center px-0 my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <h2>Chambres Deluxe</h2>
+          <p>
+            Les chambres de la gamme Deluxe, offre une plongée dasn le raffinement de notre palace parisien, le haut de gamme de vos séjour à Paris.
+          </p>
+          <p>          
+            <a href="#deluxe" class="btn btn-primary">Voir nos chambres Deluxe</a>
+          </p>
+        </div>
+        <div id="chbde" class="col-lg-8">
+          <img class="img-fluid" src="images/deluxe2.jpg" alt="chambres Deluxe">
+        </div>
+      </div>
+    </section>
+
+    <section class="container text-center align-items-center px-0 my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-4 order-md-1">
+          <h2>Nos suites</h2>
+          <p>
+            Pour le summum du luxe et de la sophistication, séjourner dans nos suites est l'expérience exclusive que vous reserve l'Hotelcop Paris.
+          </p>
+          <p>          
+            <a href="#suite" class="btn btn-primary">Voir nos suites</a>
+          </p>
+        </div>
+        <div id="chbsu" class="col-lg-8 order-md-0">
+          <img class="img-fluid" src="images/suite2.jpg" alt="suite">
+        </div>
+      </div>
+    </section>
+    
+    <!-- FIN PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
+       
+      
+        <!-- SECTION POUR LES CARACTERISTIQUES DE LA CHAMBRE CLASSIQUE -->
 
         <section class="w-100 text-center py-5" id="classique">
             <h2>Notre chambre classique</h2>
@@ -266,9 +288,9 @@
               </a>
             </div>
             <h3 class="mt-5">Caractéristiques</h3>
-            <div class="d-flex text-left py-0">
-              <div class="col-4 pt-3">
-                <h3>Votre confort</h3>
+            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre confort</h3>
                 <ul>
                   <li>Climatisation</li>
                   <li>Peignoirs</li>
@@ -276,8 +298,8 @@
                   <li>Lit d’appoint (sur demande)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Votre divertissement</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre divertissement</h3>
                 <ul>
                   <li>Télévision à écran plat</li>
                   <li>Chaînes cablées et satellites</li>
@@ -285,8 +307,8 @@
                   <li>Accès Internet en WIFI (payant 25 €/24h)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Commodités</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Commodités</h3>
                 <ul>
                   <li>Service en chambre</li>
                   <li>Accessoires de salle de bain</li>
@@ -296,7 +318,7 @@
                 </ul>
               </div>
             </div>
-            <h4 class="mb-5 pb-5">Réserver votre séjour dans une de nos chambres classiques :<a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
+            <h4 class="mb-5 pb-5">Prix de la nuit :  500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
             
         </section>
 
@@ -343,9 +365,9 @@
               </a>
             </div>
             <h3 class="mt-5">Caractéristiques</h3>
-            <div class="d-flex text-left py-0">
-              <div class="col-4 pt-3">
-                <h3>Votre confort</h3>
+            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre confort</h3>
                 <ul>
                   <li>Climatisation</li>
                   <li>Peignoirs</li>
@@ -353,8 +375,8 @@
                   <li>Lit d’appoint (sur demande)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Votre divertissement</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre divertissement</h3>
                 <ul>
                   <li>Télévision à écran plat</li>
                   <li>Chaînes cablées et satellites</li>
@@ -362,8 +384,8 @@
                   <li>Accès Internet en WIFI (payant 25 €/24h)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Commodités</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Commodités</h3>
                 <ul>
                   <li>Service en chambre</li>
                   <li>Accessoires de salle de bain</li>
@@ -373,7 +395,7 @@
                 </ul>
               </div>
             </div>
-            <h4 class="mb-5 pb-5">Réserver votre séjour dans une de nos chambres confort :<a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
+            <h4 class="mb-5 pb-5">Prix de la nuit : 1000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
           </section>
 
         <!-- sections pour les caracteristiques de la chambres deluxe -->
@@ -419,9 +441,9 @@
               </a>
             </div>
             <h3 class="mt-5">Caractéristiques</h3>
-            <div class="d-flex text-left py-0">
-              <div class="col-4 pt-3">
-                <h3>Votre confort</h3>
+            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre confort</h3>
                 <ul>
                   <li>Climatisation</li>
                   <li>Peignoirs</li>
@@ -429,8 +451,8 @@
                   <li>Lit d’appoint (sur demande)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Votre divertissement</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre divertissement</h3>
                 <ul>
                   <li>Télévision à écran plat</li>
                   <li>Chaînes cablées et satellites</li>
@@ -438,8 +460,8 @@
                   <li>Accès Internet en WIFI (payant 25 €/24h)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Commodités</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Commodités</h3>
                 <ul>
                   <li>Service en chambre</li>
                   <li>Accessoires de salle de bain</li>
@@ -449,12 +471,12 @@
                 </ul>
               </div>
             </div>
-            <h4 class="mb-5 pb-5">Réserver votre séjour dans une de nos chambres deluxe :<a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
+            <h4 class="mb-5 pb-5">Prix de la nuit : 1500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
         </section>
 
         <!-- sections pour les caracteristiques de la suite -->
 
-        <section class="w-100 text-center my-5" id="suite">
+        <section class="w-100 text-center py-5" id="suite">
             <h2>Nos suites</h2>
             <p class="italic">La Suite, le summum de séjour haut de gamme.</p>
             <p class="w-75 mx-auto">Séjourner dans une de nos suites, restera une expérience inoubliable de votre passage à Paris. Les plus standard de qualité de notre hotel sont éxigés pour leur aménagement, notre psersonnel sera aux petits soins pour vous servir 24 heures sur 24. Reserver une suite à l'hotelcop est une garantie d'un séjour réussit dans notre belle capitale.</p>
@@ -495,9 +517,9 @@
               </a>
             </div>
             <h3 class="mt-5">Caractéristiques</h3>
-            <div class="d-flex text-left py-0">
-              <div class="col-4 pt-3">
-                <h3>Votre confort</h3>
+            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre confort</h3>
                 <ul>
                   <li>Climatisation</li>
                   <li>Peignoirs</li>
@@ -505,8 +527,8 @@
                   <li>Lit d’appoint (sur demande)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Votre divertissement</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Votre divertissement</h3>
                 <ul>
                   <li>Télévision à écran plat</li>
                   <li>Chaînes cablées et satellites</li>
@@ -514,8 +536,8 @@
                   <li>Accès Internet en WIFI (payant 25 €/24h)</li>
                 </ul>
               </div>
-              <div class="col-4 pt-3">
-                <h3>Commodités</h3>
+              <div class="w-md-25 pt-3">
+                <h3 class="justify-content-start">Commodités</h3>
                 <ul>
                   <li>Service en chambre</li>
                   <li>Accessoires de salle de bain</li>
@@ -525,7 +547,7 @@
                 </ul>
               </div>
             </div>
-              <h4 class="mb-5 pb-5">Réserver votre séjour dans une de nos suite :<a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
+              <h4 class="mb-5 pb-5">Prix de la nuit : 2000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
         </section>
 
     </main>

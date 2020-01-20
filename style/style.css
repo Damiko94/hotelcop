@@ -138,25 +138,28 @@ footer a:hover,
 /*****section chambres*******/
 
 #chambre-index {
-  min-height: 500px;
+  
 
-  background: url(../images/chambres/chambre3lg.jpg) cover;
+  background: url(../images/chambres/chambre3lg.jpg);
 }
 
 /*****section restaurant*******/
 
 #resto-index {
-  min-height: 500px;
+  
 
-  background: url(../images/resto/resto-lg.jpeg) cover;
+  background: url(../images/resto/resto-lg.jpeg);
 }
 
 /*****section spa*******/
 
 #spa-index {
-  min-height: 500px;
+  
 
-  background: url(../images/spa/spa.jpeg) cover;
+  background: url(../images/spa/spa.jpeg);
+}
+#chambre-index, #resto-index, #spa-index, #chbcl, #chbco, #chbde, #chbsu{
+  height: 500px;
 }
 /*******reglages dispo div dans section*******/
 
