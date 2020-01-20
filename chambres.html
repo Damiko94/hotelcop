@@ -1,628 +1,646 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- BOOSTRAP -->
-    <link rel="stylesheet" href="style/bootstrap.min.css" />
-    <!-- BOOSTRAP MATERIAL DESIGN -->
-    <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
-    <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
-    <!-- FONT AWESOME -->
-    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="style/style.css" />
-    <title>Hotel Cop Paris - Avenue Montaigne</title>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <!-- Etendue en affichage large -->
-    <!-- Réduite en médium et centré -->
-    <nav class="navbar navbar-expand-lg sticky-top text-light">
-      
-      <!-- LOGO -->
-      <!-- Toujours visible -->
-      <a href="index.html" class="navbar-brand text-light">HC</a>
-      <!-- BTN RESERVER -->
-      <!-- Toujours visible -->
-      <!-- Envoie user vers page de réservation -->
-      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
-      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-primary">Réserver</a>
-      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>      
-      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
-        <ul class="navbar-nav">
-          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
-          <li class="nav-item pr-4">
-          </li>
-          <!-- MENU -->
-          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
-              <span>Nous découvrir</span>
-            </a>
-            <!-- DROPDOWN ITEMS -->
-            <!-- Liens amenants vers les pages nommées-->
-            <!-- text-center: centré dans le menu reduit -->
-            <!-- text-lg-left:left dans le menu étendu-->            
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
-              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
-              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-              <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
-              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
-              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
-            </div>
-          </li>
-          
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Chambres</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
-              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
-              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
-              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
-              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
-              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
-            </div>
-          </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Restaurant</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
-              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
-              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
-              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
-            </div>
-          </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Spa</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
-              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
-            </div>
-          </li>
-          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
-          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item dropdown pr-4 text-light text-nowrap">
-            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>FR</span> <i class="fas fa-globe-europe"></i>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
-              <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>              
-            </div>
-          </li>             
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- BOOSTRAP -->
+  <link rel="stylesheet" href="style/bootstrap.min.css" />
+  <!-- BOOSTRAP MATERIAL DESIGN -->
+  <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet" />
+  <!-- FONT AWESOME -->
+  <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css" />
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="style/style.css" />
+  <title>Hotel Cop Paris - Avenue Montaigne</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <!-- Etendue en affichage large -->
+  <!-- Réduite en médium et centré -->
+  <nav class="navbar navbar-expand-lg sticky-top text-light">
+
+    <!-- LOGO -->
+    <!-- Toujours visible -->
+    <a href="index.html" class="navbar-brand text-light">HC</a>
+    <!-- BTN RESERVER -->
+    <!-- Toujours visible -->
+    <!-- Envoie user vers page de réservation -->
+    <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+    <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+    <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
+        <li class="nav-item pr-4">
+        </li>
+        <!-- MENU -->
+        <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Nous découvrir</span>
+          </a>
+          <!-- DROPDOWN ITEMS -->
+          <!-- Liens amenants vers les pages nommées-->
+          <!-- text-center: centré dans le menu reduit -->
+          <!-- text-lg-left:left dans le menu étendu-->
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+            <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+            <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+            <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+            <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
+            <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+            <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Chambres</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
+            <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
+            <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
+            <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>
+            <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
+            <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
+          </div>
+        </li>
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Restaurant</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
+            <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
+            <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
+            <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>
+            <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
+            <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
+          </div>
+        </li>
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Spa</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
+            <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
+            <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+            <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>
+            <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+            <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+            <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
+          </div>
+        </li>
+        <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+        <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+        <li class="nav-item dropdown pr-4 text-light text-nowrap">
+          <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>FR</span> <i class="fas fa-globe-europe"></i>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+            <a class="dropdown-item" href="#"><span>English</span></a>
+            <a class="dropdown-item" href="#"><span>Español</span></a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- BARRE DE RECHERCHE -->
+      <!-- Mini form inline -->
+      <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+      <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
+        <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" />
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+      </form>
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
+  <!-- HEADER -->
+  <header>
+    <div id="carousel-indic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic" data-slide-to="1"></li>
+        <li data-target="#carousel-indic" data-slide-to="2"></li>
+
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/chambres/chambre1bis.jpg" alt="Image Restaurant">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="my-0 mx-auto">Un ecrin de luxe au coeur de Paris</h3>
+            <p>Des suites élégantes et luxueuses situées au centre de la capitale</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/chambres/chambre2bis.jpg" alt="Image chambre">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Une décoration raffinnée</h3>
+            <p>Un séjour inoubliable dans un écrin de au style sophistiqué</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/chambres/chambre3bis.jpg" alt="Image restaurant">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Elégance et expérience haut de gamme</h3>
+            <p>Séjourné à l'Hotelcop Paris est une expérience incomparable</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+
+  </header>
+  <!-- FIN HEADER -->
+
+  <!-- PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
+
+  <h1 class="text-center mb-5">Nos gammes de chambres</h1>
+
+  <!-- d-none d-md-block :disparition des sections en version mobile -->
+  <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
+    <div class="row align-items-center p-0">
+      <div class="col-lg-4">
+        <h2>Chambres classique</h2>
+        <p>
+          Nos chambres classique respire l'élégance et le luxe propre à l'hotelcop paris, une introduction à la
+          sophistication du style hotelcop
+        </p>
+        <p>
+          <a href="#classique" class="btn btn-primary">Voir nos chambres classiques</a>
+        </p>
+      </div>
+      <div id="chbcl" class="col-lg-8 p-md-0">
+        <img class="img-fluid" src="images/classique2.jpg" alt="chambre classique">
+      </div>
+    </div>
+  </section>
+
+  <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
+    <div class="row align-items-center p-0">
+
+      <div class="col-lg-4 order-lg-1">
+
+        <h2>Chambres confort</h2>
+        <p>
+          Notre gamme confort vous satifera par son raffinement, pour un séjour agréable au coeur de la ville des
+          lumière
+        </p>
+        <p>
+          <a href="#confort" class="btn btn-primary">Voir nos chambres confort</a>
+        </p>
+      </div>
+      <div id="chbco" class="col-lg-8 order-lg-0 p-md-0">
+        <img class="img-fluid" src="images/pavillon2.jpg" alt="chambre confort">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
+    <div class="row align-items-center p-0">
+      <div class="col-lg-4">
+        <h2>Chambres Deluxe</h2>
+        <p>
+          Les chambres de la gamme Deluxe, offre une plongée dasn le raffinement de notre palace parisien, le haut de
+          gamme de vos séjour à Paris.
+        </p>
+        <p>
+          <a href="#deluxe" class="btn btn-primary">Voir nos chambres Deluxe</a>
+        </p>
+      </div>
+      <div id="chbde" class="col-lg-8 p-md-0">
+        <img class="img-fluid" src="images/deluxe2.jpg" alt="chambres Deluxe">
+      </div>
+    </div>
+  </section>
+
+  <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
+    <div class="row align-items-center p-0">
+      <div class="col-lg-4 order-lg-1">
+        <h2>Nos suites</h2>
+        <p>
+          Pour le summum du luxe et de la sophistication, séjourner dans nos suites est l'expérience exclusive que vous
+          reserve l'Hotelcop Paris.
+        </p>
+        <p>
+          <a href="#suite" class="btn btn-primary">Voir nos suites</a>
+        </p>
+      </div>
+      <div id="chbsu" class="col-lg-8 order-lg-0 p-md-0">
+        <img class="img-fluid" src="images/suite2.jpg" alt="suite">
+      </div>
+    </div>
+  </section>
+
+  <!-- FIN PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
+
+
+  <!-- SECTION POUR LES CARACTERISTIQUES DE LA CHAMBRE CLASSIQUE -->
+
+  <section class="w-100 text-center py-5" id="classique">
+    <h2>Notre chambre classique</h2>
+    <p class="font-italic">Le chambre classique est notre premier degré d'entrée dans le luxe et le raffinement
+      d'hotelcop.</p>
+    <p class="w-50 mx-auto">D'une surface de 25 metres carré vous y serez acceuillis comme si vous étiez chez vous. Avec
+      tous les services de notre hotel inclus dans cette gamme, profitez en pleine quiétude de votre séjour dans notre
+      magnique ville de Paris.</p>
+
+    <!-- reprise du caroussel pour les photos de la chambre classique -->
+
+    <div id="carousel-indic-classiq" class="carousel slide p-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic-classiq" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic-classiq" data-slide-to="1"></li>
+        <li data-target="#carousel-indic-classiq" data-slide-to="2"></li>
+
+      </ol>
+      <div class="carousel-inner p-0">
+        <div class="carousel-item active p-0">
+          <img class="d-block w-100" src="images/chambres-classiques/chb1.jpg" alt="Image Restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-classiques/chb2.jpg" alt="Image chambre">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-classiques/chb3.jpg" alt="Image restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+    <h3 class="mt-5">Caractéristiques</h3>
+    <div class="row text-left py-0 col-lg-10 justify-content-around mx-auto">
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre confort</h3>
+        <ul>
+          <li>Climatisation</li>
+          <li>Peignoirs</li>
+          <li>Chaussons</li>
+          <li>Lit d’appoint (sur demande)</li>
         </ul>
-        
-        <!-- BARRE DE RECHERCHE -->
-        <!-- Mini form inline -->
-        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
-        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre divertissement</h3>
+        <ul>
+          <li>Télévision à écran plat</li>
+          <li>Chaînes cablées et satellites</li>
+          <li>Réveil avec connexion MP3</li>
+          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Commodités</h3>
+        <ul>
+          <li>Service en chambre</li>
+          <li>Accessoires de salle de bain</li>
+          <li>Sèche-cheveux</li>
+          <li>Fer et table à repasser</li>
+          <li>Machine à café Nespresso</li>
+        </ul>
+      </div>
+    </div>
+    <h4 class="mb-5 pb-5">Prix de la nuit : 500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    </h4>
+
+  </section>
+
+  <!-- sections pour les caracteristiques de la chambres confort -->
+
+  <section class="w-100 text-center py-5" id="confort">
+    <h2>Notre chambre confort</h2>
+    <p class="italic">La chambre confort, un cocon de qualité</p>
+    <p class="w-50 mx-auto">Profitez de notre gamme confort, avec sa surface de 35 metres carré. Un espace dédié au
+      rafinement et au confort, juste pour rendre votre séjour dans notre ville des Lumières le plus agréable possible.
+      Tous les services de l'hotelcop seront la pour votre plus grande aise.</p>
+    <div id="carousel-indic-confort" class="carousel slide p-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic-confort" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic-confort" data-slide-to="1"></li>
+        <li data-target="#carousel-indic-confort" data-slide-to="2"></li>
+
+      </ol>
+      <div class="carousel-inner p-0">
+        <div class="carousel-item active p-0">
+          <img class="d-block w-100" src="images/chambres-confort/chb1.jpg" alt="Image Restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-confort/chb2.jpg" alt="Image chambre">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-confort/chb3.jpg" alt="Image restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+    <h3 class="mt-5">Caractéristiques</h3>
+    <div class="row text-left py-0 col-lg-10 justify-content-around mx-auto">
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre confort</h3>
+        <ul>
+          <li>Climatisation</li>
+          <li>Peignoirs</li>
+          <li>Chaussons</li>
+          <li>Lit d’appoint (sur demande)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre divertissement</h3>
+        <ul>
+          <li>Télévision à écran plat</li>
+          <li>Chaînes cablées et satellites</li>
+          <li>Réveil avec connexion MP3</li>
+          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Commodités</h3>
+        <ul>
+          <li>Service en chambre</li>
+          <li>Accessoires de salle de bain</li>
+          <li>Sèche-cheveux</li>
+          <li>Fer et table à repasser</li>
+          <li>Machine à café Nespresso</li>
+        </ul>
+      </div>
+    </div>
+    <h4 class="mb-5 pb-5">Prix de la nuit : 1000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    </h4>
+  </section>
+
+  <!-- sections pour les caracteristiques de la chambres deluxe -->
+
+  <section class="w-100 text-center py-5" id="deluxe">
+    <h2>Notre chambre deluxe</h2>
+    <p class="italic">La chambre Deluxe, un écrin de luxe</p>
+    <p class="w-50 mx-auto">Profitez de notre gamme Deluxe, avec sa surface de 50 metres carré, vous serez à votre aise
+      lors de votre séjour à Paris. Tous nos services vous seront accéssibles pour rendre votre passsage dans notre
+      établissement des plus agréable.</p>
+    <div id="carousel-indic-deluxe" class="carousel slide p-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic-deluxe" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic-deluxe" data-slide-to="1"></li>
+        <li data-target="#carousel-indic-deluxe" data-slide-to="2"></li>
+
+      </ol>
+      <div class="carousel-inner p-0">
+        <div class="carousel-item active p-0">
+          <img class="d-block w-100" src="images/chambres-deluxe/chb1.jpg" alt="Image Restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-deluxe/chb2.jpg" alt="Image chambre">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-deluxe/chb3.jpg" alt="Image restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+    <h3 class="mt-5">Caractéristiques</h3>
+    <div class="row text-left py-0 col-lg-10 justify-content-around mx-auto">
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre confort</h3>
+        <ul>
+          <li>Climatisation</li>
+          <li>Peignoirs</li>
+          <li>Chaussons</li>
+          <li>Lit d’appoint (sur demande)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre divertissement</h3>
+        <ul>
+          <li>Télévision à écran plat</li>
+          <li>Chaînes cablées et satellites</li>
+          <li>Réveil avec connexion MP3</li>
+          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Commodités</h3>
+        <ul>
+          <li>Service en chambre</li>
+          <li>Accessoires de salle de bain</li>
+          <li>Sèche-cheveux</li>
+          <li>Fer et table à repasser</li>
+          <li>Machine à café Nespresso</li>
+        </ul>
+      </div>
+    </div>
+    <h4 class="mb-5 pb-5">Prix de la nuit : 1500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    </h4>
+  </section>
+
+  <!-- sections pour les caracteristiques de la suite -->
+
+  <section class="w-100 text-center py-5" id="suite">
+    <h2>Nos suites</h2>
+    <p class="italic">La Suite, le summum de séjour haut de gamme.</p>
+    <p class="w-50 mx-auto">Séjourner dans une de nos suites, restera une expérience inoubliable de votre passage à
+      Paris. Les plus standard de qualité de notre hotel sont éxigés pour leur aménagement, notre psersonnel sera aux
+      petits soins pour vous servir 24 heures sur 24. Reserver une suite à l'hotelcop est une garantie d'un séjour
+      réussit dans notre belle capitale.</p>
+    <div id="carousel-indic-suites" class="carousel slide p-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic-suites" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic-suites" data-slide-to="1"></li>
+        <li data-target="#carousel-indic-suites" data-slide-to="2"></li>
+
+      </ol>
+      <div class="carousel-inner p-0">
+        <div class="carousel-item active p-0">
+          <img class="d-block w-100" src="images/chambres-suite/chb1.jpg" alt="Image Restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-suite/chb2.jpg" alt="Image chambre">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+        <div class="carousel-item p-0">
+          <img class="d-block w-100" src="images/chambres-suite/chb3.jpg" alt="Image restaurant">
+          <div class="carousel-caption d-none d-md-block">
+
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+    <h3 class="mt-5">Caractéristiques</h3>
+    <div class="row text-left py-0 col-lg-10 justify-content-around mx-auto">
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre confort</h3>
+        <ul>
+          <li>Climatisation</li>
+          <li>Peignoirs</li>
+          <li>Chaussons</li>
+          <li>Lit d’appoint (sur demande)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre divertissement</h3>
+        <ul>
+          <li>Télévision à écran plat</li>
+          <li>Chaînes cablées et satellites</li>
+          <li>Réveil avec connexion MP3</li>
+          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Commodités</h3>
+        <ul>
+          <li>Service en chambre</li>
+          <li>Accessoires de salle de bain</li>
+          <li>Sèche-cheveux</li>
+          <li>Fer et table à repasser</li>
+          <li>Machine à café Nespresso</li>
+        </ul>
+      </div>
+    </div>
+    <h4 class="mb-5 pb-5">Prix de la nuit : 2000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    </h4>
+  </section>
+
+  </main>
+
+
+  <!-- DEBUT FOOTER -->
+  <footer class="text-center">
+    <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+    <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
+      <div class="foot-resp">
+        <p>Hotel Cop</p>
+        <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+        <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fas fa-sms"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <div class="foot-resp">
+        <p><a href="contact-acces.html">Contact et accès</a></p>
+        <p><a href="presse.html">Presse</a></p>
+        <p><a href="recrutement.html">Recrutement</a></p>
+        <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+        <!-- <p><a href="actualites.html">Actualités</a></p> -->
+      </div>
+
+      <div class="foot-resp">
+        <p><a href="mentions-legales.html">Mentions légales</a></p>
+        <p><a href="cgv.html">CGV</a></p>
+        <p><a href="plan-site.html">Plan du site</a></p>
+        <p><a href="#">Imprimer la page</a></p>
+      </div>
+
+      <div class="foot-resp ">
+        <p class="d-bloc">Newsletter</p>
+        <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+        <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+          <input type="email" class="d-bloc form-control mr-sm-2 " name="mailNewsletter" id="mailNewsletter"
+            placeholder="Saisir votre email" />
+          <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-secondary">
+            Valider
+          </button>
         </form>
       </div>
-    </nav>
-    <!-- FIN NAVBAR -->
-    <!-- HEADER -->
-    <header>
-      <div id="carousel-indic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-indic" data-slide-to="1"></li>
-          <li data-target="#carousel-indic" data-slide-to="2"></li>
-          
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="images/chambres/chambre1bis.jpg" alt="Image Restaurant">
-            <div class="carousel-caption d-none d-md-block">
-              <h3 class="my-0 mx-auto">Un ecrin de luxe au coeur de Paris</h3>
-              <p>Des suites élégantes et luxueuses situées au centre de la capitale</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="images/chambres/chambre2bis.jpg" alt="Image chambre">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Une décoration raffinnée</h3>
-              <p>Un séjour inoubliable  dans un écrin de au style sophistiqué</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="images/chambres/chambre3bis.jpg" alt="Image restaurant">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Elégance et expérience haut de gamme</h3>
-              <p>Séjourné à l'Hotelcop Paris est une expérience incomparable</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Précédent</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Suivant</span>
-        </a>
-      </div>
-      
-    </header>
-    <!-- FIN HEADER -->
+    </div>
 
-    <!-- PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
+    <div class="col pb-3 mt-5 text-center">
+      <p>Hotel Cop 2020 - Tous Droits réservés</p>
+    </div>
+  </footer>
 
-    <h1 class="text-center mb-5">Nos gammes de chambres</h1>
+  <!-- JQUERY -->
+  <script src="script/jquery/jquery-3.4.1.js"></script>
+  <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
 
-<!-- d-none d-md-block :disparition des sections en version mobile -->
-    <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
-      <div class="row align-items-center p-0">
-        <div class="col-lg-4">
-          <h2>Chambres classique</h2>
-          <p>
-            Nos chambres classique respire l'élégance et le luxe propre à l'hotelcop paris, une introduction à la sophistication du style hotelcop
-          </p>
-          <p>          
-            <a href="#classique" class="btn btn-primary">Voir nos chambres classiques</a>
-          </p>
-        </div>
-        <div id="chbcl" class="col-lg-8 p-md-0">
-          <img  class="img-fluid" src="images/classique2.jpg" alt="chambre classique">
-        </div>
-      </div>
-    </section>
+  <!-- BOOTSTRAP MATERIAL DESIGN -->
+  <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
+  <!-- BOOTSTRAP -->
+  <script src="script/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT -->
+  <script src="script/js/script.js"></script>
+</body>
 
-    <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
-      <div class="row align-items-center p-0">
-        
-        <div class="col-lg-4 order-lg-1">
-          
-          <h2>Chambres confort</h2>
-          <p>
-            Notre gamme confort vous satifera par son raffinement, pour un séjour agréable au coeur de la ville des lumière
-          </p>
-          <p>          
-            <a href="#confort" class="btn btn-primary">Voir nos chambres confort</a>
-          </p>
-        </div>
-        <div id="chbco" class="col-lg-8 order-lg-0 p-md-0">
-          <img class="img-fluid" src="images/pavillon2.jpg" alt="chambre confort">
-        </div>
-      </div>
-      
-    </section>
-
-    <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
-      <div class="row align-items-center p-0">
-        <div class="col-lg-4">
-          <h2>Chambres Deluxe</h2>
-          <p>
-            Les chambres de la gamme Deluxe, offre une plongée dasn le raffinement de notre palace parisien, le haut de gamme de vos séjour à Paris.
-          </p>
-          <p>          
-            <a href="#deluxe" class="btn btn-primary">Voir nos chambres Deluxe</a>
-          </p>
-        </div>
-        <div id="chbde" class="col-lg-8 p-md-0">
-          <img class="img-fluid" src="images/deluxe2.jpg" alt="chambres Deluxe">
-        </div>
-      </div>
-    </section>
-
-    <section class="d-none d-md-block container text-center align-items-center p-0 pt-lg-5 my-md-5">
-      <div class="row align-items-center p-0">
-        <div class="col-lg-4 order-lg-1">
-          <h2>Nos suites</h2>
-          <p>
-            Pour le summum du luxe et de la sophistication, séjourner dans nos suites est l'expérience exclusive que vous reserve l'Hotelcop Paris.
-          </p>
-          <p>          
-            <a href="#suite" class="btn btn-primary">Voir nos suites</a>
-          </p>
-        </div>
-        <div id="chbsu" class="col-lg-8 order-lg-0 p-md-0">
-          <img class="img-fluid" src="images/suite2.jpg" alt="suite">
-        </div>
-      </div>
-    </section>
-    
-    <!-- FIN PRESENTATION DES DIFFERENTES GAMMES DE CHAMBRES -->
-       
-      
-        <!-- SECTION POUR LES CARACTERISTIQUES DE LA CHAMBRE CLASSIQUE -->
-
-        <section class="w-100 text-center py-5" id="classique">
-            <h2>Notre chambre classique</h2>
-            <p class="font-italic">Le chambre classique est notre premier degré d'entrée dans le luxe et le raffinement d'hotelcop.</p>
-            <p class="w-75 mx-auto">D'une surface de 25 metres carré vous y serez acceuillis comme si vous étiez chez vous. Avec tous les services de notre hotel inclus dans cette gamme, profitez en pleine quiétude de votre séjour dans notre magnique ville de Paris.</p>
-            
-            <!-- reprise du caroussel pour les photos de la chambre classique -->
-
-            <div id="carousel-indic-classiq" class="carousel slide p-0" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-indic-classiq" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-indic-classiq" data-slide-to="1"></li>
-                <li data-target="#carousel-indic-classiq" data-slide-to="2"></li>
-                
-              </ol>
-              <div class="carousel-inner p-0">
-                <div class="carousel-item active p-0">
-                  <img class="d-block w-100" src="images/chambres-classiques/chb1.jpg" alt="Image Restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-classiques/chb2.png" alt="Image chambre">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-classiques/chb3.jpg" alt="Image restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-
-              </div>
-              <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-              </a>
-              <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-              </a>
-            </div>
-            <h3 class="mt-5">Caractéristiques</h3>
-            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre confort</h3>
-                <ul>
-                  <li>Climatisation</li>
-                  <li>Peignoirs</li>
-                  <li>Chaussons</li>
-                  <li>Lit d’appoint (sur demande)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre divertissement</h3>
-                <ul>
-                  <li>Télévision à écran plat</li>
-                  <li>Chaînes cablées et satellites</li>
-                  <li>Réveil avec connexion MP3</li>
-                  <li>Accès Internet en WIFI (payant 25 €/24h)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Commodités</h3>
-                <ul>
-                  <li>Service en chambre</li>
-                  <li>Accessoires de salle de bain</li>
-                  <li>Sèche-cheveux</li>
-                  <li>Fer et table à repasser</li>
-                  <li>Machine à café Nespresso</li>
-                </ul>
-              </div>
-            </div>
-            <h4 class="mb-5 pb-5">Prix de la nuit :  500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
-            
-        </section>
-
-        <!-- sections pour les caracteristiques de la chambres confort -->
-        
-        <section class="w-100 text-center py-5" id="confort">
-            <h2>Notre chambre confort</h2>
-            <p class="italic">La chambre confort, un cocon de qualité</p>
-            <p class="w-75 mx-auto">Profitez de notre gamme confort, avec sa surface de 35 metres carré. Un espace dédié au rafinement et au confort, juste pour rendre votre séjour dans notre ville des Lumières le plus agréable possible. Tous les services de l'hotelcop seront la pour votre plus grande aise.</p>
-            <div id="carousel-indic-confort" class="carousel slide p-0" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-indic-confort" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-indic-confort" data-slide-to="1"></li>
-                <li data-target="#carousel-indic-confort" data-slide-to="2"></li>
-                
-              </ol>
-              <div class="carousel-inner p-0">
-                <div class="carousel-item active p-0">
-                  <img class="d-block w-100" src="images/chambres-confort/chb1.jpg" alt="Image Restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-confort/chb2.jpg" alt="Image chambre">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-confort/chb3.jpg" alt="Image restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-              </a>
-              <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-              </a>
-            </div>
-            <h3 class="mt-5">Caractéristiques</h3>
-            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre confort</h3>
-                <ul>
-                  <li>Climatisation</li>
-                  <li>Peignoirs</li>
-                  <li>Chaussons</li>
-                  <li>Lit d’appoint (sur demande)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre divertissement</h3>
-                <ul>
-                  <li>Télévision à écran plat</li>
-                  <li>Chaînes cablées et satellites</li>
-                  <li>Réveil avec connexion MP3</li>
-                  <li>Accès Internet en WIFI (payant 25 €/24h)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Commodités</h3>
-                <ul>
-                  <li>Service en chambre</li>
-                  <li>Accessoires de salle de bain</li>
-                  <li>Sèche-cheveux</li>
-                  <li>Fer et table à repasser</li>
-                  <li>Machine à café Nespresso</li>
-                </ul>
-              </div>
-            </div>
-            <h4 class="mb-5 pb-5">Prix de la nuit : 1000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
-          </section>
-
-        <!-- sections pour les caracteristiques de la chambres deluxe -->
-
-        <section class="w-100 text-center py-5" id="deluxe">
-            <h2>Notre chambre deluxe</h2>
-            <p class="italic">La chambre Deluxe, un écrin de luxe</p>
-            <p class="w-75 mx-auto">Profitez de notre gamme Deluxe, avec sa surface de 50 metres carré, vous serez à votre aise lors de votre séjour à Paris. Tous nos services vous seront accéssibles pour rendre votre passsage dans notre établissement des plus agréable.</p>
-            <div id="carousel-indic-deluxe" class="carousel slide p-0" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-indic-deluxe" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-indic-deluxe" data-slide-to="1"></li>
-                <li data-target="#carousel-indic-deluxe" data-slide-to="2"></li>
-                
-              </ol>
-              <div class="carousel-inner p-0">
-                <div class="carousel-item active p-0">
-                  <img class="d-block w-100" src="images/chambres-deluxe/chb1.jpg" alt="Image Restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-deluxe/chb2.jpg" alt="Image chambre">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-deluxe/chb3.jpg" alt="Image restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-              </a>
-              <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-              </a>
-            </div>
-            <h3 class="mt-5">Caractéristiques</h3>
-            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre confort</h3>
-                <ul>
-                  <li>Climatisation</li>
-                  <li>Peignoirs</li>
-                  <li>Chaussons</li>
-                  <li>Lit d’appoint (sur demande)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre divertissement</h3>
-                <ul>
-                  <li>Télévision à écran plat</li>
-                  <li>Chaînes cablées et satellites</li>
-                  <li>Réveil avec connexion MP3</li>
-                  <li>Accès Internet en WIFI (payant 25 €/24h)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Commodités</h3>
-                <ul>
-                  <li>Service en chambre</li>
-                  <li>Accessoires de salle de bain</li>
-                  <li>Sèche-cheveux</li>
-                  <li>Fer et table à repasser</li>
-                  <li>Machine à café Nespresso</li>
-                </ul>
-              </div>
-            </div>
-            <h4 class="mb-5 pb-5">Prix de la nuit : 1500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
-        </section>
-
-        <!-- sections pour les caracteristiques de la suite -->
-
-        <section class="w-100 text-center py-5" id="suite">
-            <h2>Nos suites</h2>
-            <p class="italic">La Suite, le summum de séjour haut de gamme.</p>
-            <p class="w-75 mx-auto">Séjourner dans une de nos suites, restera une expérience inoubliable de votre passage à Paris. Les plus standard de qualité de notre hotel sont éxigés pour leur aménagement, notre psersonnel sera aux petits soins pour vous servir 24 heures sur 24. Reserver une suite à l'hotelcop est une garantie d'un séjour réussit dans notre belle capitale.</p>
-            <div id="carousel-indic-suites" class="carousel slide p-0" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-indic-suites" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-indic-suites" data-slide-to="1"></li>
-                <li data-target="#carousel-indic-suites" data-slide-to="2"></li>
-                
-              </ol>
-              <div class="carousel-inner p-0">
-                <div class="carousel-item active p-0">
-                  <img class="d-block w-100" src="images/chambres-suite/chb1.jpg" alt="Image Restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-suite/chb2.jpg" alt="Image chambre">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-                <div class="carousel-item p-0">
-                  <img class="d-block w-100" src="images/chambres-suite/chb3.jpg" alt="Image restaurant">
-                  <div class="carousel-caption d-none d-md-block">
-                    
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-              </a>
-              <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-              </a>
-            </div>
-            <h3 class="mt-5">Caractéristiques</h3>
-            <div class="row text-left py-0 justify-content-around col-md-8 mx-auto">
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre confort</h3>
-                <ul>
-                  <li>Climatisation</li>
-                  <li>Peignoirs</li>
-                  <li>Chaussons</li>
-                  <li>Lit d’appoint (sur demande)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Votre divertissement</h3>
-                <ul>
-                  <li>Télévision à écran plat</li>
-                  <li>Chaînes cablées et satellites</li>
-                  <li>Réveil avec connexion MP3</li>
-                  <li>Accès Internet en WIFI (payant 25 €/24h)</li>
-                </ul>
-              </div>
-              <div class="w-md-25 pt-3">
-                <h3 class="justify-content-start">Commodités</h3>
-                <ul>
-                  <li>Service en chambre</li>
-                  <li>Accessoires de salle de bain</li>
-                  <li>Sèche-cheveux</li>
-                  <li>Fer et table à repasser</li>
-                  <li>Machine à café Nespresso</li>
-                </ul>
-              </div>
-            </div>
-              <h4 class="mb-5 pb-5">Prix de la nuit : 2000 euros <a href="reservations.html" class="btn btn-primary">Réserver</a></h4>
-        </section>
-
-    </main>
-
-    
-    <!-- DEBUT FOOTER -->
-    <footer class="text-center">
-      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-      <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
-        <div class="foot-resp">
-          <p>Hotel Cop</p>
-          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
-          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
-
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fas fa-sms"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
-        </div>
-
-        <div class="foot-resp">
-          <p><a href="contact-acces.html">Contact et accès</a></p>
-          <p><a href="presse.html">Presse</a></p>
-          <p><a href="recrutement.html">Recrutement</a></p>
-          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-          <!-- <p><a href="actualites.html">Actualités</a></p> -->
-        </div>
-
-        <div class="foot-resp">
-          <p><a href="mentions-legales.html">Mentions légales</a></p>
-          <p><a href="cgv.html">CGV</a></p>
-          <p><a href="plan-site.html">Plan du site</a></p>
-          <p><a href="#">Imprimer la page</a></p>
-        </div>
-
-        <div class="foot-resp ">
-          <p class="d-bloc">Newsletter</p>
-          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-          <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-            <input
-              type="email"
-              class="d-bloc form-control mr-sm-2 "
-              name="mailNewsletter"
-              id="mailNewsletter"
-              placeholder="Saisir votre email"
-            />
-            <button
-              id="btnNewsletter"
-              type="submit"
-              class=" d-bloc btn btn-secondary"
-            >
-              Valider
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="col pb-3 mt-5 text-center">
-        <p>Hotel Cop 2020 - Tous Droits réservés</p>
-      </div>
-    </footer>
-
-    <!-- JQUERY -->
-    <script src="script/jquery/jquery-3.4.1.js"></script>
-    <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
-
-    <!-- BOOTSTRAP MATERIAL DESIGN -->
-    <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
-    <!-- BOOTSTRAP -->
-    <script src="script/js/bootstrap.bundle.min.js"></script>
-    <!-- SCRIPT -->
-    <script src="script/js/script.js"></script>
-  </body>
 </html>
