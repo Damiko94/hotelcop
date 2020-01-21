@@ -7,9 +7,9 @@ body {
   max-width: 1400px;
 }
 
-/* ******* */
-/* SECTION */
-/* ******* */
+/* **** */
+/* LOGO */
+/* **** */
 .logo-sm{
   height:45px;
   width: 45px;
@@ -130,6 +130,12 @@ footer a {
   color: #dde2ed;
 }
 
+/* Change la taille des icones du FOOTER*/
+footer a .fab,
+footer a .fas {
+  width: 40px;
+  font-size: 25px;
+}
 /* Met en évidence le lien de la navbar correspondant à la page visitée */
 .nav-item .active,
 .nav-link .active {
@@ -324,16 +330,6 @@ footer a:hover,
   }
 }
 
-/****************/
-/* MODIF DAMIEN */
-/****************/
-/*pour changer la taille des icones
-du FOOTER*/
-footer .fab,
-footer .fas {
-  width: 40px;
-  font-size: 25px;
-}
 /**********************/
 /***  pages chambres***/
 /**********************/
