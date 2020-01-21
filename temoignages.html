@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <!-- BOOSTRAP MATERIAL DESIGN -->
+    <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
+    <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <!-- FONT AWESOME -->
+    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <title>Hotel Cop Paris - Avenue Montaigne</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- Etendue en affichage large -->
+    <!-- Réduite en médium et centré -->
+    <nav class="navbar navbar-expand-lg sticky-top text-light">
+      <!-- LOGO -->
+      <!-- Toujours visible -->
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+      </a>
+      <!-- BTN RESERVER -->
+      <!-- Toujours visible -->
+      <!-- Envoie user vers page de réservation -->
+      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+      <a href="reservations.html" class="btn btn-primary">Réserver</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
+          <li class="nav-item pr-4">
+          </li>
+          <!-- MENU -->
+          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle active" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+              <span>Nous découvrir</span>
+            </a>
+            <!-- DROPDOWN ITEMS -->
+            <!-- Liens amenants vers les pages nommées-->
+            <!-- text-center: centré dans le menu reduit -->
+            <!-- text-lg-left:left dans le menu étendu-->            
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+              <a class="dropdown-item active" href="temoignages.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Chambres</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
+              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
+              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
+              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
+              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
+              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Restaurant</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
+              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
+              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
+              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Spa</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
+              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
+              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
+              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
+            </div>
+          </li>
+          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>FR</span> <i class="fas fa-globe-europe"></i>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+              <a class="dropdown-item" href="#"><span>English</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
+            </div>
+          </li>             
+        </ul>
+        
+        <!-- BARRE DE RECHERCHE -->
+        <!-- Mini form inline -->
+        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
+          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+      </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+    <!-- HEADER -->
+    <header>
+
+    </header>
+    <!-- FIN HEADER -->
+    
+    <section id="avis-header">
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+          <div class="col text-center p-0">
+            <h2>Avis Clients</h2>
+            <h3>Satistaction générale</h3>
+            <div class="py-0" style="font-size: larger;">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              4/5 sur 1.359 avis <br> Avis certifiés par TrustCop
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <section id="avis-details">
+      <div class="text-center p-0">
+        <h2>Dans le détail</h2>      
+      </div>
+        <div class="form-inline justify-content-center p-0">
+            <label for="filterAvis">Trier par</label>
+            <select class="form-control mx-2" id="filterAvis">
+              <option selected>Le plus récent</option>
+              <option>Le plus ancien</option>            
+            </select>
+          <button class="btn btn-primary my-1" type="button" data-toggle="collapse" data-target="#formAvis" aria-expanded="false" aria-controls="formAvis">Ajouter un avis <i class="fas fa-chevron-down"></i></button>          
+      </div>
+      <!-- FORMULAIRE D'AJOUT D'UN AVIS -->
+      <!-- S'affiche avec le toggle button 'ajout d'un avis -->
+      <div class="container collapse" id="formAvis">
+        <form action="post">
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-1 py-1">
+              <select name="ct-civilite" id="civilite" class="form-control">
+                <option value="m" selected>M.</option>
+                <option value="mme">Mme.</option>
+              </select>
+            </div>
+            <div class="col-lg-5 py-1">
+              <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
+              <small id="nomHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
+              <small id="prenomHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-3 py-1">
+              <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email">
+              <small id="emailHelp" class="form-text text-left"></small>
+            </div>
+            <div class="col-lg-3 py-1">
+              <input type="email" name="ct-email2" id="email2" class="form-control" placeholder="Confirmer votre email">
+              <small id="email2Help" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chboxChambres" value="chambres">
+                <label class="custom-control-label text-muted" for="chboxChambres">Chambres</label>
+              </div>
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chboxRestaurant" value="restaurant">
+                <label class="custom-control-label text-muted" for="chboxRestaurant">Restaurant</label>
+              </div>
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chxboxSpa" value="spa">
+                <label class="custom-control-label text-muted" for="chxboxSpa">Spa</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+              <small id="msgHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <!-- CAPTCHA -->
+            <!-- Vérif user non bot -->
+            <!-- A remplacer par Google Captcha -->
+            <div class="col-lg-6 py-1">
+              <input type="text" name="ct-objet-email" id="objet" placeholder="(Captcha) Combien font 2x2 ?" class="form-control">
+              <small id="captchaHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 text-left py-1">
+              <button type="submit" class="btn btn-secondary">Envoyer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- CONTAINER : contient les row des avis -->
+      <!-- pt-0 : retire la padding-top afin d'éviter un espace trop important avec le row suivant -->
+      <div class="container pt-0">
+          <!-- pb-0 : retire le padding-bottom pour éviter un espace trop important avec la car du dessous lors du passage en affichage mobile -->
+          <div class="row pb-0">
+            <!-- col-md-4 : une card par ligne jusqu'en affichage mid, ensuite 3 par ligne -->
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Maria S.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <!-- px-0 : rapproche le texte des bords -->
+                  <!-- py-2 : ajoute un peu d'espace avant et après le texte -->
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Chambre, Restaurant, Spa</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Andre A.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Chambre, Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (2)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (12)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <!-- FIN 1 LIGNE CARD -->
+          <div class="row py-0">
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Paul P.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (6)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Spa</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (9)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (4)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div> 
+          <div class="row py-0">
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Paul P.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (3)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Spa</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (1)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div> 
+          <div class="row py-0">
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Paul P.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Spa</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (2)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (3)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div> 
+          <div class="row py-0">
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Paul P.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (4)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Spa</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+            <div class="col-md-4 p-2">
+              <div class="card p-0">
+                <div class="card-body">
+                  <h5 class="card-title">Roger F.</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half"></i></h6>
+                  <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-0 m-1">
+                    <div class="col-6 p-0">                  
+                      <i class="far fa-thumbs-up pr-1"></i>Utile (1)
+                    </div>
+                    <div class="col-6 p-0 d-flex justify-content-end">
+                      <p class="card-text p-0 text-nowrap">Posté le 02/01/2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div> 
+          <!-- FIN ROW -->
+      </div>    
+      <div class="text-center">
+        <p id="more-avis" class="p-0">Charger plus <i class="fas fa-chevron-down"></i></p>
+      </div>
+    </section>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+  <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
+    <div class="foot-resp">
+      <p>Hotel Cop</p>
+      <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+      <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fas fa-sms"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>          
+    </div>
+
+    <div class="foot-resp">
+      <p><a href="contact-acces.html">Contact et accès</a></p>
+      <p><a href="presse.html">Presse</a></p>
+      <p><a href="recrutement.html">Recrutement</a></p>
+      <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+      <!-- <p><a href="actualites.html">Actualités</a></p> -->
+    </div>
+
+    <div class="foot-resp">
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+      <p><a href="cgv.html">CGV</a></p>
+      <p><a href="plan-site.html">Plan du site</a></p>
+      <p><a href="#">Imprimer la page</a></p>
+    </div>
+
+    <div class="foot-resp ">
+      <p class="d-bloc">Newsletter</p>
+      <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+      <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+        <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+        <button id="btnNewsletter" type="submit"class=" d-bloc btn btn-secondary">Valider</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col pb-3 mt-5 text-center">
+    <p><a href="index.html" class="navbar-brand text-light">
+      <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+    </a></p>
+    <p>Hotel Cop 2020 - Tous Droits réservés</p>
+  </div>
+</footer>
+
+<!-- JQUERY -->
+<script src="script/jquery/jquery-3.4.1.js"></script>
+<!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
+
+<!-- BOOTSTRAP MATERIAL DESIGN -->
+<!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
+<!-- BOOTSTRAP -->
+<script src="script/js/bootstrap.bundle.min.js"></script>
+<!-- SCRIPT -->
+<script src="script/js/script.js"></script>
+</body>
+</html>    
