@@ -315,6 +315,9 @@ footer a:hover,
     width: 100%;
     padding: 0;
   }
+  #classique, #confort, #deluxe, #suite{
+    width: 100%;
+  }
 }
 
 /****************/
@@ -330,6 +333,13 @@ footer .fas {
 /**********************/
 /***  pages chambres***/
 /**********************/
+
+/* CLASSE POUR DONNER UNE LARGEUR FIXE AUX DIV CARACTERISTIQUES DANS LES SECTIONS DETAILLEES DES CHAMBRES*/
 .carac{
   width: 300px;
+}
+/* SEPARATEUR entre les sections chambres et la section détails des services inclus dans chaque chambres
+l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres */
+#separ{
+  border-bottom: 3px solid #0d1f41;
 }
