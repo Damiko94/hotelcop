@@ -169,8 +169,18 @@ footer a:hover,
 
   background: url(../images/spa/spa.jpeg);
 }
-/*******reglages dispo div dans section*******/
 
+/*********/
+/* CARDS */
+/*********/
+.card{
+  border-color: goldenrod ;
+  border-radius: 0;
+}
+
+
+
+/*******reglages dispo div dans section*******/
 /***************/
 /* MEDIA QUERY */
 /***************/
