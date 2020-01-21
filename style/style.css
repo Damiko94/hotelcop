@@ -107,10 +107,6 @@ on met une width en px pour utiliser le flex-wrap */
   margin: 30px 0;
 }
 /*********HEADER***********/
-.carousel-inner{
-  height: 650px;
-}
-
 #img-1{
   background-size: auto 400px;
   
