@@ -73,6 +73,13 @@ footer a {
   background-color: #0d1f41;
   color: darkgoldenrod;
 }
+/* ****** */
+/* ICONES */
+/* ****** */
+.fas.fa-star,
+.fas.fa-star-half{
+  color: darkgoldenrod;
+}
 
 /* ******* */
 /* BUTTONS */
