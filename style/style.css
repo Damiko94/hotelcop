@@ -109,6 +109,16 @@ footer a {
   background-color: #0d1f41;
   border-color:darkgoldenrod;
 }
+/* Ajustement des couleurs du btn-primary lorsque état actif et focus */
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
+  color: darkgoldenrod;
+  background-color: #0d1f41;
+  border-color:darkgoldenrod;
+  box-shadow: 0 0 0 .2rem rgba(184, 135, 11, 0.300);
+}
+.btn-primary:not(:disabled):not(.disabled):active.btn-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(184, 135, 11, 0.300);
+}
 
 .btn-outline-primary{
   color: darkgoldenrod;
