@@ -189,7 +189,11 @@ footer a {
 /*****************/
 /* LINKS : HOVER */
 /*****************/
-.nav-item a:hover,
+a:hover{
+  text-decoration: none;
+}
+
+section a:hover, .nav-item a span:hover,
 footer a:hover,
 .dropdown-item:hover {
   text-decoration: none;
@@ -199,7 +203,7 @@ footer a:hover,
 /*****section chambres*******/
 
 #chambre-index {
-  min-height: 500px;
+  
 
   background: url(../images/chambres/chambre3lg.jpg);
 }
@@ -207,7 +211,7 @@ footer a:hover,
 /*****section restaurant*******/
 
 #resto-index {
-  min-height: 500px;
+  
 
   background: url(../images/resto/resto-lg.jpeg);
 }
@@ -215,9 +219,13 @@ footer a:hover,
 /*****section spa*******/
 
 #spa-index {
-  min-height: 500px;
+  
 
   background: url(../images/spa/spa.jpeg);
+}
+
+#chambre-index, #resto-index, #spa-index{
+  height: 500px;
 }
 
 /*******reglages dispo div dans section*******/
@@ -242,6 +250,7 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-sm.jpeg);
   }
+ 
 }
 @media (max-width: 768px) {
   #chambre-index {
@@ -253,6 +262,7 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-md.jpeg);
   }
+ 
 }
 @media (max-width: 990px) {
   #restaurant {
@@ -273,4 +283,10 @@ footer .fab,
 footer .fas {
   width: 40px;
   font-size: 25px;
+}
+/**********************/
+/***  pages chambres***/
+/**********************/
+.carac{
+  width: 300px;
 }
