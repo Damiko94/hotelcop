@@ -27,7 +27,7 @@
       <!-- LOGO -->
       <!-- Toujours visible -->
       <a href="index.html" class="navbar-brand text-light">
-        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
       </a>
       <!-- BTN RESERVER -->
       <!-- Toujours visible -->
@@ -57,12 +57,12 @@
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
               <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-              <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
               <a class="dropdown-item active" href="recrutement.html"><span>Recrutement</span></a>
               <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-          
+
           <li class="nav-item dropdown pr-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Chambres</span>
@@ -102,13 +102,14 @@
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>              
+              <a class="dropdown-item" href="#"><span>Español</span></a>
             </div>
           </li>             
         </ul>
@@ -118,7 +119,7 @@
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
@@ -280,7 +281,7 @@
     <!-- FOOTER -->
     <footer class="text-center">
       <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-      <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
         <div class="foot-resp">
           <p>Hotel Cop</p>
           <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
@@ -300,7 +301,6 @@
           <p><a href="presse.html">Presse</a></p>
           <p><a href="recrutement.html">Recrutement</a></p>
           <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-          <!-- <p><a href="actualites.html">Actualités</a></p> -->
         </div>
 
         <div class="foot-resp">
@@ -322,18 +322,17 @@
 
       <div class="col pb-3 mt-5 text-center">
         <p><a href="index.html" class="navbar-brand text-light">
-          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
         </a></p>
         <p>Hotel Cop 2020 - Tous Droits réservés</p>
       </div>
     </footer>
+    <!-- FIN FOOTER -->
 
     <!-- JQUERY -->
     <script src="script/jquery/jquery-3.4.1.js"></script>
-    <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
+    <script src="script/jquery/jquery-ui.min.js"></script>
 
-    <!-- BOOTSTRAP MATERIAL DESIGN -->
-    <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
     <!-- BOOTSTRAP -->
     <script src="script/js/bootstrap.bundle.min.js"></script>
     <!-- SCRIPT -->

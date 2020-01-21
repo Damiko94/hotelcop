@@ -2,11 +2,14 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
     <link rel="stylesheet" href="style/bootstrap.min.css" />
     <!-- BOOSTRAP MATERIAL DESIGN -->
     <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
     <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
@@ -23,7 +26,9 @@
       
       <!-- LOGO -->
       <!-- Toujours visible -->
-      <a href="index.html" class="navbar-brand text-light">HC</a>
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+      </a>
       <!-- BTN RESERVER -->
       <!-- Toujours visible -->
       <!-- Envoie user vers page de réservation -->
@@ -52,12 +57,12 @@
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
               <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-              <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
               <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
               <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-          
+
           <li class="nav-item dropdown pr-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Chambres</span>
@@ -88,22 +93,23 @@
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
               <a class="dropdown-item active" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="#evasion"><span>Soin Evasion</span></a>
+              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
+              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
             </div>
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>              
+              <a class="dropdown-item" href="#"><span>Español</span></a>
             </div>
           </li>             
         </ul>
@@ -113,7 +119,7 @@
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
@@ -287,23 +293,22 @@
         </section>
     </main>
 
-    
-    <!-- DEBUT FOOTER -->
+    <!-- FOOTER -->
     <footer class="text-center">
       <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-      <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
         <div class="foot-resp">
           <p>Hotel Cop</p>
           <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
           <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
 
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fas fa-sms"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>          
         </div>
 
         <div class="foot-resp">
@@ -311,7 +316,6 @@
           <p><a href="presse.html">Presse</a></p>
           <p><a href="recrutement.html">Recrutement</a></p>
           <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-          <!-- <p><a href="actualites.html">Actualités</a></p> -->
         </div>
 
         <div class="foot-resp">
@@ -325,35 +329,25 @@
           <p class="d-bloc">Newsletter</p>
           <!-- ajout de -lg à form-control pour reduire la width de l'input-->
           <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-            <input
-              type="email"
-              class="d-bloc form-control mr-sm-2 "
-              name="mailNewsletter"
-              id="mailNewsletter"
-              placeholder="Saisir votre email"
-            />
-            <button
-              id="btnNewsletter"
-              type="submit"
-              class=" d-bloc btn btn-secondary"
-            >
-              Valider
-            </button>
+            <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit"class=" d-bloc btn btn-secondary">Valider</button>
           </form>
         </div>
       </div>
 
       <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+        </a></p>
         <p>Hotel Cop 2020 - Tous Droits réservés</p>
       </div>
     </footer>
+    <!-- FIN FOOTER -->
 
     <!-- JQUERY -->
     <script src="script/jquery/jquery-3.4.1.js"></script>
-    <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
+    <script src="script/jquery/jquery-ui.min.js"></script>
 
-    <!-- BOOTSTRAP MATERIAL DESIGN -->
-    <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
     <!-- BOOTSTRAP -->
     <script src="script/js/bootstrap.bundle.min.js"></script>
     <!-- SCRIPT -->

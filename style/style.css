@@ -10,6 +10,14 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
+.logo-sm{
+  height:45px;
+  width: 45px;
+}
+
+/* ******* */
+/* SECTION */
+/* ******* */
 section,
 section tr {
   color: #1b3e82;
