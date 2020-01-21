@@ -176,7 +176,7 @@
   <h1 class="text-center mb-5">Nos gammes de chambres</h1>
 
   <!-- d-none d-md-block :disparition des sections en version mobile -->
-  <section class="d-none d-md-block container text-center align-items-center  pt-lg-5 my-md-5">
+  <section class="d-none d-md-block container text-center align-items-center  pt-lg-5 mt-md-5">
     <div class="row no-gutters align-items-center p-0">
       <div class="col-lg-4">
         <h2>Chambres classique</h2>
@@ -185,14 +185,58 @@
           sophistication du style hotelcop
         </p>
         <p>
-          <a href="#classique" class="btn btn-primary">Voir nos chambres classiques</a>
+          <a href=".multi-collapse" class="btn btn-primary" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="classique classi1 classi2">Voir nos chambres classiques</a>
         </p>
+        <p class="collapse multi-collapse font-italic" id="classi1">Le chambre classique est notre premier degré d'entrée dans le luxe et le raffinement
+          d'hotelcop.</p>
+        <p class="collapse multi-collapse" id="classi2">D'une surface de 25 metres carré vous y serez acceuillis comme si vous étiez chez vous. Avec
+          tous les services de notre hotel inclus dans cette gamme, profitez en pleine quiétude de votre séjour dans notre
+          magnique ville de Paris.</p>
       </div>
+
       <div class="col-lg-8 ">
         <img class="img-fluid" src="images/classique2.jpg" alt="chambre classique">
       </div>
     </div>
   </section>
+  
+  <div class="collapse multi-collapse container text-center" id="classique">
+    
+    <h3>Caractéristiques</h3>
+    <div class="d-flex text-left py-0 col-lg-10 justify-content-around mx-auto">
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre confort</h3>
+        <ul>
+          <li>Climatisation</li>
+          <li>Peignoirs</li>
+          <li>Chaussons</li>
+          <li>Lit d’appoint (sur demande)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Votre divertissement</h3>
+        <ul>
+          <li>Télévision à écran plat</li>
+          <li>Chaînes cablées et satellites</li>
+          <li>Réveil avec connexion MP3</li>
+          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
+        </ul>
+      </div>
+      <div class="pt-3 carac">
+        <h3 class="justify-content-start">Commodités</h3>
+        <ul>
+          <li>Service en chambre</li>
+          <li>Accessoires de salle de bain</li>
+          <li>Sèche-cheveux</li>
+          <li>Fer et table à repasser</li>
+          <li>Machine à café Nespresso</li>
+        </ul>
+      </div>
+    </div>
+    <h4 class="mb-5 pb-5">Prix de la nuit : 500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    </h4>
+
+  </div>
 
   <section class="d-none d-md-block container text-center align-items-center  pt-lg-5 my-md-5">
     <div class="row no-gutters align-items-center p-0">
@@ -256,88 +300,7 @@
 
   <!-- SECTION POUR LES CARACTERISTIQUES DE LA CHAMBRE CLASSIQUE -->
   
-  <section class="container text-center py-5" id="classique">
-    <h2>Notre chambre classique</h2>
-    <p class="font-italic">Le chambre classique est notre premier degré d'entrée dans le luxe et le raffinement
-      d'hotelcop.</p>
-    <p class="w-50 mx-auto">D'une surface de 25 metres carré vous y serez acceuillis comme si vous étiez chez vous. Avec
-      tous les services de notre hotel inclus dans cette gamme, profitez en pleine quiétude de votre séjour dans notre
-      magnique ville de Paris.</p>
-
-    <!-- reprise du caroussel pour les photos de la chambre classique -->
-
-    <div id="carousel-indic-classiq" class="carousel slide p-0" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-indic-classiq" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-indic-classiq" data-slide-to="1"></li>
-        <li data-target="#carousel-indic-classiq" data-slide-to="2"></li>
-
-      </ol>
-      <div class="carousel-inner p-0">
-        <div class="carousel-item active p-0">
-          <img class="d-block w-100" src="images/chambres-classiques/chb1.jpg" alt="Image Restaurant">
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-        <div class="carousel-item p-0">
-          <img class="d-block w-100" src="images/chambres-classiques/chb2.jpg" alt="Image chambre">
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-        <div class="carousel-item p-0">
-          <img class="d-block w-100" src="images/chambres-classiques/chb3.jpg" alt="Image restaurant">
-          <div class="carousel-caption d-none d-md-block">
-
-          </div>
-        </div>
-
-      </div>
-      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Précédent</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Suivant</span>
-      </a>
-    </div>
-    <h3 class="mt-5">Caractéristiques</h3>
-    <div class="d-flex text-left py-0 col-lg-10 justify-content-around mx-auto">
-      <div class="pt-3 carac">
-        <h3 class="justify-content-start">Votre confort</h3>
-        <ul>
-          <li>Climatisation</li>
-          <li>Peignoirs</li>
-          <li>Chaussons</li>
-          <li>Lit d’appoint (sur demande)</li>
-        </ul>
-      </div>
-      <div class="pt-3 carac">
-        <h3 class="justify-content-start">Votre divertissement</h3>
-        <ul>
-          <li>Télévision à écran plat</li>
-          <li>Chaînes cablées et satellites</li>
-          <li>Réveil avec connexion MP3</li>
-          <li>Accès Internet en WIFI (payant 25 €/24h)</li>
-        </ul>
-      </div>
-      <div class="pt-3 carac">
-        <h3 class="justify-content-start">Commodités</h3>
-        <ul>
-          <li>Service en chambre</li>
-          <li>Accessoires de salle de bain</li>
-          <li>Sèche-cheveux</li>
-          <li>Fer et table à repasser</li>
-          <li>Machine à café Nespresso</li>
-        </ul>
-      </div>
-    </div>
-    <h4 class="mb-5 pb-5">Prix de la nuit : 500 euros <a href="reservations.html" class="btn btn-primary">Réserver</a>
-    </h4>
-
-  </section>
+  
 
   <!-- sections pour les caracteristiques de la chambres confort -->
 
