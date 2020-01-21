@@ -158,6 +158,8 @@
             </select>
           <button class="btn btn-primary my-1" type="button" data-toggle="collapse" data-target="#formAvis" aria-expanded="false" aria-controls="formAvis">Ajouter un avis <i class="fas fa-chevron-down"></i></button>          
       </div>
+      <!-- FORMULAIRE D'AJOUT D'UN AVIS -->
+      <!-- S'affiche avec le toggle button 'ajout d'un avis -->
       <div class="container collapse" id="formAvis">
         <form action="post">
           <div class="form-row justify-content-center py-0">
@@ -226,8 +228,12 @@
           </div>
         </form>
       </div>
-      <div class="container pt-0">      
+      <!-- CONTAINER : contient les row des avis -->
+      <!-- pt-0 : retire la padding-top afin d'éviter un espace trop important avec le row suivant -->
+      <div class="container pt-0">
+          <!-- pb-0 : retire le padding-bottom pour éviter un espace trop important avec la car du dessous lors du passage en affichage mobile -->
           <div class="row pb-0">
+            <!-- col-md-4 : une card par ligne jusqu'en affichage mid, ensuite 3 par ligne -->
             <div class="col-md-4 p-2">
               <div class="card p-0">
                 <div class="card-body">
@@ -238,6 +244,8 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half"></i></h6>
+                  <!-- px-0 : rapproche le texte des bords -->
+                  <!-- py-2 : ajoute un peu d'espace avant et après le texte -->
                   <p class="card-text px-0 py-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <p class="card-text p-0"><small class="text-muted">Chambre, Restaurant, Spa</small></p>
                 </div>
