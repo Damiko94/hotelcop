@@ -148,7 +148,83 @@
     </section>
     <section id="avis-details">
       <div class="text-center p-0">
-        <h2>Dans le détail</h2>            
+        <h2>Dans le détail</h2>      
+      </div>
+        <div class="form-inline justify-content-center p-0">
+            <label for="filterAvis">Trier par</label>
+            <select class="form-control mx-2" id="filterAvis">
+              <option selected>Le plus récent</option>
+              <option>Le plus ancien</option>            
+            </select>
+          <button class="btn btn-primary my-1" type="button" data-toggle="collapse" data-target="#formAvis" aria-expanded="false" aria-controls="formAvis">Ajouter un avis <i class="fas fa-chevron-down"></i></button>          
+      </div>
+      <div class="container collapse" id="formAvis">
+        <form action="post">
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-1 py-1">
+              <select name="ct-civilite" id="civilite" class="form-control">
+                <option value="m" selected>M.</option>
+                <option value="mme">Mme.</option>
+              </select>
+            </div>
+            <div class="col-lg-5 py-1">
+              <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
+              <small id="nomHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
+              <small id="prenomHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-3 py-1">
+              <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email">
+              <small id="emailHelp" class="form-text text-left"></small>
+            </div>
+            <div class="col-lg-3 py-1">
+              <input type="email" name="ct-email2" id="email2" class="form-control" placeholder="Confirmer votre email">
+              <small id="email2Help" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chboxChambres" value="chambres">
+                <label class="custom-control-label text-muted" for="chboxChambres">Chambres</label>
+              </div>
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chboxRestaurant" value="restaurant">
+                <label class="custom-control-label text-muted" for="chboxRestaurant">Restaurant</label>
+              </div>
+              <div class="custom-control-inline custom-control custom-checkbox py-0">
+                <input class="custom-control-input" type="checkbox" id="chxboxSpa" value="spa">
+                <label class="custom-control-label text-muted" for="chxboxSpa">Spa</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 py-1">
+              <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+              <small id="msgHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <!-- CAPTCHA -->
+            <!-- Vérif user non bot -->
+            <!-- A remplacer par Google Captcha -->
+            <div class="col-lg-6 py-1">
+              <input type="text" name="ct-objet-email" id="objet" placeholder="(Captcha) Combien font 2x2 ?" class="form-control">
+              <small id="captchaHelp" class="form-text text-left"></small>
+            </div>
+          </div>
+          <div class="form-row justify-content-center py-0">
+            <div class="col-lg-6 text-left py-1">
+              <button type="submit" class="btn btn-secondary">Envoyer</button>
+            </div>
+          </div>
+        </form>
       </div>
       <div class="container pt-0">      
           <div class="row pb-0">

@@ -81,7 +81,8 @@ footer a {
   color: darkgoldenrod;
 }
 
-.fa-thumbs-up{
+.fa-thumbs-up,
+#more-avis{
   cursor: pointer;
 }
 /* ******* */
