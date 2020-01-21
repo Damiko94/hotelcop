@@ -252,6 +252,13 @@ footer a:hover,
   background: url(../images/resto/resto-lg.jpeg);
 }
 
+/*ajout de css sur l'id cuisto-index pour la page restaurant*/
+#cuisto-index{
+  background: url(../images/resto/cuisto1.jpg);
+  max-width: 100%;
+  height: auto;
+}
+
 /*****section spa*******/
 
 #spa-index {
