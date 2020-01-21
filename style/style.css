@@ -81,6 +81,9 @@ footer a {
   color: darkgoldenrod;
 }
 
+.fa-thumbs-up{
+  cursor: pointer;
+}
 /* ******* */
 /* BUTTONS */
 /* ******* */
