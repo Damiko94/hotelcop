@@ -102,13 +102,14 @@
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>              
+              <a class="dropdown-item" href="#"><span>Español</span></a>
             </div>
           </li>             
         </ul>
@@ -284,7 +285,8 @@
     </section>
     <section class="d-flex my-5 px-0" id="actu">
       <div class="container">
-        <div class="row px-0">
+        <!-- no-gutters : évite le scroll horizontal -->
+        <div class="row px-0 no-gutters">
           <figure id="event" class="col-lg-4" onclick="document.location='actualites-evenements.html'">
             <figcaption class="d-flex align-items-center justify-content-center">
               <h2>Evénements</h2>
