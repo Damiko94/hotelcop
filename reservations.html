@@ -137,7 +137,7 @@
               <a class="nav-link" id="v-pills-chambres-tab" data-toggle="pill" href="#v-pills-chambres" role="tab" aria-controls="v-pills-chambres" aria-selected="false"><i class="fas fa-bed"></i> Chambres</a>
               <a class="nav-link" id="v-pills-restaurant-tab" data-toggle="pill" href="#v-pills-restaurant" role="tab" aria-controls="v-pills-restaurant" aria-selected="false"><i class="fas fa-utensils"></i> Restaurant</a>
               <a class="nav-link" id="v-pills-spa-tab" data-toggle="pill" href="#v-pills-spa" role="tab" aria-controls="v-pills-spa" aria-selected="false"><i class="fas fa-spa"></i> Spa</a>
-              <a class="nav-link" id="v-pills-panier-tab" data-toggle="pill" href="#v-pills-panier" role="tab" aria-controls="v-pills-panier" aria-selected="false"><i class="fas fa-shopping-cart"></i> Mon panier <span class="badge badge-warning">4</span></a>
+              <a class="nav-link" id="v-pills-panier-tab" data-toggle="pill" href="#v-pills-panier" role="tab" aria-controls="v-pills-panier" aria-selected="false"><i class="fas fa-shopping-cart"></i> Mon panier <span class="badge badge-warning">3</span></a>
             </div>
           </div>
           <div class="col-9">
@@ -158,16 +158,16 @@
                     <div class="form-row py-0 pl-0">
                       <div class="col-lg-5 py-1">
                         <label for="dateArrivee">du</label>
-                        <input type="date" class="form-control" name="dateArrivee" value="2020-02-07" id="dateArrivee">
+                        <input type="date" class="form-control" name="dateArrivee" min="2020-02-07" value="2020-02-07" id="dateArrivee">
                       </div>
                       <div class="col-lg-5 py-1">
                         <label for="dateDepart">au</label>
-                        <input type="date" class="form-control" name="dateDepart" value="2020-02-07" id="dateDepart"> 
+                        <input type="date" class="form-control" name="dateDepart" min="2020-02-07" value="2020-02-07" id="dateDepart"> 
                       </div>
                     </div>
                     <div class="form-row py-0 pl-0">
                       <div class="col-lg-5 py-1">
-                        <label for="nbOccupants">pour </label>
+                        <label for="nbOccupants">dans </label>
                         <select name="nbOccupants" id="nbOccupants" class="form-control">
                           <option value="1" selected>1 chambre</option>
                           <option value="2">2 chambres</option>
@@ -177,7 +177,7 @@
                         </select>
                       </div>
                       <div class="col-lg-5 py-1">
-                        <label for="nbChambre">à </label>
+                        <label for="nbChambre">pour </label>
                         <select name="nbChambre" id="nbChambre" class="form-control">
                           <option value="1" selected>1 occupant</option>
                           <option value="2">2 occupants</option>
@@ -187,22 +187,64 @@
                         </select>
                       </div>
                     </div>
-                    <div class="form-row py-2 pl-0">
-                      <a class="pl-1" data-toggle="collapse" href="#collapseCodeSpe" role="button" aria-expanded="false" aria-controls="collapseCodeSpe">
-                        + Ajouter un code spécial
-                      </a>
-                      <div class="collapse px-0 py-1" id="collapseCodeSpe">
-                        <input type="text" class="form-control" name="codeSpe" placeholder="Code promo/spécial" id="codeSpe">
-                        <button></button>
+                    <div class="form-row align-items-center py-2 pl-0">
+                      <div class="col-4 col-lg-3 py-3">
+                        <a class="pl-1" data-toggle="collapse" href="#collapseCodeSpe" role="button" aria-expanded="false" aria-controls="collapseCodeSpe">
+                          + Ajouter un code spécial
+                        </a>
+                      </div>
+                      <div class="col form-inline p-0 align-items-sm-end">
+                        <div class="collapse px-0 py-1 flex-nowrap" id="collapseCodeSpe">
+                          <input type="text" class="form-control" name="codeSpe" placeholder="Code promo/spécial" id="codeSpe">
+                          <button class="btn btn-secondary" id="btn-verif-codeSpe">Vérifier</button>
+                        </div>
                       </div>
                     </div>
                     <button type="submit" role="button" class="btn btn-secondary">Lancer la recherche</button>
                   </form>
                 </div>
               </div>
-              <div class="tab-pane fade" id="v-pills-chambres" role="tabpanel" aria-labelledby="v-pills-chambres-tab">...</div>
+              <div class="tab-pane fade" id="v-pills-chambres" role="tabpanel" aria-labelledby="v-pills-chambres-tab">
+                <h2 class="">Sélectionner votre chambre</h2>
+                <div class="container border border-primary">
+                  <h4>Notre Recommandation</h4>
+                  <!-- CARDS -->
+                  <!-- Recommandation chambre -->
+                  <div class="card p-0">
+                    <div class="card-body">
+                      <img src="images/chambres-suite/chb1.jpg" alt="Image Suite" class="card-img-top">
+                      <h5 class="card-title my-3">Chambre Suite <span class="text-right">2000€</span></h5>
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Détails</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Prestations</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content p-0" id="myTabContent">
+                        <div class="tab-pane fade p-0 show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <p class="card-text">
+                            La Suite, le summum de séjour haut de gamme. Séjourner dans une de nos suites, restera une expérience inoubliable de votre passage à Paris. Les plus standard de qualité de notre hotel sont éxigés pour leur aménagement, notre psersonnel sera aux petits soins pour vous servir 24 heures sur 24. Reserver une suite à l'hotelcop est une garantie d'un séjour réussit dans notre belle capitale.
+                          </p>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                      </div>
+                      <div class="form-inline p-0">
+                        <i class="fas fa-minus-square"></i>
+                        <input type="number" class="form-control" value="0" min="0"  max="5" id="chambre-recommandee">
+                        <i class="fas fa-plus-square"></i>
+                        <a href="" class="btn btn-primary ml-3">Sélectionner</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
               <div class="tab-pane fade" id="v-pills-restaurant" role="tabpanel" aria-labelledby="v-pills-restaurant-tab">...</div>
               <div class="tab-pane fade" id="v-pills-spa" role="tabpanel" aria-labelledby="v-pills-spa-tab">...</div>
+              <div class="tab-pane fade" id="v-pills-panier" role="tabpanel" aria-labelledby="v-pills-panier-tab">...</div>
             </div>
           </div>
         </div>
