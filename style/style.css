@@ -10,8 +10,8 @@ body {
 /* ******* */
 /* SECTION */
 /* ******* */
-.logo-sm{
-  height:45px;
+.logo-sm {
+  height: 45px;
   width: 45px;
 }
 
@@ -22,9 +22,11 @@ section,
 section tr {
   color: #1b3e82;
 }
+
 section div {
   padding: 40px;
 }
+
 section div p {
   padding: 20px;
 }
@@ -32,6 +34,7 @@ section div p {
 a {
   text-decoration: none !important;
 }
+
 /***********section event actu presse***********/
 /* 
   Hauteur : 400px
@@ -39,7 +42,7 @@ a {
 */
 #event,
 #actua,
-#press{
+#press {
   height: 400px;
   cursor: pointer;
 }
@@ -52,6 +55,7 @@ a {
 #actua {
   background-image: url(../images/section_event/actu.jpg);
 }
+
 #press {
   background-image: url(../images/section_event/press.jpg);
 }
@@ -62,7 +66,7 @@ a {
 */
 figure#event,
 figure#actua,
-figure#press{
+figure#press {
   padding-left: 0;
   padding-right: 0;
   color: #FFF;
@@ -72,7 +76,7 @@ figure#press{
   Resize de la figcaption à 100% du parent
   bgc noir avec opacité pour laisser voir l'img
 */
-figcaption{
+figcaption {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.400);
@@ -82,7 +86,7 @@ figcaption{
   Hover sur parent, 
   Changmt font color en bleu et bgc en gold sur enfant
 */
-figure:hover figcaption{
+figure:hover figcaption {
   color: #1b3e82;
   background-color: rgba(218, 165, 32, 0.500);
   transition: 0.3s ease-in-out;
@@ -108,22 +112,25 @@ h2 {
 footer {
   width: auto;
 }
+
 /* comportement responsive du footer
 on met une width en px pour utiliser le flex-wrap */
 .foot-resp {
   width: 310px;
   margin: 30px 0;
 }
+
 /*********HEADER***********/
-#img-1{
+#img-1 {
   background-size: auto 400px;
-  
+
 }
 
 nav,
 footer {
   background-color: #0d1f41;
 }
+
 .nav-item a,
 footer,
 footer a {
@@ -136,18 +143,20 @@ footer a {
   background-color: #0d1f41;
   color: darkgoldenrod;
 }
+
 /* ****** */
 /* ICONES */
 /* ****** */
 .fas.fa-star,
-.fas.fa-star-half{
+.fas.fa-star-half {
   color: darkgoldenrod;
 }
 
 .fa-thumbs-up,
-#more-avis{
+#more-avis {
   cursor: pointer;
 }
+
 /* ******* */
 /* BUTTONS */
 /* ******* */
@@ -158,8 +167,10 @@ footer a {
 .custom-file-label {
   border-radius: 0;
 }
+
 .btn-secondary {
-  background-color: #dde2ed; /*dde2ed*/
+  background-color: #dde2ed;
+  /*dde2ed*/
   border-color: #dde2ed;
   color: #1b3e82;
 }
@@ -169,6 +180,7 @@ footer a {
   border-color: #dde2ed;
   color: #dde2ed;
 }
+
 /* 
 .btn-secondary:focus {
   background-color: #dde2ed;
@@ -186,60 +198,67 @@ footer a {
   background-color: #0d1f41;
   border-color: darkgoldenrod;
 }
+
 /* Ajustement des couleurs du btn-primary lorsque état actif et focus */
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:focus {
   color: darkgoldenrod;
   background-color: #0d1f41;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
   box-shadow: 0 0 0 .2rem rgba(184, 135, 11, 0.300);
 }
+
 .btn-primary:not(:disabled):not(.disabled):active.btn-primary:focus {
   box-shadow: 0 0 0 .2rem rgba(184, 135, 11, 0.300);
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
   color: darkgoldenrod;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
   background-color: transparent;
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
   color: #1b3e82;
   background-color: darkgoldenrod;
-  border-color:darkgoldenrod;
+  border-color: darkgoldenrod;
 }
 
 .dropdown-menu {
   background-color: #0d1f41;
 }
+
 .dropdown-item:focus,
 .dropdown-item:hover {
   color: #dde2ed;
   /* text-decoration: none; */
   background-color: transparent;
 }
-.custom-file-input:lang(fr) ~ .custom-file-label::after {
+
+.custom-file-input:lang(fr)~.custom-file-label::after {
   content: "Fichier";
 }
 
 /*****************/
 /* LINKS : HOVER */
 /*****************/
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-section a:hover, .nav-item a span:hover,
+section a:hover,
+.nav-item a span:hover,
 footer a:hover,
 .dropdown-item:hover {
   text-decoration: none;
   transition: 0.3s;
   color: darkgoldenrod;
 }
+
 /*****section chambres*******/
 
 #chambre-index {
-  
+
 
   background: url(../images/chambres/chambre3lg.jpg);
 }
@@ -247,13 +266,13 @@ footer a:hover,
 /*****section restaurant*******/
 
 #resto-index {
-  
+
 
   background: url(../images/resto/resto-lg.jpeg);
 }
 
 /*ajout de css sur l'id cuisto-index pour la page restaurant*/
-#cuisto-index{
+#cuisto-index {
   background: url(../images/resto/cuisto1.jpg);
   max-width: 100%;
   height: auto;
@@ -262,12 +281,14 @@ footer a:hover,
 /*****section spa*******/
 
 #spa-index {
-  
+
 
   background: url(../images/spa/spa.jpeg);
 }
 
-#chambre-index, #resto-index, #spa-index{
+#chambre-index,
+#resto-index,
+#spa-index {
   height: 500px;
 }
 
@@ -276,8 +297,8 @@ footer a:hover,
 /*********/
 /* CARDS */
 /*********/
-.card{
-  border-color: goldenrod ;
+.card {
+  border-color: goldenrod;
   border-radius: 0;
 }
 
@@ -290,6 +311,7 @@ footer a:hover,
 
 /* ajout dans les media query de differentes tailles d'images pour les sections chambres ,restaurant et spa */
 @media (max-width: 576px) {
+
   /*passage des elements du footer en colonne en dessous d'une width de 576px*/
   #colonne {
     flex-direction: column;
@@ -298,35 +320,46 @@ footer a:hover,
   #chambre-index {
     background: url(../images/chambres/chambre3sm.jpg);
   }
+
   #resto-index {
     background: url(../images/resto/resto-sm.jpeg);
   }
+
   #spa-index {
     background: url(../images/spa/spa-sm.jpeg);
   }
- 
+
 }
+
 @media (max-width: 768px) {
   #chambre-index {
     background: url(../images/chambres/chambre3md.jpg);
   }
+
   #resto-index {
     background: url(../images/resto/resto-md.jpeg);
   }
+
   #spa-index {
     background: url(../images/spa/spa-md.jpeg);
   }
- 
+
 }
+
 @media (max-width: 990px) {
   #restaurant {
     flex-direction: column-reverse;
   }
+
   .container {
     width: 100%;
     padding: 0;
   }
-  #classique, #confort, #deluxe, #suite{
+
+  #classique,
+  #confort,
+  #deluxe,
+  #suite {
     width: 100%;
   }
 }
@@ -341,16 +374,18 @@ footer .fas {
   width: 40px;
   font-size: 25px;
 }
+
 /**********************/
 /***  pages chambres***/
 /**********************/
 
 /* CLASSE POUR DONNER UNE LARGEUR FIXE AUX DIV CARACTERISTIQUES DANS LES SECTIONS DETAILLEES DES CHAMBRES*/
-.carac{
+.carac {
   width: 300px;
 }
+
 /* SEPARATEUR entre les sections chambres et la section détails des services inclus dans chaque chambres
 l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres */
-#separ{
+#separ {
   border-bottom: 3px solid #0d1f41;
 }
