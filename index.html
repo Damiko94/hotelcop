@@ -37,7 +37,7 @@
       <!-- BUTTON PANIER -->
       <!-- Toujours visible -->
       <!-- Active BS Modal -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-warning">3</span></button>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -181,7 +181,7 @@
               </div>
             </div>
             
-            <div class="row">
+            <div class="row border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -198,11 +198,16 @@
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
+            <div class="row pl-3">
+              <div class="col custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
+                <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <!-- btn réserver renvoie vers la page réservation pour valider et payer -->
-            <a href="reservations.html" class="btn btn-primary">Réserver</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>            
+            <button class="btn btn-primary">Valider et payer</button>
           </div>
         </div>
       </div>
