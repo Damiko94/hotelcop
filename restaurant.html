@@ -182,7 +182,7 @@
         </div>
     </header>
     <!-- FIN HEADER -->
-    <main>
+    <main class="container">
         <div class="text-center mt-5 w-50 mx-auto">
             <h1>Au Jardin Délices</h1>
             <p>Comment ne pas céder à la tentation de notre restaurant gastronomique,
@@ -229,7 +229,7 @@
         <!--+++++++++++++++++++++++ LA BRASSERIE +++++++++++++++++++++++++++++++-->
         <section class="container">
             <div class="row no-gutters text-center">
-                <div class="col-lg-8"><img src="images/resto/brasserie2bis.jpg" alt="brasserie" class="img-fluid"></div>
+                <img src="images/resto/brasserie2bis.jpg" alt="brasserie" class="img-fluid">
                 <div class="col-lg-4">
                     <h3>Notre brasserie</h3>
                     <p>Un espace conviviale, idéal pour un déjeuner en famille ou d'affaire.
@@ -248,11 +248,8 @@
         <!--++++++++++++++++ESPACE DEGUSTATION+++++++++++++++++++-->
         <section class="container">
             <div class="row no-gutters text-center">
-                <img src="images/resto/resto2.jpeg" alt="restaurant" class="img-fluid">
-                <div>
+                <div class="col-lg-4">
                     <h3>Après-midi Dégustation</h3>
-                </div>
-                <div>
                     <p>Une petite faim dans entre le déjêuner et le dîner,
                         nous avons une carte spécialement conçue pour vos envies de l'après-midi.
                     </p>
@@ -264,96 +261,85 @@
                         nos
                         cuisiniers passionnés.</p>
                 </div>
+                <div class="col-lg-8"><img src="images/resto/resto2.jpeg" class="img-fluid" alt="restaurant">
+                </div>
             </div>
         </section>
 
         <!--++++++++++++++++ESPACE DINER+++++++++++++++++++-->
         <section class="container">
-            <h3>Pour Dîner</h3>
-            <img src="images/resto/resto4.jpeg" alt="restaurant" class="img-fluid">
-            <div class="row no-gutters">
-                <div class="col-lg-6">
+            <div class="row no-gutters text-center">
+                <div class="col-lg-8"><img src="images/resto/resto4.jpeg" class="img-fluid" alt="restaurant"></div>
+                <div class="col-lg-4">
+                    <h3>Pour Dîner</h3>
                     <p>
                     </p>
                 </div>
-            </div>
         </section>
 
-        <!--+++++++++++SECTIONS DES MENUS+++++++++++++-->
-        <section>
-            <div class="row no-gutters">
-                <div class="col-md-4"><iframe src="images/resto/menus/menu_dejeuner.pdf" width="100%" height="500"
-                        frameborder="0" style="border:0;"></iframe></div>
-                <div class="col-md-4"><iframe src="images/resto/menus/menus-interieur.pdf" width="100%" height="500"
-                        frameborder="0" style="border:0;"></iframe></div>
-                <div class="col-md-4"><iframe src="images/resto/menus/menu_petit_dejeuner.pdf" width="100%" height="500"
-                        frameborder="0" style="border:0;"></iframe>
+
+        <!-- FOOTER -->
+        <footer class="text-center">
+            <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+            <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
+                <div class="foot-resp">
+                    <p>Hotel Cop</p>
+                    <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008
+                            Paris</a>
+                    </p>
+                    <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fas fa-sms"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <div class="foot-resp">
+                    <p><a href="contact-acces.html">Contact et accès</a></p>
+                    <p><a href="presse.html">Presse</a></p>
+                    <p><a href="recrutement.html">Recrutement</a></p>
+                    <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+                </div>
+
+                <div class="foot-resp">
+                    <p><a href="mentions-legales.html">Mentions légales</a></p>
+                    <p><a href="cgv.html">CGV</a></p>
+                    <p><a href="plan-site.html">Plan du site</a></p>
+                    <p><a href="#">Imprimer la page</a></p>
+                </div>
+
+                <div class="foot-resp ">
+                    <p class="d-bloc">Newsletter</p>
+                    <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+                    <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+                        <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter"
+                            id="mailNewsletter" placeholder="Saisir votre email" />
+                        <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-secondary">Valider</button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="text-center">
-        <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-        <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
-            <div class="foot-resp">
-                <p>Hotel Cop</p>
-                <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a>
-                </p>
-                <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
-
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fas fa-sms"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <div class="col pb-3 mt-5 text-center">
+                <p><a href="index.html" class="navbar-brand text-light">
+                        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+                    </a></p>
+                <p>Hotel Cop 2020 - Tous Droits réservés</p>
             </div>
+        </footer>
+        <!-- FIN FOOTER -->
 
-            <div class="foot-resp">
-                <p><a href="contact-acces.html">Contact et accès</a></p>
-                <p><a href="presse.html">Presse</a></p>
-                <p><a href="recrutement.html">Recrutement</a></p>
-                <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-            </div>
+        <!-- JQUERY -->
+        <script src="script/jquery/jquery-3.4.1.js"></script>
+        <script src="script/jquery/jquery-ui.min.js"></script>
 
-            <div class="foot-resp">
-                <p><a href="mentions-legales.html">Mentions légales</a></p>
-                <p><a href="cgv.html">CGV</a></p>
-                <p><a href="plan-site.html">Plan du site</a></p>
-                <p><a href="#">Imprimer la page</a></p>
-            </div>
-
-            <div class="foot-resp ">
-                <p class="d-bloc">Newsletter</p>
-                <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-                <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-                    <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter"
-                        placeholder="Saisir votre email" />
-                    <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-secondary">Valider</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="col pb-3 mt-5 text-center">
-            <p><a href="index.html" class="navbar-brand text-light">
-                    <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
-                </a></p>
-            <p>Hotel Cop 2020 - Tous Droits réservés</p>
-        </div>
-    </footer>
-    <!-- FIN FOOTER -->
-
-    <!-- JQUERY -->
-    <script src="script/jquery/jquery-3.4.1.js"></script>
-    <script src="script/jquery/jquery-ui.min.js"></script>
-
-    <!-- BOOTSTRAP -->
-    <script src="script/js/bootstrap.bundle.min.js"></script>
-    <!-- SCRIPT -->
-    <script src="script/js/script.js"></script>
+        <!-- BOOTSTRAP -->
+        <script src="script/js/bootstrap.bundle.min.js"></script>
+        <!-- SCRIPT -->
+        <script src="script/js/script.js"></script>
 </body>
 
 </html>
