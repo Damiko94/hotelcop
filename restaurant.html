@@ -15,98 +15,6 @@
     <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css" />
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css" />
-    <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 100px);
-            grid-auto-rows: 100px;
-            grid-auto-flow: dense;
-        }
-
-        .item {
-            overflow: hidden;
-            grid-template-columns: 1;
-            grid-template-rows: 1;
-        }
-
-        .item img {
-            grid-column: 1 / -1;
-            grid-row: 1 / -1;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .item__overlay {
-            background: #ffc60032;
-            grid-column: 1 / -1;
-            grid-row: 1 / -1;
-            position: relative;
-            display: grid;
-            justify-items: center;
-            align-items: center;
-            transition: 0.2s;
-        }
-
-        .item__overlay button {
-            background-attachment: none;
-            border: 2px solid white;
-            color: white;
-            text-transform: uppercase;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 5px;
-        }
-
-
-        .item.v2 {
-            grid-row: span 2;
-        }
-
-        .item.v3 {
-            grid-row: span 3;
-        }
-
-        .item.v4 {
-            grid-row: span 4;
-        }
-
-        .item.h2 {
-            grid-column: span 2;
-        }
-
-        .item.h3 {
-            grid-column: span 3;
-        }
-
-        .item.h4 {
-            grid-column: span 4;
-        }
-
-        .overlay {
-            position: fixed;
-            background: rgba(0, 0, 0, 0.7);
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: none;
-            z-index: 2;
-        }
-
-        .overlay.open {
-            display: grid;
-        }
-
-        .overlay figure {
-            background: white;
-            width: 700px;
-            padding: 20px;
-        }
-
-        .overlay img {
-            width: 100%;
-        }
-    </style>
     <title>Hotel Cop Paris - Avenue Montaigne</title>
 </head>
 
@@ -317,15 +225,50 @@
             </div>
         </section>
         <!--+++++++++++++++++++++++gallerie d'immages de plats++++++++++++++++++-->
-        <div class="overlay">
-            <div class="overlay-inner">
-                <button class="close">x fermer</button>
-                <img class="imgal">
-            </div>
+        <div class="d-flex flex-column justify-content-center text-center">
+            <h3>Quelques Photos de nos plats</h3>
+            <p class="font-italic">Seulement pour vous mettre l'eau à la bouche</p>
         </div>
-
-        <section class="gallery">
-
+        <section class="gallery justify-content-center">
+            <div class="item v3 h4">
+                <img src="images/resto/menus/plat1.jpg">
+            </div>
+            <div class="d-none d-lg-block item v4 h2">
+                <img src="images/resto/menus/plat2.jpg">
+            </div>
+            <div class="d-none d-lg-block item v2 h3">
+                <img src="images/resto/menus/plat3.jpg">
+            </div>
+            <div class="item v4 h4">
+                <img src="images/resto/menus/plat4.jpg">
+            </div>
+            <div class="item v2 h4">
+                <img src="images/resto/menus/plat5.jpg">
+            </div>
+            <div class="item v3 h4">
+                <img src="images/resto/menus/plat6.jpg">
+            </div>
+            <div class="d-none d-lg-block item v2 h3">
+                <img src="images/resto/menus/plat7.jpg">
+            </div>
+            <div class="d-none d-lg-block item v3 h3">
+                <img src="images/resto/menus/plat8.jpg">
+            </div>
+            <div class="d-none d-lg-block item v3 h2">
+                <img src="images/resto/menus/plat9.jpg">
+            </div>
+            <div class="d-none d-lg-block item v4 h4">
+                <img src="images/resto/menus/plat10.jpeg">
+            </div>
+            <div class="item v2 h4">
+                <img src="images/resto/menus/plat11.jpg">
+            </div>
+            <div class="d-none d-lg-block item v2 h3">
+                <img src="images/resto/menus/plat12.jpg">
+            </div>
+            <div class="d-none d-lg-block d-none item v2 h2">
+                <img src="images/resto/menus/plat13.jpg">
+            </div>
         </section>
 
         <!-- SEPARATEUR -->
@@ -470,42 +413,7 @@
         <!--style popur tester la mozaique de photos -->
 
         <!--script pour la gallery photo de plats-->
-        <script>
-            const gallery = document.querySelector('.gallery');
-            const overlay = document.querySelector('.overlay');
-            const overlayImage = overlay.querySelector('.imgal');
-            const overlayClose = overlay.querySelector('.close');
 
-            function generateHTML([h, v]) {
-                return `
-                    <div class="item h${h} v${v}">
-                        <img src="images/resto/menus/plat${randomNumber(8)}.jpg">
-                        <div class="itemm__overlay">
-                            <button> Voir</button>
-                        </div>
-                    </div>        
-                `;
-            }
-
-            function randomNumber(limit) {
-                return Math.floor(Math.random() * limit) + 1;
-            }
-
-            const digits = Array.from({
-                length: 50
-            }, () => [randomNumber(4), randomNumber(4)]).concat([
-                [1, 1],
-                [1, 1],
-                [1, 1],
-                [1, 1],
-                [1, 1],
-                [1, 1],
-                [1, 1],
-            ]);
-
-            const html = digits.map(generateHTML).join('');
-            gallery.innerHTML = html;
-        </script>
 </body>
 
 </html>
