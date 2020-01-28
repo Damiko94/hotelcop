@@ -124,100 +124,73 @@
     <!-- FIN NAVBAR -->
     <!-- HEADER -->
     <header>
-      <div id="carousel-indic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carousel-indic"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carousel-indic" data-slide-to="1"></li>
-          <li data-target="#carousel-indic" data-slide-to="2"></li>
-          <li data-target="#carousel-indic" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image Restaurant"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="my-0 mx-auto">Hotel Cop</h1>
-              <span class="d-bloc my-0 mx-auto">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-              <p class="my-0 mx-auto">Paris</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image chambre"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos chambres</h5>
-              <p>Un peu sommeil ?</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image restaurant"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre restaurant</h5>
-              <p>Une petite faim ?</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image spa"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre spa</h5>
-              <p>Une petite pause ?</p>
-            </div>
-          </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#carousel-indic"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Précédent</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carousel-indic"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Suivant</span>
-        </a>
-      </div>
+      
     </header>
     <!-- FIN HEADER -->
+    
+    <!-- EVENEMENTS -->
+    <!-- VIDEO 1 -->
     <section>
-      <div class="container text-center mb-sm-5 mt-sm-5">
+      <div class="container text-center my-sm-5 my-0 pb-0">
         <h2>Evénements</h2>
-        <p>
-          
-        </p>
+        <!-- no-gutters : suppr row margin et padding col -->
+        <div class="row no-gutters">
+          <!-- media query < lg : Text + vidéo superposés. >= lg : côte à côte + gestion auto de la taille des col -->
+          <div class="col-12 col-lg py-0">
+            <h3>Neha + Vizek</h3>
+            <p>Il y a quelques semaines, nous avons eu le grand privilège, et pour le bonheur de tous, de célébrer l'union de Neha et de Vizek.</p>
+          </div>
+          <div class="col-12 col-lg py-0 embed-responsive embed-responsive-16by9">
+            <!-- video + poster -->
+            <video poster="images/events/neha+vivek.jpg" controls>
+              <source src="videos/Neha + Vivek.mp4" type="video/mp4">
+            </video>
+        </div>
       </div>
-      <iframe src="https://player.vimeo.com/video/281567111" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </section>
+    <!-- VIDEO 2 -->
+    <section>
+      <div class="container text-center my-sm-5 my-0 pb-0">
+        <!-- no-gutters : suppr row margin et padding col -->
+        <div class="row no-gutters">
+          <!-- media query < lg : Text + vidéo superposés. 
+            >= lg : côte à côte + gestion auto de la taille des col -->
+          <div class="col-12 col-lg py-0 order-lg-1">
+            <h3>Isa + Erik</h3>
+            <p>Il y a quelques semaines, nous avons eu le grand privilège, et pour le bonheur de tous, de célébrer l'union d'Isa et d'Eric.</p>
+          </div>
+          <div class="col-12 col-lg py-0 order-lg-0 embed-responsive embed-responsive-16by9">
+            <video poster="images/events/isa+eric.jpg" controls>
+              <source src="videos/ISA + ERIC.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- VIDEO 3 -->
+    <section>
+      <div class="container text-center my-sm-5 my-0 pb-0">
+        <!-- no-gutters : suppr row margin et padding col -->
+        <div class="row no-gutters">
+          <!-- media query < lg : Text + vidéo superposés. >= lg : côte à côte + gestion auto de la taille des col -->
+          <div class="col-12 col-lg py-0">
+            <h3>Notre toute première campagne publicitaire</h3>
+            <p>Nous sommes fiers de vous présenter notre toute première campagne publicitaire</p>
+          </div>
+          <div class="col-12 col-lg py-0 embed-responsive embed-responsive-16by9">
+            <video poster="images/events/tour-eiffel.jpg" controls>
+              <source src="videos/campagne-pub.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTUALITES SECTEUR HOTELLIER -->
+    <section>
+      
+    </section>
+
     <!-- FOOTER -->
     <footer class="text-center">
       <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
