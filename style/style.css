@@ -280,7 +280,11 @@ footer a:hover,
   border-radius: 0;
 }
 
-
+/* Retire les borders radius de BS sur les cards img */
+.card-img, .card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 
 /*******reglages dispo div dans section*******/
 /***************/
@@ -303,7 +307,6 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-sm.jpeg);
   }
- 
 }
 @media (max-width: 768px) {
   #chambre-index {
@@ -315,7 +318,24 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-md.jpeg);
   }
- 
+  /* Cards de 1 colonnes jusqu'à sm */
+  .card-columns {
+    column-count: 1;
+  } 
+}
+
+@media (min-width:768px){
+  /* Cards de 2 colonnes à partir de md */
+  .card-columns {
+    column-count: 2;
+  } 
+}
+
+@media (min-width:992px){
+  /* Cards de 3 colonnes à partir de md */
+  .card-columns {
+    column-count: 3;
+  } 
 }
 @media (max-width: 990px) {
   #restaurant {
@@ -328,6 +348,7 @@ footer a:hover,
   #classique, #confort, #deluxe, #suite{
     width: 100%;
   }
+  
 }
 
 /**********************/
