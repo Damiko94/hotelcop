@@ -286,6 +286,10 @@ footer a:hover,
   border-top-right-radius: 0;
 }
 
+.bg-bleu{
+  background-color: #0d1f41;
+}
+
 /*******reglages dispo div dans section*******/
 /***************/
 /* MEDIA QUERY */
