@@ -1,216 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
-    <!-- BOOSTRAP -->
-    <link rel="stylesheet" href="style/bootstrap.min.css" />
-    <!-- GOOGLE FONT -->
-    <!-- 2 lignes pour passer le w3c validator -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
-    <!-- FONT AWESOME -->
-    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="style/style.css" />
-    <title>Hotel Cop Paris - Avenue Montaigne</title>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <!-- Etendue en affichage large -->
-    <!-- Réduite en médium et centré -->
-    <nav class="navbar navbar-expand-lg sticky-top text-light">
-      
-      <!-- LOGO -->
-      <!-- Toujours visible -->
-      <a href="index.html" class="navbar-brand text-light">
-        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
-      </a>
-      <!-- BTN RESERVER -->
-      <!-- Toujours visible -->
-      <!-- Envoie user vers page de réservation -->
-      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
-      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-primary">Réserver</a>
-      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>      
-      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
-        <ul class="navbar-nav">
-          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
-          <li class="nav-item pr-4">
-          </li>
-          <!-- MENU -->
-          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
-              <span>Nous découvrir</span>
-            </a>
-            <!-- DROPDOWN ITEMS -->
-            <!-- Liens amenants vers les pages nommées-->
-            <!-- text-center: centré dans le menu reduit -->
-            <!-- text-lg-left:left dans le menu étendu-->            
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
-              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
-              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
-              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
-              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
-            </div>
-          </li>
+<head>
+  <meta charset="UTF-8" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
+  <!-- BOOSTRAP -->
+  <link rel="stylesheet" href="style/bootstrap.min.css" />
+  <!-- GOOGLE FONT -->
+  <!-- 2 lignes pour passer le w3c validator -->
+  <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet" />
+  <!-- FONT AWESOME -->
+  <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css" />
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="style/style.css" />
+  <title>Hotel Cop Paris - Avenue Montaigne</title>
+</head>
 
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Chambres</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
-              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
-              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
-              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
-              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
-              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
-            </div>
-          </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Restaurant</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
-              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
-              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
-              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
-            </div>
-          </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Spa</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
-              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
-            </div>
-          </li>
-          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
-          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
-          <li class="nav-item dropdown pr-2 text-light text-nowrap">
-            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>FR</span> <i class="fas fa-globe-europe"></i>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
-              <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>
-            </div>
-          </li>             
-        </ul>
-        
-        <!-- BARRE DE RECHERCHE -->
-        <!-- Mini form inline -->
-        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
-        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-    </nav>
-    <!-- FIN NAVBAR -->
-    <!-- HEADER -->
-    <header>
-      <div id="carousel-indic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carousel-indic"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carousel-indic" data-slide-to="1"></li>
-          <li data-target="#carousel-indic" data-slide-to="2"></li>
-          <li data-target="#carousel-indic" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image Restaurant"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="my-0 mx-auto">Hotel Cop</h1>
-              <span class="d-bloc my-0 mx-auto">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-              <p class="my-0 mx-auto">Paris</p>
-            </div>
+<body>
+  <!-- NAVBAR -->
+  <!-- Etendue en affichage large -->
+  <!-- Réduite en médium et centré -->
+  <nav class="navbar navbar-expand-lg sticky-top text-light">
+
+    <!-- LOGO -->
+    <!-- Toujours visible -->
+    <a href="index.html" class="navbar-brand text-light">
+      <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
+    </a>
+    <!-- BTN RESERVER -->
+    <!-- Toujours visible -->
+    <!-- Envoie user vers page de réservation -->
+    <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+    <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+    <a href="reservations.html" class="btn btn-primary">Réserver</a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
+        <li class="nav-item pr-4">
+        </li>
+        <!-- MENU -->
+        <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Nous découvrir</span>
+          </a>
+          <!-- DROPDOWN ITEMS -->
+          <!-- Liens amenants vers les pages nommées-->
+          <!-- text-center: centré dans le menu reduit -->
+          <!-- text-lg-left:left dans le menu étendu-->
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+            <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+            <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+            <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+            <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
+            <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+            <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
           </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image chambre"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos chambres</h5>
-              <p>Un peu sommeil ?</p>
-            </div>
+        </li>
+
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Chambres</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
+            <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
+            <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
+            <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>
+            <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
+            <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
           </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image restaurant"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre restaurant</h5>
-              <p>Une petite faim ?</p>
-            </div>
+        </li>
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Restaurant</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
+            <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
+            <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
+            <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>
+            <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
+            <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
           </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="images/bar-711x200.jpg"
-              alt="Image spa"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre spa</h5>
-              <p>Une petite pause ?</p>
-            </div>
+        </li>
+        <li class="nav-item dropdown pr-4 text-light">
+          <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>Spa</span>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
+            <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
+            <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+            <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>
+            <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+            <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+            <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
+          </div>
+        </li>
+        <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+        <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+        <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+        <li class="nav-item dropdown pr-2 text-light text-nowrap">
+          <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span>FR</span> <i class="fas fa-globe-europe"></i>
+          </a>
+          <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+            <a class="dropdown-item" href="#"><span>English</span></a>
+            <a class="dropdown-item" href="#"><span>Español</span></a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- BARRE DE RECHERCHE -->
+      <!-- Mini form inline -->
+      <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+      <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
+        <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" />
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
+  <!-- HEADER -->
+  <header>
+    <div id="carousel-indic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-indic" data-slide-to="1"></li>
+        <li data-target="#carousel-indic" data-slide-to="2"></li>
+        <li data-target="#carousel-indic" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image Restaurant" />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="my-0 mx-auto">Hotel Cop</h1>
+            <span class="d-bloc my-0 mx-auto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <p class="my-0 mx-auto">Paris</p>
           </div>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carousel-indic"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Précédent</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carousel-indic"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Suivant</span>
-        </a>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image chambre" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Nos chambres</h5>
+            <p>Un peu sommeil ?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image restaurant" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Notre restaurant</h5>
+            <p>Une petite faim ?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image spa" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Notre spa</h5>
+            <p>Une petite pause ?</p>
+          </div>
+        </div>
       </div>
-    </header>
-    <!-- FIN HEADER -->
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+  </header>
+  <!-- FIN HEADER -->
 
-    <!-- premiere section historique -->
+  <!-- premiere section historique -->
 
     <section id="about" class="text-center mb-sm-5 mt-sm-5">
       <div class="container">
@@ -279,30 +256,8 @@
           <a href="spa.html" class="btn btn-primary">Voir nos gammes de soins</a>
         </p>
       </div>
-      <div id="spa-index" class="col-lg-8 flex-wrap"></div>
-    </section>
-    <section class="d-flex my-5 px-0" id="actu">
-      <div class="container">
-        <!-- no-gutters : évite le scroll horizontal -->
-        <div class="row px-0 no-gutters">
-          <figure id="event" class="col-lg-4" onclick="document.location='actualites-evenements.html'">
-            <figcaption class="d-flex align-items-center justify-content-center">
-              <h2>Evénements</h2>
-            </figcaption>
-          </figure>
-          <figure id="actua" class="col-lg-4" onclick="document.location='actualites-evenements.html'">
-            <figcaption class="d-flex align-items-center justify-content-center">
-              <h2>Actualités</h2>
-            </figcaption>
-          </figure>
-          <figure id="press" class="col-lg-4" onclick="document.location='presse.html'">
-            <figcaption class="d-flex align-items-center justify-content-center">
-              <h2>Presse</h2>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
     <section class="container px-0">
       <h2>Un quartier d'exception</h2>
@@ -322,28 +277,28 @@
           <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
           <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
 
-          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fas fa-sms"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>          
-        </div>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-sms"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
 
-        <div class="foot-resp">
-          <p><a href="contact-acces.html">Contact et accès</a></p>
-          <p><a href="presse.html">Presse</a></p>
-          <p><a href="recrutement.html">Recrutement</a></p>
-          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-        </div>
+      <div class="foot-resp">
+        <p><a href="contact-acces.html">Contact et accès</a></p>
+        <p><a href="presse.html">Presse</a></p>
+        <p><a href="recrutement.html">Recrutement</a></p>
+        <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+      </div>
 
-        <div class="foot-resp">
-          <p><a href="mentions-legales.html">Mentions légales</a></p>
-          <p><a href="cgv.html">CGV</a></p>
-          <p><a href="plan-site.html">Plan du site</a></p>
-          <p><a href="#">Imprimer la page</a></p>
-        </div>
+      <div class="foot-resp">
+        <p><a href="mentions-legales.html">Mentions légales</a></p>
+        <p><a href="cgv.html">CGV</a></p>
+        <p><a href="plan-site.html">Plan du site</a></p>
+        <p><a href="#">Imprimer la page</a></p>
+      </div>
 
         <div class="foot-resp ">
           <p class="d-bloc">Newsletter</p>
@@ -354,6 +309,7 @@
           </form>
         </div>
       </div>
+    </div>
 
       <div class="col pb-3 mt-5 text-center">
         <p><a href="index.html" class="navbar-brand text-light">
@@ -367,13 +323,14 @@
     </footer>
     <!-- FIN FOOTER -->
 
-    <!-- JQUERY -->
-    <script src="script/jquery/jquery-3.4.1.js"></script>
-    <script src="script/jquery/jquery-ui.min.js"></script>
+  <!-- JQUERY -->
+  <script src="script/jquery/jquery-3.4.1.js"></script>
+  <script src="script/jquery/jquery-ui.min.js"></script>
 
-    <!-- BOOTSTRAP -->
-    <script src="script/js/bootstrap.bundle.min.js"></script>
-    <!-- SCRIPT -->
-    <script src="script/js/script.js"></script>
-  </body>
+  <!-- BOOTSTRAP -->
+  <script src="script/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT -->
+  <script src="script/js/script.js"></script>
+</body>
+
 </html>
