@@ -1,5 +1,6 @@
 body {
   font-family: "Alegreya Sans", sans-serif;
+  color: #1b3e82;
 }
 
 .container {
@@ -16,26 +17,63 @@ section div p {
   padding: 20px;
 }
 
-section,
-section div a {
-  color: #1b3e82;
+a {
   text-decoration: none !important;
 }
 /***********section event actu presse***********/
+/* 
+  Hauteur : 400px
+  Curseur : pointer pour donner l'impression que toute l'img est cliquable
+*/
+#event,
+#actua,
+#press{
+  height: 400px;
+  cursor: pointer;
+}
+
+/* Chargement des img en bgc */
 #event {
   background: url(../images/section_event/event.jpg);
-  ;
-  height: 400px;
 }
+
 #actua {
   background-image: url(../images/section_event/actu.jpg);
-  
-  height: 400px;
 }
 #press {
   background-image: url(../images/section_event/press.jpg);
-  
-  height: 400px;
+}
+
+/* 
+  Retire les padding left et right de chaque figure
+  Font color blanc  
+*/
+figure#event,
+figure#actua,
+figure#press{
+  padding-left: 0;
+  padding-right: 0;
+  color: #FFF;
+}
+
+/* 
+  Resize de la figcaption à 100% du parent
+  bgc noir avec opacité pour laisser voir l'img
+*/
+figcaption{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.400);
+}
+
+/* 
+  Hover sur parent, 
+  Changmt font color en bleu et bgc en gold sur enfant
+*/
+figure:hover figcaption{
+  color: #1b3e82;
+  background-color: rgba(218, 165, 32, 0.500);
+  transition: 0.3s ease-in-out;
 }
 
 /*********/
