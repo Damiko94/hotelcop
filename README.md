@@ -1,10 +1,11 @@
 # Projet Front End - [IFOCOP](https://www.ifocop.fr/centre-formations/paris-xi/)
-DIW54 - DEWOO20\
+[DIW54 - Développeur intégrateur Web](https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-integrateur-web/)\
+[DEWOO20 - Développeur PHP orienté objet – Symfony](https://www.ifocop.fr/formations-metiers/web-digital/formation-developpeur-php-oriente-objet/)\
 15/01/2020 - 07/02/2020
 
 ## Sujet
 
-Création d'un **site web en HTML/CSS**
+Création d'un **site web en HTML/CSS** en binôme.
 
 ## Consigne et Contexte
 
@@ -261,7 +262,7 @@ Le client attache particulièrement d’importance au respect des dates et du d�
 
 Les fonctionnalités nécessitant une base de données, ainsi que les langages de programmation (sql, php, etc.) seront conçus en interface mais ne seront pas à développer au niveau des traitements.
 
-Exemple :\
+Exemple :
 * Formulaire de réservation et calendrier : Interface (HTML / CSS)
 * Formulaire pour déposer un avis / Lecture des avis : Interface (HTML / CSS)
 

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <!-- FONT AWESOME -->
+    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <title>Hotel Cop Paris - Avenue Montaigne</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- Etendue en affichage large -->
+    <!-- Réduite en médium et centré -->
+    <nav class="navbar navbar-expand-lg sticky-top text-light">
+      
+      <!-- LOGO -->
+      <!-- Toujours visible -->
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+      </a>
+      <!-- BTN RESERVER -->
+      <!-- Toujours visible -->
+      <!-- Envoie user vers page de réservation -->
+      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+      <a href="reservations.html" class="btn btn-primary mr-2">Réserver</a>
+      <!-- BUTTON PANIER -->
+      <!-- Toujours visible -->
+      <!-- Active BS Modal -->
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
+          <li class="nav-item pr-4">
+          </li>
+          <!-- MENU -->
+          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+              <span>Nous découvrir</span>
+            </a>
+            <!-- DROPDOWN ITEMS -->
+            <!-- Liens amenants vers les pages nommées-->
+            <!-- text-center: centré dans le menu reduit -->
+            <!-- text-lg-left:left dans le menu étendu-->            
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Chambres</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
+              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
+              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
+              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
+              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
+              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Restaurant</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
+              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
+              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
+              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Spa</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
+              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
+              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
+              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
+            </div>
+          </li>
+          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
+            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>FR</span> <i class="fas fa-globe-europe"></i>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+              <a class="dropdown-item" href="#"><span>English</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>
+            </div>
+          </li>             
+        </ul>
+        
+        <!-- BARRE DE RECHERCHE -->
+        <!-- Mini form inline -->
+        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
+          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+    <!-- MODAL PANIER -->
+    <!-- En dehors de la NAV -->
+    <div class="modal fade" id="modalPanier" tabindex="1" role="dialog" aria-labelledby="labelPanier" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelPanier">Votre panier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Chambre Suite pour 2 personnes<br>
+                  du 07/02/2020 au 08/02/2020 (1 nuit)
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  580 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Diner pour 2 personnes<br>
+                  le 07/02/2020 - 21h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  <!-- Pas de tarif, on ne sait jamais ce qu'on va manger -->
+                  -
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Soin Relaxant pour 2 personnes<br>
+                  le 07/02/2020 - 19h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  325 €
+                </p>
+              </div>
+            </div>
+            
+            <div class="row border-top">
+              <div class="col">
+                <p class="text-right">
+                  TOTAL
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  905 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-muted text-right">
+                <p>La maison ne fait pas crédit.</p>
+              </div>
+            </div>
+            <div class="row pl-3">
+              <div class="col custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
+                <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>            
+            <button class="btn btn-primary">Valider et payer</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- FIN MODAL PANIER -->
+
+  
+  <main>
+    <section class="container">
+     
+       <div class="row d-flex justify-content-center">
+         <h2>Votre Réservation</h2>
+       </div>
+       <!-- FORMULAIRE DE RESERVATION -->
+       <div class="row d-flex justify-content-center">
+        <form class="form-inline">
+          <label class="form-check-label mr-2" for="date-arrivee">Date d'arrivée</label>
+          <input type="date" class="form-control mr-sm-3" id="date-arrivee" value="2020-02-07" min="2020-02-07">
+          <label class="form-check-label mr-2" for="date-arrivee">Date d'arrivée</label>
+          <input type="date" class="form-control mr-sm-3" id="date-arrivee" value="2020-02-07" min="2020-02-07">
+                
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="check-restaurant">
+            <label class="form-check-label mr-4 mr-md-3" for="check-restaurant">Restaurant</label>
+            <input class="form-check-input" type="checkbox" id="check-spa">
+            <label class="form-check-label" for="check-spa">Spa</label>            
+          </div>
+        
+          <!-- Nombre d'occupant de la chambre : pas de distinctions entre adultes et enfants -->
+          <!-- Limité à 5 occupants -->
+          <div class="form-select pl-0 pr-2 py-3">
+            <select class="form-control" name="nb-occupant" id="nb-occupant">
+              <option value="1">1 occupant</option>
+              <option value="2">2 occupants</option>
+              <option value="3">3 occupants</option>
+              <option value="4">4 occupants</option>
+              <option value="5">5 occupants</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="btn-recherche-resa">Lancer la recherche</button>
+        </form>
+       </div>
+       <!-- FIN FORMULAIRE DE RESERVATION -->
+      </section>
+      
+      <section class="container">
+        <div class="row no-gutters">
+          <h3>Voici notre sélection pour la période du <span id="resa-date-arrivee">07/02/2020</span> au <span id="resa-date-depart">07/02/2020</span> (<span id="resa-nb-nuits">1 nuit</span>)</h3>
+        </div>
+        <!-- RESA CHAMBRE CLASSIQUE -->
+        <form>
+        <div class="row border no-gutters">
+         <div class="col p-0">
+           <img src="images/classique.jpg" class="img-thumbnail float-left" alt="Chambre classique">
+         </div>
+         <div class="col py-0 pl-3">
+          <h5>Chambre Classique</h5>
+            <p class="px-0 py-2">Tarif : 500 €</p>
+            Services inclus :
+            <ul>
+              <li>Room Service</li>
+              <li>Petit déjeuner</li>
+              <li>Voiturier</li>
+              <li>Ménage quotidien</li>
+            </ul>
+         </div>
+         <div class="col-12 col-md py-0 text-right">      
+          <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+            <select name="nb-classique" class="form-control form-control-sm w-25" id="nb-classique">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </p>
+         </div>
+        </div>
+        <!-- RESA CHAMBRE CONFORT -->
+        <div class="row border no-gutters">
+          <div class="col p-0">
+            <img src="images/pavillon2.jpg" class="img-thumbnail float-left" alt="Chambre Confort">
+          </div>
+          <div class="col py-0 pl-3">
+           <h5>Chambre Confort</h5>
+             <p class="px-0 py-2">Tarif : 1000 €</p>
+             Services inclus :
+             <ul>
+               <li>Room Service</li>
+               <li>Petit déjeuner</li>
+               <li>Voiturier</li>
+               <li>Ménage quotidien</li>
+             </ul>
+          </div>
+          <div class="col-12 col-md py-0 text-right">      
+           <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+             <select name="nb-confort" class="form-control form-control-sm w-25" id="nb-confort">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+             </select>
+           </p>
+          </div>
+         </div>
+         <!-- RESA CHAMBRE DELUXE -->
+         <div class="row border no-gutters">
+           <div class="col p-0">
+             <img src="images/deluxe.jpg" class="img-thumbnail float-left" alt="Chambre deluxe">
+           </div>
+           <div class="col py-0 pl-3">
+            <h5>Chambre Deluxe</h5>
+              <p class="px-0 py-2">Tarif : 1500 €</p>
+              Services inclus :
+              <ul>
+                <li>Room Service</li>
+                <li>Petit déjeuner</li>
+                <li>Voiturier</li>
+                <li>Ménage quotidien</li>
+              </ul>
+           </div>
+           <div class="col-12 col-md py-0 text-right">      
+            <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+              <select name="nb-deluxe" class="form-control form-control-sm w-25" id="nb-deluxe">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </p>
+           </div>
+          </div>
+          <!-- RESA CHAMBRE SUITE -->
+          <div class="row border no-gutters">
+            <div class="col p-0">
+              <img src="images/suite.jpg" class="img-thumbnail float-left" alt="Chambre classique">
+            </div>
+            <div class="col py-0 pl-3">
+             <h5>Chambre Suite</h5>
+               <p class="px-0 py-2">Tarif : 2000 €</p>
+               Services inclus :
+               <ul>
+                 <li>Room Service</li>
+                 <li>Petit déjeuner</li>
+                 <li>Voiturier</li>
+                 <li>Ménage quotidien</li>
+               </ul>
+            </div>
+            <div class="col-12 col-md py-0 text-right">      
+             <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+               <select name="nb-suite" class="form-control form-control-sm w-25" id="nb-suite">
+                 <option value="0">0</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+               </select>
+             </p>
+            </div>
+           </div>
+           <div class="row p-0 no-gutters">
+             <div class="col d-flex justify-content-end">
+               <button role="button" type="submit" class="btn btn-primary">Réserver</button>
+             </div>
+             <div class="col-1 text-right">TOTAL</div>
+             <div class="col-2 text-center pr-2" id="resa-total">500 €</div>
+            </div>
+          </form>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
+        <div class="foot-resp">
+          <p>Hotel Cop</p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-sms"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>          
+        </div>
+
+        <div class="foot-resp">
+          <p><a href="contact-acces.html">Contact et accès</a></p>
+          <p><a href="presse.html">Presse</a></p>
+          <p><a href="recrutement.html">Recrutement</a></p>
+          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+        </div>
+
+        <div class="foot-resp">
+          <p><a href="mentions-legales.html">Mentions légales</a></p>
+          <p><a href="cgv.html">CGV</a></p>
+          <p><a href="plan-site.html">Plan du site</a></p>
+          <p><a href="#">Imprimer la page</a></p>
+        </div>
+
+        <div class="foot-resp ">
+          <p class="">Newsletter</p>
+          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+          <form id="newsl" class="form-inline d-lg-flexjustify-content-center flex-nowrap">
+            <input type="email" class=" form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit" class=" btn btn-secondary">Valider</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+        </a></p>
+        <p>
+          Hotel Cop 2020 - Tous Droits réservés <br>
+          <small class="text-muted">Designed and built with all the love <i class="fas fa-heart"></i> in the world by MT & DG</small> 
+        </p>
+      </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- JQUERY -->
+    <script src="script/jquery/jquery-3.4.1.js"></script>
+    <script src="script/jquery/jquery-ui.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="script/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPT -->
+    <script src="script/js/script.js"></script>
+  </body>
+</html>    

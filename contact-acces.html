@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
     <link rel="stylesheet" href="style/bootstrap.min.css" />
     <!-- BOOSTRAP MATERIAL DESIGN -->
     <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
     <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
@@ -23,13 +26,19 @@
       
       <!-- LOGO -->
       <!-- Toujours visible -->
-      <a href="index.html" class="navbar-brand text-light">HC</a>
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+      </a>
       <!-- BTN RESERVER -->
       <!-- Toujours visible -->
       <!-- Envoie user vers page de réservation -->
       <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
       <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-resa">Réserver</a>
+      <a href="reservations.html" class="btn btn-primary mr-2">Réserver</a>
+      <!-- BUTTON PANIER -->
+      <!-- Toujours visible -->
+      <!-- Active BS Modal -->
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
@@ -41,7 +50,7 @@
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
           <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link active dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+            <a class="nav-link dropdown-toggle active" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
             <!-- DROPDOWN ITEMS -->
@@ -50,15 +59,14 @@
             <!-- text-lg-left:left dans le menu étendu-->            
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="events.html"><span>Evénements</span></a>
-              <a class="dropdown-item" href="actualites.html"><span>Actualités</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-              <a class="dropdown-item" href="temoignages.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
               <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
               <a class="dropdown-item active" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-          
+
           <li class="nav-item dropdown pr-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>Chambres</span>
@@ -98,13 +106,14 @@
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>              
+              <a class="dropdown-item" href="#"><span>Español</span></a>
             </div>
           </li>             
         </ul>
@@ -114,11 +123,97 @@
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
           <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Rechercher</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
     <!-- FIN NAVBAR -->
+    <!-- MODAL PANIER -->
+    <!-- En dehors de la NAV -->
+    <div class="modal fade" id="modalPanier" tabindex="1" role="dialog" aria-labelledby="labelPanier" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelPanier">Votre panier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Chambre Suite pour 2 personnes<br>
+                  du 07/02/2020 au 08/02/2020 (1 nuit)
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  580 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Diner pour 2 personnes<br>
+                  le 07/02/2020 - 21h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  <!-- Pas de tarif, on ne sait jamais ce qu'on va manger -->
+                  -
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Soin Relaxant pour 2 personnes<br>
+                  le 07/02/2020 - 19h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  325 €
+                </p>
+              </div>
+            </div>
+            
+            <div class="row border-top">
+              <div class="col">
+                <p class="text-right">
+                  TOTAL
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  905 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-muted text-right">
+                <p>La maison ne fait pas crédit.</p>
+              </div>
+            </div>
+            <div class="row pl-3">
+              <div class="col custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
+                <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>            
+            <button class="btn btn-primary">Valider et payer</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- FIN MODAL PANIER -->
+    
     <!-- HEADER -->
     <header>
       <div id="carousel-indic" class="carousel slide" data-ride="carousel">
@@ -177,6 +272,7 @@
     </header>
     <!-- FIN HEADER -->
 
+
     <section id="contact" class="text-center my-sm-5">        
           <h2>Nous contacter</h2>
           <h3>Nous serons ravis de vous aider</h3>
@@ -219,6 +315,34 @@
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
+                <div class="col-lg-3 py-1">
+                  <input type="text" name="ct-entreprise" id="entreprise" class="form-control" placeholder="Entreprise">
+                  <small id="entrepriseHelp" class="form-text text-left"></small>
+                </div>
+                <div class="col-lg-3 py-1">
+                  <select name="ct-pays" id="pays" class="form-control">
+                    <option value="fr" selected>France</option>
+                    <option value="gb">Angleterre</option>
+                    <option value="ger">Allemagne</option>
+                    <option value="es">Espagne</option>
+                    <option value="es">Espagne</option>
+                    <option value="it">Italie</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-6 py-1">
+                  <select name="ct-categorie" id="categorie" class="form-control">
+                    <option value="0" selected>Sélectionnez une catégorie...</option>
+                    <option value="chambre">Chambre</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="spa">Spa</option>
+                    <option value="general">Ordre Général</option>
+                  </select>
+                  <small id="categorieHelp" class="form-text text-left"></small>
+                </div>
+              </div>
+              <div class="form-row justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <input type="text" name="ct-objet-email" id="objet" placeholder="Objet du message" class="form-control">
                   <small id="objetHelp" class="form-text text-left"></small>
@@ -239,7 +363,11 @@
                   <small id="captchaHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Envoyer</button>
+              <div class="form-row justify-content-center py-0">
+                <div class="col-lg-6 text-left py-1">
+                  <button type="submit" class="btn btn-secondary">Envoyer</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -260,6 +388,14 @@
             <!-- order-xl évite que table se trouve superposé à la map -->
             <div class="col-lg-6 order-xl-1">
               <h3>Informations complémentaires</h3>
+              <div class="row text-left py-0">
+                <div class="col py-1">
+                  <p>Hotel Cop <br>
+                    <i class="fas fa-map-marker-alt"></i> 1 avenue Montaigne 75008 Paris <br>
+                    <i class="fas fa-phone-alt"></i><a href="tel:+33175000000"> +33(0) 1 75 00 00 00</a> <br>
+                </p>
+                </div>
+              </div>
               <table class="table table-sm table-hover">
                 <tbody>
                   <thead>
@@ -311,66 +447,65 @@
           </div>
         </div>
       </section>
+      
     <!-- FOOTER -->
     <footer class="text-center">
-        <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-        <div id="haut-footer" class="d-flex flex-wrap   justify-content-around ">
-          <div class="foot-resp">
-            <p>Hotel Cop</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              1 avenue Montaigne 75008 Paris
-            </p>
-            <p><a href="tel:+33175000000">+33(0) 1 75 00 00 00</a></p>
-  
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fas fa-sms"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-          </div>
-  
-          <div class="foot-resp">
-            <p><a href="contact-acces.html">Contact et accès</a></p>
-            <p><a href="presse.html">Presse</a></p>
-            <p><a href="recrutement.html">Recrutement</a></p>
-            <p><a href="events.html">Evénements</a></p>
-            <p><a href="actualites.html">Actualités</a></p>
-          </div>
-  
-          <div class="foot-resp">
-            <p><a href="mentions-legales.html">Mentions légales</a></p>
-            <p><a href="cgv.html">CGV</a></p>
-            <p><a href="plan-site.html">Plan du site</a></p>
-            <p><a href="#">Imprimer la page</a></p>
-          </div>
-  
-          <div class="foot-resp ">
-            <p class="d-bloc">Newsletter</p>
-            <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-            <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-              <input type="email" class="d-bloc form-control mr-sm-2 " name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
-              <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-primary">Valider</button>
-            </form>
-          </div>
+      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
+        <div class="foot-resp">
+          <p>Hotel Cop</p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-sms"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>          
         </div>
-  
-        <div class="col pb-3 mt-5 text-center">
-          <p>Hotel Cop 2020 - Tous Droits réservés</p>
+
+        <div class="foot-resp">
+          <p><a href="contact-acces.html">Contact et accès</a></p>
+          <p><a href="presse.html">Presse</a></p>
+          <p><a href="recrutement.html">Recrutement</a></p>
+          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
         </div>
-      </footer>
-  
-      <!-- JQUERY -->
-      <script src="script/jquery/jquery-3.4.1.js"></script>
-      <!-- <script src="script/jquery/jquery-ui.min.js"></script> -->
-  
-      <!-- BOOTSTRAP MATERIAL DESIGN -->
-      <!-- <script src="script/js/bootstrap-material-design.min.js"></script> -->
-      <!-- BOOTSTRAP -->
-      <script src="script/js/bootstrap.bundle.min.js"></script>
-      <!-- SCRIPT -->
-      <script src="script/js/script.js"></script>
+
+        <div class="foot-resp">
+          <p><a href="mentions-legales.html">Mentions légales</a></p>
+          <p><a href="cgv.html">CGV</a></p>
+          <p><a href="plan-site.html">Plan du site</a></p>
+          <p><a href="#">Imprimer la page</a></p>
+        </div>
+
+        <div class="foot-resp ">
+          <p class="d-bloc">Newsletter</p>
+          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+          <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+            <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit"class=" d-bloc btn btn-secondary">Valider</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+        </a></p>
+        <p>Hotel Cop 2020 - Tous Droits réservés</p>
+      </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- JQUERY -->
+    <script src="script/jquery/jquery-3.4.1.js"></script>
+    <script src="script/jquery/jquery-ui.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="script/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPT -->
+    <script src="script/js/script.js"></script>
   </body>
-</html>  
+</html>

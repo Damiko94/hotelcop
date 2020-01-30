@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <!-- BOOSTRAP MATERIAL DESIGN -->
+    <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
+    <!-- GOOGLE FONT -->
+    <!-- 2 lignes pour passer le w3c validator -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <!-- FONT AWESOME -->
+    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="style/style.css" />
+    <title>Hotel Cop Paris - Avenue Montaigne</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- Etendue en affichage large -->
+    <!-- Réduite en médium et centré -->
+    <nav class="navbar navbar-expand-lg sticky-top text-light">
+      
+      <!-- LOGO -->
+      <!-- Toujours visible -->
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+      </a>
+      <!-- BTN RESERVER -->
+      <!-- Toujours visible -->
+      <!-- Envoie user vers page de réservation -->
+      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+      <a href="reservations.html" class="btn btn-primary mr-2">Réserver</a>
+      <!-- BUTTON PANIER -->
+      <!-- Toujours visible -->
+      <!-- Active BS Modal -->
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
+          <li class="nav-item pr-4">
+          </li>
+          <!-- MENU -->
+          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+              <span>Nous découvrir</span>
+            </a>
+            <!-- DROPDOWN ITEMS -->
+            <!-- Liens amenants vers les pages nommées-->
+            <!-- text-center: centré dans le menu reduit -->
+            <!-- text-lg-left:left dans le menu étendu-->            
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Chambres</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
+              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
+              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
+              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
+              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
+              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Restaurant</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
+              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
+              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
+              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
+              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown pr-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>Spa</span>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
+              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
+              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
+              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
+              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
+              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
+              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
+            </div>
+          </li>
+          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
+          <li class="nav-item dropdown pr-2 text-light text-nowrap">
+            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>FR</span> <i class="fas fa-globe-europe"></i>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+              <a class="dropdown-item" href="#"><span>English</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>
+            </div>
+          </li>             
+        </ul>
+        
+        <!-- BARRE DE RECHERCHE -->
+        <!-- Mini form inline -->
+        <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
+        <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
+          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+    <!-- MODAL PANIER -->
+    <!-- En dehors de la NAV -->
+    <div class="modal fade" id="modalPanier" tabindex="1" role="dialog" aria-labelledby="labelPanier" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelPanier">Votre panier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Chambre Suite pour 2 personnes<br>
+                  du 07/02/2020 au 08/02/2020 (1 nuit)
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  580 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Diner pour 2 personnes<br>
+                  le 07/02/2020 - 21h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  <!-- Pas de tarif, on ne sait jamais ce qu'on va manger -->
+                  -
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Soin Relaxant pour 2 personnes<br>
+                  le 07/02/2020 - 19h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  325 €
+                </p>
+              </div>
+            </div>
+            
+            <div class="row border-top">
+              <div class="col">
+                <p class="text-right">
+                  TOTAL
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  905 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-muted text-right">
+                <p>La maison ne fait pas crédit.</p>
+              </div>
+            </div>
+            <div class="row pl-3">
+              <div class="col custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
+                <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>            
+            <button class="btn btn-primary">Valider et payer</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- FIN MODAL PANIER -->
+    
+    <main class="container my-5">
+        <div class="text-center my-5">
+          <h1>Mentions Légales</h1>
+        </div>
+        <section class="my-5">
+            <h2>Editeur</h2>
+            <p>Le site internet accessible, notamment, à l’adresse http://www.hotelcop.fr (ci-après : le « Site ») est édité par la société HOTELCOP LIMITED, société de droit français au capital social de 2.000.000 Euros, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 555 222 933 00017 et dont le siège social est sis 1 avenue Montaigne Paris (France) et le principal établissement au 1 avenue Montaigne – Paris (75008) ; numéro de téléphone +33 (0)1 75 00 00 00 (ci-après dénommée « HOTELCOP PARIS »).</p>
+            <p>Les Directeurs de la publication du Site sont : Manathan T. et Damien G.</p>
+            <p>Le Site est hébergé par la société Hotelcop System, 1 avenue Montaigne, Paris ; numéro de téléphone : +33 (0)1 75 00 00 00.</p>    
+            <p>L’accès au Site ainsi que l’utilisation de son contenu s’effectuent dans le cadre des mentions d’utilisation décrites ci-après. Le fait d’accéder et de naviguer sur le Site constitue de la part de l’internaute une acceptation sans réserve des précisions suivantes :</p>
+
+        </section>
+        <section class="my-5">
+            <h2>Propriété intellectuelle</h2>
+            <p>Le Site dans son ensemble, ainsi que chacun des éléments qui le composent (notamment, textes, schémas, arborescences, logiciels, animations, images, photographies, illustrations, vidéos, représentations graphiques ou éditoriales, logos, etc.) constituent des œuvres de l’esprit protégés par le Code de la propriété intellectuelle ainsi que par toute autre législation internationale applicable.  
+            <p>HOTELCOP PARIS est seule habilitée (directement ou par l’effet de licences ou autorisations) à utiliser les éléments composant le Site, les noms de domaine, les marques, modèles, etc. ainsi que les images et contenus éditoriaux qui y sont reproduits.</p>
+            <p>L’usage de tout ou partie du Site, notamment par téléchargement, reproduction, transmission, représentation ou diffusion à d’autres fins que la consultation et l’utilisation du Site à titre personnel et privé par l’internaute dans un but non commercial est strictement interdit. La violation de ces dispositions expose son auteur aux sanctions prévues tant par le Code de la propriété intellectuelle au titre notamment de la contrefaçon de droits d’auteur, de droit de marques que par le Code civil en matière de responsabilité civile.</p>
+            <p>La création de tout lien hypertexte renvoyant à l’une quelconque des pages web ou éléments composant le Site est interdite sauf autorisation écrite et préalable de HOTELCOP PARIS, laquelle autorisation pouvant être révoquée à tout moment. Tout contenu, site internet ou autre ayant un lien hypertexte dirigeant vers le Site ou vers l’un quelconque des éléments qui le composent ne sont pas sous le contrôle de HOTELCOP PARIS et celle-ci décline par conséquent toute responsabilité (notamment, éditoriale) concernant l’accès à ces sites et leur contenu.</p>          
+        </section>
+        <section class="my-5">
+            <h2>Propriéte du site</h2>
+            <p>HOTELCOP PARIS s’efforce, dans la mesure du possible, de maintenir accessibles de manière permanente le Site, mais n’est tenue à aucune obligation d’y parvenir. HOTELCOP PARIS peut donc interrompre l’accès au Site, notamment pour des raisons de maintenance ou de mise à jour, ou pour toutes autres raisons, notamment techniques ou éditoriales et ce, sans préavis ni information préalable des internautes, sans que HOTELCOP PARIS ne puisse être tenue pour responsable des conséquences de ces interruptions aussi bien à l’égard des internautes que de tout tiers.</p>
+            <p>Par ailleurs, HOTELCOP PARIS ne saurait être tenue pour responsable si des internautes ne parvenaient pas à accéder à tout ou partie du Site du fait de tout défaut technique ou de tout problème notamment et non limitativement lié à :</p>
+            <ul>
+              <li>une défaillance et/ou un encombrement du réseau Internet,</li>
+              <li>une défaillance des fournisseurs d’accès Internet,</li>
+              <li>une erreur humaine ou d’origine électrique,</li>
+              <li>toute intervention malveillante,</li>
+              <li>tous dysfonctionnements de logiciel ou de matériel,</li>
+              <li>un cas de force majeure.</li>
+            </ul>
+        </section>
+        <section class="my-5">
+            <h2>Responsabilité</h2>
+            <p>HOTELCOP PARIS s’efforce d’assurer au mieux de ses possibilités l’exactitude et la mise à jour des informations diffusées sur le Site, dont elle se réserve le droit de modifier, à tout moment et sans préavis, le contenu.</p>
+            <p>Toutefois, HOTELCOP PARIS ne peut garantir l’exactitude, la précision et l’exhaustivité des informations mises à disposition sur le Site, lesquelles informations ne constituent ni une garantie ni un engagement de la part de HOTELCOP PARIS à l’égard de l’internaute. En particulier, cette dernière ne saurait être tenue pour responsable :</p>
+            <ul>
+              <li>de toute imprécision, inexactitude ou omission desdites informations ;</li>
+              <li>de tout dommage éventuel résultant d’une intrusion informatique d’un tiers ayant entraîné une modification desdites informations ;</li>
+              <li>et, plus généralement, de tous dommages, directs ou indirects, qu’elles qu’en soient les causes, origines, natures et conséquences, liées à l’accès (ou à l’impossibilité d’accéder au Site), au contenu, à l’utilisation du Site et/ou au crédit accordé à une quelconque information provenant de ce dernier</li>
+            </ul>
+        </section>
+    </main>
+        
+    <!-- FOOTER -->
+    <footer class="text-center">
+      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
+        <div class="foot-resp">
+          <p>Hotel Cop</p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-sms"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>          
+        </div>
+
+        <div class="foot-resp">
+          <p><a href="contact-acces.html">Contact et accès</a></p>
+          <p><a href="presse.html">Presse</a></p>
+          <p><a href="recrutement.html">Recrutement</a></p>
+          <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+        </div>
+
+        <div class="foot-resp">
+          <p><a href="mentions-legales.html">Mentions légales</a></p>
+          <p><a href="cgv.html">CGV</a></p>
+          <p><a href="plan-site.html">Plan du site</a></p>
+          <p><a href="#">Imprimer la page</a></p>
+        </div>
+
+        <div class="foot-resp ">
+          <p class="d-bloc">Newsletter</p>
+          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+          <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+            <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-secondary">Valider</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+        </a></p>
+        <p>
+          Hotel Cop 2020 - Tous Droits réservés <br>
+          <small class="text-muted">Designed and built with all the love <i class="fas fa-heart"></i> in the world by MT & DG</small> 
+        </p>
+      </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- JQUERY -->
+    <script src="script/jquery/jquery-3.4.1.js"></script>
+    <script src="script/jquery/jquery-ui.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="script/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPT -->
+    <script src="script/js/script.js"></script>
+  </body>
+</html>
