@@ -34,7 +34,11 @@
       <!-- Envoie user vers page de réservation -->
       <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
       <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
-      <a href="reservations.html" class="btn btn-primary">Réserver</a>
+      <a href="reservations.html" class="btn btn-primary mr-2">Réserver</a>
+      <!-- BUTTON PANIER -->
+      <!-- Toujours visible -->
+      <!-- Active BS Modal -->
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
@@ -124,6 +128,93 @@
       </div>
     </nav>
     <!-- FIN NAVBAR -->
+
+    <!-- MODAL PANIER -->
+    <!-- En dehors de la NAV -->
+    <div class="modal fade" id="modalPanier" tabindex="1" role="dialog" aria-labelledby="labelPanier" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="labelPanier">Votre panier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Chambre Suite pour 2 personnes<br>
+                  du 07/02/2020 au 08/02/2020 (1 nuit)
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  580 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Diner pour 2 personnes<br>
+                  le 07/02/2020 - 21h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  <!-- Pas de tarif, on ne sait jamais ce qu'on va manger -->
+                  -
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>
+                  1 Soin Relaxant pour 2 personnes<br>
+                  le 07/02/2020 - 19h
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  325 €
+                </p>
+              </div>
+            </div>
+            
+            <div class="row border-top">
+              <div class="col">
+                <p class="text-right">
+                  TOTAL
+                </p>
+              </div>
+              <div class="col-2">
+                <p class="text-right">
+                  905 €
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-muted text-right">
+                <p>La maison ne fait pas crédit.</p>
+              </div>
+            </div>
+            <div class="row pl-3">
+              <div class="col custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
+                <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>            
+            <button class="btn btn-primary">Valider et payer</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- FIN MODAL PANIER -->
+    
     <main class="container my-5">
       <div class="text-center my-5">
         <h1>CONDITIONS GENEREALES DE VENTE</h1>
