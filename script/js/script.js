@@ -121,22 +121,22 @@ function checkSaisie(nInput, iInput){
       case "ct-prenom":
       case "ct-entreprise":
           minChar = 2;
-          var regEx = /^[a-zA-Z-]{2,50}$/;
+          regEx = /^[a-zA-Z-éèàùïöüëäöïüäç ]{2,50}$/;
           break;
       case "ct-email":
       case "ct-email2":
           minChar = 2;
-          var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+          regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
           break;
       case "ct-msg":
           minChar = 10;
           //Tous les caractères. nombre entre 10 et 2000.
-          var regEx = /^.{10,2000}$/;
+          regEx = /^[\w|\d|\s|\n|\r"'-_#,;:!§{}&²€$£%µéèàùïöüëäöïüäç°]{10,2000}$/;
           break;
       case "ct-objet":
           minChar = 10;
           //Tous les caractères. nombre entre 10 et 100.
-          var regEx = /^.{10,100}$/;
+          regEx = /^[\w|\d|\s|\n|\r"'-_#,;:!§{}&²€$£%µéèàùïöüëäöïüäç°]{1,100}$/;
           break;      
       default:
           minChar = 2;
