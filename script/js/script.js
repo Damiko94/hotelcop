@@ -67,6 +67,19 @@ function setUi(idInput, isInvalid){
   idInput.setAttribute("class", attr + " is-"+valid+"valid");  
 }
 
+/** ****************** **/
+/**   MESSAGE ENVOYE   **/
+/** ****************** **/
+var btnSent = document.getElementById("btnSent");
+var msgSent = document.getElementById("msgSent");
+
+btnSent.addEventListener("click", function(e){
+  e.preventDefault();
+  let msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> Notre équipe reviendra vers vous le plus rapidement possible.";
+  msgSent.innerHTML = msg;
+});
+
+
 /** ****************** **
  *
  *        DAMIEN

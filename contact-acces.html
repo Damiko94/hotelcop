@@ -285,7 +285,8 @@
             <!-- Taille form -->
             <!-- SM-MD : large -->
             <!-- LG : reduit sur col-6 -->
-            <form action="post">
+            <form method="GET" action="contact-acces.html">
+
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-1 py-1">
                   <select name="ct-civilite" id="civilite" class="form-control">
@@ -294,29 +295,29 @@
                   </select>
                 </div>
                 <div class="col-lg-5 py-1">
-                  <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
+                  <input value="FEDERER" type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
                   <small id="nomHelp" class="form-text text-left"></small>
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
+                  <input value="Roger" type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
                   <small id="prenomHelp" class="form-text text-left"></small>
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-3 py-1">
-                  <input type="email" name="ct-email" id="ct-email" class="form-control" placeholder="Email" required>
+                  <input value="federer@roger.com" type="email" name="ct-email" id="ct-email" class="form-control" placeholder="Email" required>
                   <small id="emailHelp" class="form-text text-left"></small>
                 </div>
                 <div class="col-lg-3 py-1">
-                  <input type="email" name="ct-email2" id="ct-email2" class="form-control" placeholder="Confirmer votre email" required>
+                  <input value="federer@roger.com" type="email" name="ct-email2" id="ct-email2" class="form-control" placeholder="Confirmer votre email" required>
                   <small id="email2Help" class="form-text text-left"></small>
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-3 py-1">
-                  <input type="text" name="ct-entreprise" id="ct-entreprise" class="form-control" placeholder="Entreprise">
+                  <input value="RF" type="text" name="ct-entreprise" id="ct-entreprise" class="form-control" placeholder="Entreprise">
                   <small id="entrepriseHelp" class="form-text text-left"></small>
                 </div>
                 <div class="col-lg-3 py-1">
@@ -334,7 +335,7 @@
                 <div class="col-lg-6 py-1">
                   <select name="ct-categorie" id="ct-categorie" class="form-control">
                     <option value="0" selected>Sélectionnez une catégorie...</option>
-                    <option value="chambre">Chambre</option>
+                    <option selected value="chambre">Chambre</option>
                     <option value="restaurant">Restaurant</option>
                     <option value="spa">Spa</option>
                     <option value="general">Ordre Général</option>
@@ -344,13 +345,13 @@
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <input type="text" name="ct-objet-email" id="ct-objet" placeholder="Objet du message" class="form-control" required>
+                  <input value="Pour vous remercier" type="text" name="ct-objet-msg" id="ct-objet" placeholder="Objet du message" class="form-control" required>
                   <small id="objetHelp" class="form-text text-left"></small>
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <textarea name="ct-msg" id="ct-msg" cols="30" rows="10" placeholder="Votre message" class="form-control" required></textarea>
+                  <textarea name="ct-msg" id="ct-msg" cols="30" rows="10" placeholder="Votre message" class="form-control" required>Un message qui vient du coeur</textarea>
                   <small id="msgHelp" class="form-text text-left"></small>
                 </div>
               </div>
@@ -359,16 +360,21 @@
                 <!-- Vérif user non bot -->
                 <!-- A remplacer par Google Captcha -->
                 <div class="col-lg-6 py-1">
-                  <input type="text" name="ct-captcha" id="ct-captcha" placeholder="(Captcha) Combien font 2x2 ?" class="form-control" required>
+                  <input value="4" type="text" name="ct-captcha" id="ct-captcha" placeholder="(Captcha) Combien font 2x2 ?" class="form-control" required>
                   <small id="captchaHelp" class="form-text text-left"></small>
                 </div>
               </div>
               <div class="form-row justify-content-center py-0">
                 <div class="col-lg-6 text-left py-1">
-                  <button type="submit" class="btn btn-secondary">Envoyer</button>
+                  <button type="submit" class="btn btn-secondary" id="btnSent">Envoyer</button>
                 </div>
               </div>
             </form>
+            <div class="row justify-content-center py-0">
+              <div class="col-lg-6 py-1 text-left">
+                <p id="msgSent" class="text-success px-0"></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
