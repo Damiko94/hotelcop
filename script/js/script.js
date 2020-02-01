@@ -53,6 +53,7 @@ iPrenom.addEventListener("blur", function(){if(iPrenom.value==""){setUi(iPrenom,
 iEntreprise.addEventListener("blur", function(){if(iEntreprise.value==""){setUi(iEntreprise, true);}else{checkSaisie("ct-entreprise", iEntreprise)}});
 iEmail1.addEventListener("blur", function(){if(iEmail1.value==""){setUi(iEmail1, true);}else{checkSaisie("ct-email", iEmail1)}});
 iEmail2.addEventListener("blur", function(){if(iEmail2.value==""){setUi(iEmail2, true);}else{checkSaisie("ct-email2", iEmail2)}});
+iCategorie.addEventListener("change", getCategorie);
 iObjet.addEventListener("blur", function(){if(iObjet.value==""){setUi(iObjet, true);}else{checkSaisie("ct-objet", iObjet)}});
 iMsg.addEventListener("blur", function(){if(iMsg.value==""){setUi(iMsg, true);}else{checkSaisie("ct-msg", iMsg)}});
 
@@ -189,6 +190,21 @@ function checkEmptyInputs() {
   }else{
     //Sinon return false
     return false;
+  }
+}
+
+
+/** ****************** **/
+/**      CATEGORIE     **/
+/** ****************** **/
+function getCategorie(){
+  var vCategorie = iCategorie.value;
+  if (vCategorie != "") {
+      // console.log(vCategorie);       
+      setUi(iCategorie,false);
+  }else{
+      // console.log(vCategorie);
+      setUi(iCategorie,true);
   }
 }
 
