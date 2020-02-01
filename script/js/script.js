@@ -4,15 +4,21 @@
  *
  *  ****************** **/
 
+/** ****************** **/
+/**  IMPRESSION PAGE   **/
+/** ****************** **/
 // Fonction impression de la page
 function printPage() {
   window.print();
 }
 
 /** ****************** **/
+/** ------------------ --/
 //     PAGE CONTACT
+/** ------------------ --/
 /** ****************** **/
 
+var iCivilite = document.getElementById("ct-civilite");
 var iNom = document.getElementById("ct-nom");
 var iPrenom = document.getElementById("ct-prenom");
 var iEmail1 = document.getElementById("ct-email");
@@ -20,8 +26,10 @@ var iEmail2 = document.getElementById("ct-email2");
 var iCategorie = document.getElementById("ct-categorie");
 var iObjet = document.getElementById("ct-objet");
 var iMsg = document.getElementById("ct-msg");
+var iCaptcha = document.getElementById("ct-captcha");
 // var iEmail1Help = document.getElementById("emailHelp");
 var iEmail2Help = document.getElementById("email2Help");
+var iCaptchaHelp = document.getElementById("captchaHelp");
 
 /** ****************** **/
 /**   SAISIE EMAIL 1   **/
@@ -50,21 +58,21 @@ iEmail2.addEventListener("input", function(){compareInputs(iEmail1, iEmail2);});
 function compareInputs(input1, input2){
   var val1 = input1.value;
   var val2 = input2.value;
+  var attr = "form-control";
   // Affiche ok uniquement quand le mail est entièrement écrit et qu'ils correspondent
   if (val1.length === val2.length && val1.substr(0,val2.length) === val2.substr(0,val2.length)) {
     // console.log("Identiques!");
-    setUi(input2, false);
+    setUi(input2, attr, false);
     iEmail2Help.innerHTML="Les emails correspondent!";
   }else{
     // console.log("Pas Identiques!");
-    setUi(input2, true);
+    setUi(input, attr2, true);
     iEmail2Help.innerHTML="";
   }
 }
 
 // Affiche pour l'utilisateur qu'emails correspondent
-function setUi(idInput, isInvalid){
-  var attr = "form-control";
+function setUi(idInput, attr, isInvalid){  
   var valid = "";
   if (isInvalid){
       valid = "in";
@@ -86,6 +94,32 @@ function checkEmptyInputs() {
 }
 
 /** ****************** **/
+/**      CAPTCHA       **/
+/** ****************** **/
+iCaptcha.addEventListener("input", function(){
+  var attr = "form-control";
+  var msg;
+  if(checkCaptcha()){
+    setUi(iCaptcha, attr, false);
+    iCaptchaHelp.innerHTML = "";
+  }else{
+    setUi(iCaptcha, attr, true);
+    msg = "Attention, le nombre saisi n'est pas le bon.";
+    iCaptchaHelp.innerHTML = msg;
+  }
+});
+
+
+// Vérif nombre saisi soit le bon
+function checkCaptcha(){
+  var vCaptcha = iCaptcha.value;
+  if (vCaptcha == 4) {
+    return true;
+  }
+  return false;
+}
+
+/** ****************** **/
 /**   MESSAGE ENVOYE   **/
 /** ****************** **/
 var btnSent = document.getElementById("btnSent");
@@ -93,10 +127,12 @@ var msgSent = document.getElementById("msgSent");
 
 btnSent.addEventListener("click", function(e){
   e.preventDefault();
-  
-  if(!checkEmptyInputs()){
-    let msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> Notre équipe reviendra vers vous le plus rapidement possible.";
-    msgSent.innerHTML = msg;
+  var msg;  
+  if (checkCaptcha()) {
+    if(!checkEmptyInputs()){
+      msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> " + iCivilite.value + " " + iNom.value + ", notre équipe reviendra vers vous le plus rapidement possible.";      
+      msgSent.innerHTML = msg;
+    }    
   }
 });
 
