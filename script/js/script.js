@@ -106,6 +106,11 @@ function checkSaisie(nInput, iInput){
           minChar = 2;
           var regEx = /^[a-zA-Z-]{2,50}$/;
           break;
+      case "ct-email":
+      case "ct-email2":
+          minChar = 2;
+          var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+          break;
       case "ct-msg":
           minChar = 10;
           //Tous les caractères. nombre entre 10 et 2000.
