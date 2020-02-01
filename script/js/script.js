@@ -27,7 +27,7 @@ var iCategorie = document.getElementById("ct-categorie");
 var iObjet = document.getElementById("ct-objet");
 var iMsg = document.getElementById("ct-msg");
 var iCaptcha = document.getElementById("ct-captcha");
-// var iEmail1Help = document.getElementById("emailHelp");
+var iEmail1Help = document.getElementById("emailHelp");
 var iEmail2Help = document.getElementById("email2Help");
 var iCaptchaHelp = document.getElementById("captchaHelp");
 
@@ -96,6 +96,7 @@ function checkEmptyInputs() {
 /** ****************** **/
 /**      CAPTCHA       **/
 /** ****************** **/
+//Listener input sur saisie du captcha
 iCaptcha.addEventListener("input", function(){
   var attr = "form-control";
   var msg;
@@ -109,16 +110,42 @@ iCaptcha.addEventListener("input", function(){
   }
 });
 
-
+// ------------------
+//   Check Captcha
+// ------------------
 // Vérif nombre saisi soit le bon
 function checkCaptcha(){
   var vCaptcha = iCaptcha.value;
-  if (vCaptcha == 4) {
+  //Compare saisie user avec chiffres générés
+  if (vCaptcha == (nb1+nb2)) {
     return true;
   }
   return false;
 }
 
+// ------------------
+//   Random captcha
+// ------------------
+//Appel de la fonction à chaque chargement de la page pour générer nouveaux chiffres
+randCaptcha();
+
+//Déclaration en dehors de randCaptcha() pour être utlisés dans checkCaptcha()
+var nb1, nb2;
+// Génère un captcha différent à chaque rafraichissement de la page
+function randCaptcha(){
+  var max = 10;
+  nb1 = alea_nb(max);
+  nb2 = alea_nb(max);
+  var ph = "(Captcha) Combien font " + nb1 + "+" + nb2 + " ?";
+  
+  //UI : Mise à jour du placeholder
+  iCaptcha.setAttribute("placeholder", ph);
+}
+
+//Return un entier entre 0 et max passé en argument
+function alea_nb(max){
+	return Math.floor(Math.random() * max + 1);
+}
 /** ****************** **/
 /**   MESSAGE ENVOYE   **/
 /** ****************** **/
