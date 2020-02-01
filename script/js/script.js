@@ -33,6 +33,8 @@ var iEmail1Help = document.getElementById("emailHelp");
 var iEmail2Help = document.getElementById("email2Help");
 var iMsgHelp = document.getElementById("msgHelp");
 var iCaptchaHelp = document.getElementById("captchaHelp");
+var iFichier = document.getElementById("ct-fichier");
+var labelFichier = document.getElementById("label-fichier");
 
 /** ****************** **/
 /**  CHECK DES INPUTS  **/
@@ -41,21 +43,41 @@ var iCaptchaHelp = document.getElementById("captchaHelp");
  * Si user clique dans input et sort sans rien saisir
  * affiche erreur
  * */
-iNom.addEventListener("blur", function(){
-  if(iNom.value==""){
-    setUi(iNom, true);
-  }else{  
-   //Vérif que saisie correspond au RegExp   
-    checkSaisie("ct-nom", iNom)
-  }
-});
-iPrenom.addEventListener("blur", function(){if(iPrenom.value==""){setUi(iPrenom, true);}else{checkSaisie("ct-prenom", iPrenom)}});
-iEntreprise.addEventListener("blur", function(){if(iEntreprise.value==""){setUi(iEntreprise, true);}else{checkSaisie("ct-entreprise", iEntreprise)}});
-iEmail1.addEventListener("blur", function(){if(iEmail1.value==""){setUi(iEmail1, true);}else{checkSaisie("ct-email", iEmail1)}});
-iEmail2.addEventListener("blur", function(){if(iEmail2.value==""){setUi(iEmail2, true);}else{checkSaisie("ct-email2", iEmail2)}});
-iCategorie.addEventListener("change", getCategorie);
-iObjet.addEventListener("blur", function(){if(iObjet.value==""){setUi(iObjet, true);}else{checkSaisie("ct-objet", iObjet)}});
-iMsg.addEventListener("blur", function(){if(iMsg.value==""){setUi(iMsg, true);}else{checkSaisie("ct-msg", iMsg)}});
+if (iNom !== null) {
+  iNom.addEventListener("blur", function(){
+    if(iNom.value==""){
+      setUi(iNom, true);
+    }else{  
+     //Vérif que saisie correspond au RegExp   
+      checkSaisie("ct-nom", iNom)
+    }
+  });
+}
+
+if (iPrenom !== null) {
+  iPrenom.addEventListener("blur", function(){if(iPrenom.value==""){setUi(iPrenom, true);}else{checkSaisie("ct-prenom", iPrenom)}});
+}
+if (iEntreprise !== null) {
+  iEntreprise.addEventListener("blur", function(){if(iEntreprise.value==""){setUi(iEntreprise, true);}else{checkSaisie("ct-entreprise", iEntreprise)}});  
+}
+if (iEmail1 !== null) {
+  iEmail1.addEventListener("blur", function(){if(iEmail1.value==""){setUi(iEmail1, true);}else{checkSaisie("ct-email", iEmail1)}});
+}
+if (iEmail2 !== null) {
+  iEmail2.addEventListener("blur", function(){if(iEmail2.value==""){setUi(iEmail2, true);}else{checkSaisie("ct-email2", iEmail2)}});
+}
+if (iCategorie !== null) {
+  iCategorie.addEventListener("change", getCategorie);
+}
+if (iObjet !== null) {
+  iObjet.addEventListener("blur", function(){if(iObjet.value==""){setUi(iObjet, true);}else{checkSaisie("ct-objet", iObjet)}});
+}
+if (iMsg !== null) {
+  iMsg.addEventListener("blur", function(){if(iMsg.value==""){setUi(iMsg, true);}else{checkSaisie("ct-msg", iMsg)}});
+}
+if (iCaptcha !== null) {
+  iCaptcha.addEventListener("blur", function(){if(iCaptcha.value==""){setUi(iCaptcha, true);}else{checkSaisie("ct-captcha", iCaptcha)}});
+}
 
 /* *
  * Vérif la saisie à chaque frappe du clavier et
@@ -74,7 +96,7 @@ iMsg.addEventListener("input", function(){
  * */
 function checkSaisie(nInput, iInput){
   //nInput : input name
-  var regEx;
+  var regEx = /^.{10,100}$/;;
   var val = iInput.value;
   var minChar;
   switch (nInput) {
@@ -193,7 +215,6 @@ function checkEmptyInputs() {
   }
 }
 
-
 /** ****************** **/
 /**      CATEGORIE     **/
 /** ****************** **/
@@ -207,6 +228,15 @@ function getCategorie(){
       setUi(iCategorie,true);
   }
 }
+
+/** ****************** **/
+/**      FICHIER       **/
+/** ****************** **/
+//Récup et affiche le nom du fichier sélectionné
+iFichier.addEventListener("change", function(){
+  var f = iFichier.files[0];
+  labelFichier.innerHTML = f.name;
+});
 
 
 /** ****************** **/

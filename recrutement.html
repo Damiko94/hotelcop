@@ -286,36 +286,36 @@
         <form action="post">
           <div class="form-row justify-content-center py-0">
             <div class="col-lg-1 py-1">
-              <select name="rh-civilite" id="rh-civilite" class="form-control">
+              <select name="ct-civilite" id="ct-civilite" class="form-control">
                 <option value="m" selected>M.</option>
                 <option value="mme">Mme.</option>
               </select>
             </div>
             <div class="col-lg-5 py-1">
-              <input type="text" class="form-control" id="rh-nom" placeholder="Nom" required>
+              <input type="text" class="form-control" id="ct-nom" placeholder="Nom" required>
               <small id="nomHelp" class="form-text text-left"></small>
             </div>
           </div>
           <div class="form-row justify-content-center py-0">
             <div class="col-lg-6 py-1">
-              <input type="text" class="form-control" id="rh-prenom" placeholder="Prénom" required>
+              <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
               <small id="prenomHelp" class="form-text text-left"></small>
             </div>
           </div>
           <div class="form-row justify-content-center py-0">
             <div class="col-lg-3 py-1">
-              <input type="email" name="rh-email" id="rh-email" class="form-control" placeholder="Email">
+              <input type="email" name="ct-email" id="ct-email" class="form-control" placeholder="Email">
               <small id="emailHelp" class="form-text text-left"></small>
             </div>
             <div class="col-lg-3 py-1">
-              <input type="email" name="rh-email2" id="rh-email2" class="form-control" placeholder="Confirmer votre email">
+              <input type="email" name="ct-email2" id="ct-email2" class="form-control" placeholder="Confirmer votre email">
               <small id="email2Help" class="form-text text-left"></small>
             </div>
           </div>
           <div class="form-row justify-content-center py-0">
             <div class="col-lg-6 py-1">
-              <select name="rh-poste" id="rh-poste" class="form-control">
-                <option value="0" selected>Sélectionnez le poste auquel vous souhaitez postuler</option>
+              <select name="ct-categorie" id="ct-categorie" class="form-control">
+                <option value="" selected>Sélectionnez le poste auquel vous souhaitez postuler</option>
                 <optgroup label="Hotel">
                   <option value="room-service">Room Service</option>
                   <option value="voiturier">Voiturier</option>
@@ -338,14 +338,14 @@
           </div>
           <div class="form-row justify-content-center py-1 px-5">
             <div class="col-lg-6 py-1 px-2 custom-file">
-              <small id="cvHelp" class="form-text text-left">Manque un fichier</small>
-              <input type="file" class="custom-file-input px-0" id="inputFichier" lang="fr">
-              <label class="custom-file-label text-left" for="inputFichier">Sélectionner un fichier</label>
+              <input type="file" class="custom-file-input px-0" id="ct-fichier" accept=".doc, .docx, .pdf" lang="fr">
+              <label class="custom-file-label text-left" for="ct-fichier" id="label-fichier">Sélectionner un fichier</label>
+              <small id="cvHelp" class="form-text text-left">Sélectionner un fichier au format .doc, .docx ou .pdf</small>
             </div>
           </div>
           <div class="form-row justify-content-center py-1">
             <div class="col-lg-6 py-1">
-              <textarea name="rh-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+              <textarea name="ct-msg" id="ct-msg" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
               <small id="msgHelp" class="form-text text-left"></small>
             </div>
           </div>
@@ -354,13 +354,13 @@
             <!-- Vérif user non bot -->
             <!-- A remplacer par Google Captcha -->
             <div class="col-lg-6 py-1">
-              <input type="text" name="rh-objet-email" id="objet" placeholder="(Captcha) Combien font 2x2 ?" class="form-control">
+              <input type="text" name="ct-captcha" id="ct-captcha" placeholder="" class="form-control">
               <small id="captchaHelp" class="form-text text-left"></small>
             </div>
           </div>
           <div class="form-row justify-content-center py-0">
             <div class="col-lg-6 text-left py-1">
-              <button type="submit" class="btn btn-secondary">Envoyer</button>
+              <button type="submit" class="btn btn-secondary" id="btnSent">Envoyer</button>
             </div>
           </div>
         </form>
