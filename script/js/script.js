@@ -192,14 +192,18 @@ function checkEmptyInputs() {
   if(iNom.value === "" || iPrenom.value === "" || iEmail1.value === "" || iEmail2.value === "" || iCategorie.value === "" || iObjet.value === "" || iMsg.value === "" || iCategorie.value === ""){
     
     isOneInputEmpty = true;
-    var allInputNames = ["nom", "prenom", "email", "email2", "objet", "msg", "captcha", "categorie"];
+    var allInputNames = ["nom", "prenom", "email", "email2", "categorie", "objet", "msg", "captcha"];
     //Boucle sur tous les inputs de allInputNames[] et modif sur is-invalid si vide
     for (var key in allInputNames) { 
       var inputObjet = document.getElementById("ct-" + allInputNames[key]);
-      var inputVal = inputObjet.value;
-      if (inputVal == "") {
-        // console.log(allInputNames[key]);
-        setUi(inputObjet, true);
+      //Vérif que l'input existe
+      if (inputObjet != null) {
+        var inputVal = inputObjet.value;
+        //Vérif que valeur soit vide
+        if (inputVal == "") {
+          console.log(allInputNames[key]);
+          setUi(inputObjet, true);
+        }        
       }
     }
   }else{
@@ -233,10 +237,12 @@ function getCategorie(){
 /**      FICHIER       **/
 /** ****************** **/
 //Récup et affiche le nom du fichier sélectionné
-iFichier.addEventListener("change", function(){
-  var f = iFichier.files[0];
-  labelFichier.innerHTML = f.name;
-});
+if (iFichier !== null) {
+  iFichier.addEventListener("change", function(){
+    var f = iFichier.files[0];
+    labelFichier.innerHTML = f.name;
+  });
+}
 
 
 /** ****************** **/
