@@ -23,30 +23,79 @@ var iNom = document.getElementById("ct-nom");
 var iPrenom = document.getElementById("ct-prenom");
 var iEmail1 = document.getElementById("ct-email");
 var iEmail2 = document.getElementById("ct-email2");
+var iEntreprise = document.getElementById("ct-entreprise");
+var iPays = document.getElementById("ct-pays");
 var iCategorie = document.getElementById("ct-categorie");
 var iObjet = document.getElementById("ct-objet");
 var iMsg = document.getElementById("ct-msg");
 var iCaptcha = document.getElementById("ct-captcha");
 var iEmail1Help = document.getElementById("emailHelp");
 var iEmail2Help = document.getElementById("email2Help");
+var iMsgHelp = document.getElementById("msgHelp");
 var iCaptchaHelp = document.getElementById("captchaHelp");
+
+iNom.addEventListener("blur", function(){checkSaisie("ct-nom", iNom)});
+iPrenom.addEventListener("blur", function(){checkSaisie("ct-prenom", iPrenom)});
+iEntreprise.addEventListener("blur", function(){checkSaisie("ct-entreprise", iEntreprise)});
+iObjet.addEventListener("blur", function(){checkSaisie("ct-objet", iObjet)});
+iMsg.addEventListener("blur", function(){checkSaisie("ct-msg", iMsg)});
+iMsg.addEventListener("input", function(){
+  checkSaisie("ct-msg", iMsg);
+  iMsgHelp.innerHTML = "Il vous reste x caractères";
+});
+
+function checkSaisie(nInput, iInput){
+  //nInput : input name
+  var regEx;
+  var val = iInput.value;
+  var minChar;
+  var attr = "form-control";
+  switch (nInput) {
+      case "ct-nom":
+      case "ct-prenom":
+      case "ct-entreprise":
+          minChar = 2;
+          var regEx = /^[a-zA-Z-]{2,50}$/;
+          break;
+      case "ct-msg":
+          minChar = 10;
+          //Tous les caractères. nombre entre 10 et 1000.
+          var regEx = /^.{10,1000}$/;
+          break;
+      default:
+          minChar = 2;
+          break;
+  }
+  // console.log("val.length : "+ val.length);
+  if (val.length >= minChar) {
+      if (regEx.test(val)) {
+          // console.log(nInput + " correct!");
+          setUi(iInput, attr, false);
+      }else{
+          // console.log(nInput + " Incorrect");
+          setUi(iInput, attr, true);
+      }
+  }
+  // console.log(val + " | " + regEx.test(val));
+}
 
 /** ****************** **/
 /**   SAISIE EMAIL 1   **/
 /** ****************** **/
-//source: regexr.com/2rhq7
-var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
 //Vérifie que le mail saisi a le format d'un email
 iEmail1.addEventListener("input", function(){
+  //source: regexr.com/2rhq7
+  var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
   var vEmail1 = iEmail1.value;
+  var attr = "form-control";
   if (regEx.test(vEmail1)) {
     // console.log("Email valide!");
-    setUi(iEmail1, false);
+    setUi(iEmail1, attr, false);
     // Il n'est pas pertinent d'afficher que le mail saisi est valide.
   }else{
     // console.log("Email NON valide!");    
-    setUi(iEmail1, true);
+    setUi(iEmail1, attr, true);
   }
 });
 
@@ -66,7 +115,7 @@ function compareInputs(input1, input2){
     iEmail2Help.innerHTML="Les emails correspondent!";
   }else{
     // console.log("Pas Identiques!");
-    setUi(input, attr2, true);
+    setUi(input2, attr, true);
     iEmail2Help.innerHTML="";
   }
 }
@@ -79,6 +128,18 @@ function setUi(idInput, attr, isInvalid){
   }
   idInput.setAttribute("class", attr + " is-"+valid+"valid");  
 }
+
+/** ****************** **/
+/**  CHECK CATEGORIE   **/
+/** ****************** **/
+//Vérif qu'une catégorie a été sélectionnée
+function checkCategorie(){
+  if(iCategorie !== 0){
+    return false;
+  }
+  return true;
+}
+
 
 /** ****************** **/
 /** CHECK EMPTY INPUTS **/
