@@ -40,8 +40,9 @@ iEntreprise.addEventListener("blur", function(){checkSaisie("ct-entreprise", iEn
 iObjet.addEventListener("blur", function(){checkSaisie("ct-objet", iObjet)});
 iMsg.addEventListener("blur", function(){checkSaisie("ct-msg", iMsg)});
 iMsg.addEventListener("input", function(){
+  var vMsg = iMsg.value;  
   checkSaisie("ct-msg", iMsg);
-  iMsgHelp.innerHTML = "Il vous reste x caractères";
+  iMsgHelp.innerHTML = "Il vous reste " + (2000 - vMsg.length) + " caractères";
 });
 
 function checkSaisie(nInput, iInput){
@@ -59,8 +60,8 @@ function checkSaisie(nInput, iInput){
           break;
       case "ct-msg":
           minChar = 10;
-          //Tous les caractères. nombre entre 10 et 1000.
-          var regEx = /^.{10,1000}$/;
+          //Tous les caractères. nombre entre 10 et 2000.
+          var regEx = /^.{10,2000}$/;
           break;
       default:
           minChar = 2;
