@@ -44,40 +44,57 @@ var labelFichier = document.getElementById("label-fichier");
  * affiche erreur
  * */
 if (iNom !== null) {
-  iNom.addEventListener("blur", function(){
-    if(iNom.value==""){
-      setUi(iNom, true);
-    }else{  
-     //Vérif que saisie correspond au RegExp   
-      checkSaisie("ct-nom", iNom)
-    }
-  });
+  iNom.addEventListener("blur", function(){mainUI(iNom, 'ct-nom')});
 }
 
 if (iPrenom !== null) {
-  iPrenom.addEventListener("blur", function(){if(iPrenom.value==""){setUi(iPrenom, true);}else{checkSaisie("ct-prenom", iPrenom)}});
+  iPrenom.addEventListener("blur", function(){mainUI(iPrenom, 'ct-prenom')});
 }
+
 if (iEntreprise !== null) {
-  iEntreprise.addEventListener("blur", function(){if(iEntreprise.value==""){setUi(iEntreprise, true);}else{checkSaisie("ct-entreprise", iEntreprise)}});  
+  iEntreprise.addEventListener("blur", function(){mainUI(iEntreprise, 'ct-entreprise')});
 }
+
 if (iEmail1 !== null) {
-  iEmail1.addEventListener("blur", function(){if(iEmail1.value==""){setUi(iEmail1, true);}else{checkSaisie("ct-email", iEmail1)}});
+  iEmail1.addEventListener("blur", function(){mainUI(iEmail1, 'ct-email')});
 }
 if (iEmail2 !== null) {
-  iEmail2.addEventListener("blur", function(){if(iEmail2.value==""){setUi(iEmail2, true);}else{checkSaisie("ct-email2", iEmail2)}});
+  iEmail2.addEventListener("blur", function(){mainUI(iEmail2, 'ct-email2')});
 }
+
 if (iCategorie !== null) {
   iCategorie.addEventListener("change", getCategorie);
 }
+
 if (iObjet !== null) {
-  iObjet.addEventListener("blur", function(){if(iObjet.value==""){setUi(iObjet, true);}else{checkSaisie("ct-objet", iObjet)}});
+  iObjet.addEventListener("blur", function(){mainUI(iObjet, 'ct-objet')});
 }
+
 if (iMsg !== null) {
-  iMsg.addEventListener("blur", function(){if(iMsg.value==""){setUi(iMsg, true);}else{checkSaisie("ct-msg", iMsg)}});
+  iMsg.addEventListener("blur", function(){mainUI(iMsg, 'ct-msg')});
 }
+
 if (iCaptcha !== null) {
-  iCaptcha.addEventListener("blur", function(){if(iCaptcha.value==""){setUi(iCaptcha, true);}else{checkSaisie("ct-captcha", iCaptcha)}});
+  iCaptcha.addEventListener("blur", function(){mainUI(iCaptcha, 'ct-captcha')});
 }
+
+/* *
+ * Fonction principale qui va appeler les fonctions setUI ou de vérif de saisie
+ * */
+function mainUI(input, inputName){
+  if(input.value == ""){
+    setUi(input, true);
+  }else{
+    //Change la fonction appellé si c'est captcha
+    if (inputName == "ct-captcha") {
+      setCaptcha;
+    }else{
+      //Vérif que la saisie respect RegExp
+      checkSaisie(inputName, input);
+    }
+  }
+}
+
 
 /* *
  * Vérif la saisie à chaque frappe du clavier et
@@ -120,7 +137,7 @@ function checkSaisie(nInput, iInput){
           minChar = 10;
           //Tous les caractères. nombre entre 10 et 100.
           var regEx = /^.{10,100}$/;
-          break;
+          break;      
       default:
           minChar = 2;
           break;
@@ -194,27 +211,24 @@ function setUi(idInput, isInvalid){
 function checkEmptyInputs() {
   var isOneInputEmpty;
   //Si un seul des champs n'est pas renseigné, return true
-  if(iNom.value === "" || iPrenom.value === "" || iEmail1.value === "" || iEmail2.value === "" || iCategorie.value === "" || iObjet.value === "" || iMsg.value === "" || iCategorie.value === ""){
-    
-    isOneInputEmpty = true;
-    var allInputNames = ["nom", "prenom", "email", "email2", "categorie", "objet", "msg", "captcha"];
-    //Boucle sur tous les inputs de allInputNames[] et modif sur is-invalid si vide
-    for (var key in allInputNames) { 
-      var inputObjet = document.getElementById("ct-" + allInputNames[key]);
-      //Vérif que l'input existe
-      if (inputObjet != null) {
-        var inputVal = inputObjet.value;
-        //Vérif que valeur soit vide
-        if (inputVal == "") {
-          console.log(allInputNames[key]);
-          setUi(inputObjet, true);
-        }        
+  isOneInputEmpty = true;
+  var allInputNames = ["nom", "prenom", "email", "email2", "categorie", "objet", "msg", "captcha"];
+  //Boucle sur tous les inputs de allInputNames[] et modif sur is-invalid si vide
+  for (var key in allInputNames) { 
+    var inputObjet = document.getElementById("ct-" + allInputNames[key]);
+    //Vérif que l'input existe
+    if (inputObjet != null) {
+      var inputVal = inputObjet.value;
+      //Vérif que valeur soit vide
+      if (inputVal == "") {
+        console.log("Manque : " + allInputNames[key]);
+        setUi(inputObjet, true);
+      }else{
+        isOneInputEmpty = false;
       }
+      
     }
-  }else{
-    isOneInputEmpty = false;
   }
-
   if(isOneInputEmpty){
     //Si un seul des champs n'est pas renseigné, return true
     return true;
@@ -254,7 +268,9 @@ if (iFichier !== null) {
 /**      CAPTCHA       **/
 /** ****************** **/
 //Listener input sur saisie du captcha
-iCaptcha.addEventListener("input", function(){
+iCaptcha.addEventListener("input", setCaptcha);
+
+function setCaptcha(){
   var msg;
   if(checkCaptcha()){
     setUi(iCaptcha, false);
@@ -264,7 +280,7 @@ iCaptcha.addEventListener("input", function(){
     msg = "Attention, le nombre saisi n'est pas le bon.";
     iCaptchaHelp.innerHTML = msg;
   }
-});
+}
 
 // ------------------
 //   Check Captcha
