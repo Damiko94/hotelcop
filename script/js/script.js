@@ -13,8 +13,13 @@ function printPage() {
 //     PAGE CONTACT
 /** ****************** **/
 
+var iNom = document.getElementById("ct-nom");
+var iPrenom = document.getElementById("ct-prenom");
 var iEmail1 = document.getElementById("ct-email");
 var iEmail2 = document.getElementById("ct-email2");
+var iCategorie = document.getElementById("ct-categorie");
+var iObjet = document.getElementById("ct-objet");
+var iMsg = document.getElementById("ct-msg");
 // var iEmail1Help = document.getElementById("emailHelp");
 var iEmail2Help = document.getElementById("email2Help");
 
@@ -68,6 +73,19 @@ function setUi(idInput, isInvalid){
 }
 
 /** ****************** **/
+/** CHECK EMPTY INPUTS **/
+/** ****************** **/
+//Vérifie que tous les champs obligatoires sont remplis
+function checkEmptyInputs() {
+  //Si un seul des champs n'est pas renseigné, return true
+  if(iNom.value === "" || iPrenom.value === "" || iEmail1.value === "" || iEmail2.value === "" || iCategorie.value === "" || iObjet.value === "" || iMsg.value === ""){
+    return true;
+  }
+  //Sinon return false
+  return false;
+}
+
+/** ****************** **/
 /**   MESSAGE ENVOYE   **/
 /** ****************** **/
 var btnSent = document.getElementById("btnSent");
@@ -75,8 +93,11 @@ var msgSent = document.getElementById("msgSent");
 
 btnSent.addEventListener("click", function(e){
   e.preventDefault();
-  let msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> Notre équipe reviendra vers vous le plus rapidement possible.";
-  msgSent.innerHTML = msg;
+  
+  if(!checkEmptyInputs()){
+    let msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> Notre équipe reviendra vers vous le plus rapidement possible.";
+    msgSent.innerHTML = msg;
+  }
 });
 
 
