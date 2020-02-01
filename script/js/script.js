@@ -160,32 +160,22 @@ function setUi(idInput, isInvalid){
 }
 
 /** ****************** **/
-/**  CHECK CATEGORIE   **/
-/** ****************** **/
-//Vérif qu'une catégorie a été sélectionnée
-function checkCategorie(){
-  if(iCategorie !== 0){
-    return false;
-  }
-  return true;
-}
-
-
-/** ****************** **/
 /** CHECK EMPTY INPUTS **/
 /** ****************** **/
 //Vérifie que tous les champs obligatoires sont remplis
 function checkEmptyInputs() {
   var isOneInputEmpty;
   //Si un seul des champs n'est pas renseigné, return true
-  if(iNom.value === "" || iPrenom.value === "" || iEmail1.value === "" || iEmail2.value === "" || iCategorie.value === "" || iObjet.value === "" || iMsg.value === ""){
+  if(iNom.value === "" || iPrenom.value === "" || iEmail1.value === "" || iEmail2.value === "" || iCategorie.value === "" || iObjet.value === "" || iMsg.value === "" || iCategorie.value === ""){
     
     isOneInputEmpty = true;
-    var allInputNames = ["nom", "prenom", "email", "email2", "objet", "msg", "captcha"];
-    for (var key in allInputNames) {      
+    var allInputNames = ["nom", "prenom", "email", "email2", "objet", "msg", "captcha", "categorie"];
+    //Boucle sur tous les inputs de allInputNames[] et modif sur is-invalid si vide
+    for (var key in allInputNames) { 
       var inputObjet = document.getElementById("ct-" + allInputNames[key]);
       var inputVal = inputObjet.value;
       if (inputVal == "") {
+        // console.log(allInputNames[key]);
         setUi(inputObjet, true);
       }
     }
@@ -194,14 +184,13 @@ function checkEmptyInputs() {
   }
 
   if(isOneInputEmpty){
-    console.log("Si un seul des champs n'est pas renseigné, return true");
+    //Si un seul des champs n'est pas renseigné, return true
     return true;
   }else{
-    console.log("Sinon return false");
+    //Sinon return false
     return false;
   }
 }
-
 
 
 /** ****************** **/
@@ -265,12 +254,12 @@ var msgSent = document.getElementById("msgSent");
 btnSent.addEventListener("click", function(e){
   e.preventDefault();
   var msg;  
-  // if (checkCaptcha()) {
-    if(!checkEmptyInputs()){
-      msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> " + iCivilite.value + " " + iNom.value + ", notre équipe reviendra vers vous le plus rapidement possible.";      
-      msgSent.innerHTML = msg;
-    }    
-  // }
+  
+  if(!checkEmptyInputs() && checkCaptcha()){
+    msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> " + iCivilite.value + " " + iNom.value + ", notre équipe reviendra vers vous le plus rapidement possible.";      
+    msgSent.innerHTML = msg;
+  }
+  
 });
 
 
