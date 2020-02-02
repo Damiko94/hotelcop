@@ -502,16 +502,16 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
 /*CSS for restaurant page, for the appear effect on scroll*/
 #main, #restaurant, #brasserie, #degustation, #diner{
   opacity: 0.2;
-  transition: opacity 0.5s;
+  transition: opacity 2s;
 }
 
-.test-anim1, .test-anim3 {
+.test-anim, .test-anim1, .test-anim3 {
   position: relative;
   left: -5000px;
-  transition: left 1.5s;
+  transition: left 2s;
 }
 .test-anim2{
   position: relative;
   left: 5000px;
-  transition: left 1.5s;
+  transition: left 2s;
 }

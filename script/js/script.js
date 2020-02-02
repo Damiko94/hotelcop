@@ -37,7 +37,8 @@ var degustation = document.querySelector('#degustation');
 var diner = document.querySelector('#diner');
 window.addEventListener('scroll', function (event) {
 	if (isInViewport(cuisto)) {
-		cuisto.style.opacity="1";
+        cuisto.style.opacity="1";
+        document.querySelector(".test-anim").style.left="0"; 
     }
     if (isInViewport(brasserie)) {
         brasserie.style.opacity="1";
