@@ -3,6 +3,28 @@
  *        MANATHAN
  *
  *  ****************** **/
+/** ****************** **/
+/** ------------------ --/
+//      SEARCH BAR
+/** ------------------ --/
+/** ****************** **/
+// Recherche dans le site et envoi sur la page concernée
+// jQuery UI : Autocomplete
+$( function() {
+  var availableTags = [
+    "chambre",
+    "suite",
+    "restaurant",
+    "menu",
+    "spa",
+    "massage",
+    "réservation",
+    "panier"
+  ];
+  $( "#searchbar" ).autocomplete({
+    source: availableTags
+  });
+} );
 
 /** ****************** **/
 /**  IMPRESSION PAGE   **/
@@ -334,29 +356,6 @@ btnSent.addEventListener("click", function(e){
   }
   
 });
-
-/** ****************** **/
-/** ------------------ --/
-//      SEARCH BAR
-/** ------------------ --/
-/** ****************** **/
-// Recherche dans le site et envoi sur la page concernée
-// jQuery UI : Autocomplete
-$( function() {
-  var availableTags = [
-    "chambre",
-    "suite",
-    "restaurant",
-    "menu",
-    "spa",
-    "massage",
-    "réservation",
-    "panier"
-  ];
-  $( "#searchbar" ).autocomplete({
-    source: availableTags
-  });
-} );
 
 /** ****************** **
  *
