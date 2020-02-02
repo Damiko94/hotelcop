@@ -11,7 +11,7 @@
 // Recherche dans le site et envoi sur la page concernée
 // jQuery UI : Autocomplete
 $(function() {
-  var availableTags = [
+  var categories = [
     "accueil",
     "chambre",
     "suite",
@@ -20,10 +20,25 @@ $(function() {
     "spa",
     "massage",
     "réservation",
-    "panier"
+    "panier",
+    "presse",
+    "actualités",
+    "événements",
+    "histoire",
+    "qui sommes-nous ?",
+    "avis clients",
+    "recrutement",
+    "contact",
+    "accès",
+    "adresse",
+    "transport",
+    "mentions légales",
+    "conditions générales de vente",
+    "CGV",
+    "plan du site"
   ];
   $("#searchbar").autocomplete({
-    source: availableTags
+    source: categories
   });
 } );
 
@@ -31,13 +46,19 @@ var sb = document.getElementById("searchbar");
 var sBtn = document.getElementById("search-btn");
 if (sBtn !== null) {
   sBtn.addEventListener("click", function(e){
+    //Récup la valeur saisie dans la recherche
     var vsb = sb.value;
     e.preventDefault();
-    redirection(vsb);
+    //Appel la fonction qui va afficher la page
+    if(redirection(vsb) === false){
+      //Affiche une alert si la recherche saisie n'est pas bonne, sinon affiche directement la page
+      alert("Attention la page demandée n'existe pas. Veuillez recommencer.");
+    }
   });
 }
 
 function redirection(vsb){
+  //Enumération des pages selon les catégories
   var namePage = {
     categories : {
       "accueil": {page:"index"},
@@ -48,11 +69,31 @@ function redirection(vsb){
       "spa": {page:"spa"},
       "massage": {page:"spa"},
       "réservation": {page:"reservations"},
-      "panier": {page:"reservation"}
+      "panier": {page:"reservations"},
+      "presse": {page:"presse"},
+      "actualités": {page:"actualites-evenements"},
+      "événements": {page:"actualites-evenements"},
+      "histoire": {page:"qui-sommmes-nous"},
+      "qui sommes-nous ?": {page:"qui-sommmes-nous"},
+      "avis clients": {page:"avis-clients"},
+      "recrutement": {page:"recrutement"},
+      "contact": {page:"contact-acces"},
+      "accès": {page:"contact-acces"},
+      "adresse": {page:"contact-acces"},
+      "transport": {page:"contact-acces"},
+      "mentions légales": {page:"mentions-legales"},
+      "conditions générales de vente": {page:"cgv"},
+      "CGV": {page:"cgv"},
+      "plan du site": {page:"plan-site"}
     }
   };
-  console.log("namePage.categories[vsb].page: " + namePage.categories[vsb].page);
-  document.location.href= namePage.categories[vsb].page + ".html";
+  if (namePage.categories[vsb] === undefined) {
+    //Vérif si la catégorie saisie a été définie, sinon return false
+    return false;
+  }else{
+    //Redirection vers la page
+    document.location.href= namePage.categories[vsb].page + ".html";
+  }
 }
 
 /** ****************** **/
