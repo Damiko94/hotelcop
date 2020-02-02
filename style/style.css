@@ -1,6 +1,7 @@
 body {
   font-family: "Alegreya Sans", sans-serif;
   color: #1b3e82;
+  overflow-x: hidden;
 }
 
 .container {
@@ -499,19 +500,19 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   padding: 10px;
   background-color: white;
 }
-/*CSS for restaurant page, for the appear effect on scroll*/
-#main, #restaurant, #brasserie, #degustation, #diner{
+/*CSS pour l'apparition des photos en chacher en axe x, sur les pages avec photos et articles en présentation en zig-zag */
+#main, #cuisto, #brasserie, #degustation, #diner{
   opacity: 0.2;
-  transition: opacity 2s;
+  transition: opacity 1s;
 }
 
 .test-anim, .test-anim1, .test-anim3 {
   position: relative;
-  left: -5000px;
-  transition: left 2s;
+  left: -2500px;
+  transition: left 1s;
 }
 .test-anim2{
   position: relative;
-  left: 5000px;
-  transition: left 2s;
+  left: 2500px;
+  transition: left 1s;
 }

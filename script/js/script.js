@@ -29,9 +29,10 @@ var isInViewport = function (elem) {
     );
 };
 /**
- * select an element & check on scroll if he is in the viewport
+ * selectionne un element et vérifie si il se trouve sur l'écran au moment du scroll
+ * s'il l'élement se trouve sur l'écran, déclanchement d'une animation, pour faire apparaitre une image au du texte
  */
-var cuisto = document.querySelector('#restaurant');
+var cuisto = document.querySelector('#cuisto');
 var brasserie = document.querySelector('#brasserie');
 var degustation = document.querySelector('#degustation');
 var diner = document.querySelector('#diner');
