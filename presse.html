@@ -212,7 +212,7 @@
     </div>  
     <!-- FIN MODAL PANIER -->
 
-<main>
+<main id="main">
   <section class="container">    
       <div class="row no-gutters">
         <div class="col text-center">
@@ -224,32 +224,36 @@
   <!-- GALLERIE ARTICLES DE PRESSE -->
   <section class="container gallery justify-content-center mb-4">
     <div class="item v3 h4 p-2">
-        <img src="images/presse/central.jpg" alt="article de presse" class="img-presse border border-primary">
+        <a href="#modal1" onclick="window.setTimeout(openModal('central'),1000);"><img src="images/presse/central.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h4 p-2">
-        <img src="images/presse/tunisie.jpg" alt="article de presse" class="img-presse border border-primary">
+      <a href="#modal1" onclick="openModal('tunisie');"><img src="images/presse/tunisie.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h3 p-2">
-        <img src="images/presse/maison.jpg" alt="article de presse" class="img-presse border border-primary">
+      <a href="#modal1" onclick="openModal('maison');"><img src="images/presse/maison.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h4 p-2">
-        <img src="images/presse/lutecia.jpg" alt="article de presse" class="img-presse border border-primary">
+        <a href="#modal1" onclick="openModal('lutecia');"><img src="images/presse/lutecia.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v3 h4 p-2">
-        <img src="images/presse/caladigreco.jpg" alt="article de presse" class="img-presse border border-primary">
+        <a href="#modal1" onclick="openModal('caladigreco');"><img src="images/presse/caladigreco.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h4 p-2">
-        <img src="images/presse/bailli.jpg" alt="article de presse" class="img-presse border border-primary">
+        <a href="#modal1" onclick="openModal('bailli');"><img src="images/presse/bailli.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h3 p-2">
-        <img src="images/presse/Cala-Di-Greco.jpg" alt="article de presse" class="img-presse border border-primary">
+        <a href="#modal1" onclick="openModal('Cala-Di-Greco');"><img src="images/presse/Cala-Di-Greco.jpg" alt="article de presse" class="img-presse border border-primary"></a>
     </div>
     <div class="item v4 h4 p-2">
-        <img src="images/presse/tendance.jpg" alt="article de presse" class="img-presse border border-primary">
-    </div>
-    
+        <a href="#modal1" onclick="openModal('tendance');"><img src="images/presse/tendance.jpg" alt="article de presse" class="img-presse border border-primary"></a>
+    </div>    
 </section>
-
+<div id="modal1" class="modale" style="display: none;">
+  <a href="#" onclick="closeModal();"><div class="window-modale">
+    <img src="" alt="article de presse" class="img-modale">
+    <button onclick="closeModal();">Fermer</button>
+  </div></a>
+</div>
 </main>
 
 <!-- FOOTER -->
@@ -314,5 +318,9 @@
 <script src="script/js/bootstrap.bundle.min.js"></script>
 <!-- SCRIPT -->
 <script src="script/js/script.js"></script>
+<!-- script uniqu pour cette page-->
+<script>
+  window.setTimeout(appear("#main"),5);
+</script>
 </body>
 </html>    
