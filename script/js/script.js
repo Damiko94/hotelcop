@@ -10,8 +10,9 @@
 /** ****************** **/
 // Recherche dans le site et envoi sur la page concernée
 // jQuery UI : Autocomplete
-$( function() {
+$(function() {
   var availableTags = [
+    "accueil",
     "chambre",
     "suite",
     "restaurant",
@@ -21,10 +22,38 @@ $( function() {
     "réservation",
     "panier"
   ];
-  $( "#searchbar" ).autocomplete({
+  $("#searchbar").autocomplete({
     source: availableTags
   });
 } );
+
+var sb = document.getElementById("searchbar");
+var sBtn = document.getElementById("search-btn");
+if (sBtn !== null) {
+  sBtn.addEventListener("click", function(e){
+    var vsb = sb.value;
+    e.preventDefault();
+    redirection(vsb);
+  });
+}
+
+function redirection(vsb){
+  var namePage = {
+    categories : {
+      "accueil": {page:"index"},
+      "chambre": {page:"chambres"},
+      "suite": {page:"chambres"},
+      "restaurant": {page:"restaurant"},
+      "menu": {page:"restaurant"},
+      "spa": {page:"spa"},
+      "massage": {page:"spa"},
+      "réservation": {page:"reservations"},
+      "panier": {page:"reservation"}
+    }
+  };
+  console.log("namePage.categories[vsb].page: " + namePage.categories[vsb].page);
+  document.location.href= namePage.categories[vsb].page + ".html";
+}
 
 /** ****************** **/
 /**  IMPRESSION PAGE   **/
@@ -122,11 +151,13 @@ function mainUI(input, inputName){
  * Vérif la saisie à chaque frappe du clavier et
  * MAJ affichage du nombre restant de caractères
  * */
-iMsg.addEventListener("input", function(){
-  var vMsg = iMsg.value;  
-  checkSaisie("ct-msg", iMsg);
-  iMsgHelp.innerHTML = "Il vous reste " + (2000 - vMsg.length) + " caractères";
-});
+if (iMsg !== null) {
+  iMsg.addEventListener("input", function(){
+    var vMsg = iMsg.value;  
+    checkSaisie("ct-msg", iMsg);
+    iMsgHelp.innerHTML = "Il vous reste " + (2000 - vMsg.length) + " caractères";
+  });  
+}
 
 /* *
  * Function recup name de l'input et var de l'input
@@ -182,24 +213,28 @@ function checkSaisie(nInput, iInput){
 /** ****************** **/
 
 //Vérifie que le mail saisi a le format d'un email
-iEmail1.addEventListener("input", function(){
-  //source: regexr.com/2rhq7
-  var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-  var vEmail1 = iEmail1.value;
-  if (regEx.test(vEmail1)) {
-    // console.log("Email valide!");
-    setUi(iEmail1, false);
-    // Il n'est pas pertinent d'afficher que le mail saisi est valide.
-  }else{
-    // console.log("Email NON valide!");    
-    setUi(iEmail1, true);
-  }
-});
+if (iEmail1 !== null) {
+  iEmail1.addEventListener("input", function(){
+    //source: regexr.com/2rhq7
+    var regEx = /[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    var vEmail1 = iEmail1.value;
+    if (regEx.test(vEmail1)) {
+      // console.log("Email valide!");
+      setUi(iEmail1, false);
+      // Il n'est pas pertinent d'afficher que le mail saisi est valide.
+    }else{
+      // console.log("Email NON valide!");    
+      setUi(iEmail1, true);
+    }
+  });
+}
 
 /** ****************** **/
 /** CONFIRMATION EMAIL **/
 /** ****************** **/
-iEmail2.addEventListener("input", function(){compareInputs(iEmail1, iEmail2);});
+if (iEmail2 !== null) {
+  iEmail2.addEventListener("input", function(){compareInputs(iEmail1, iEmail2);}); 
+}
 
 function compareInputs(input1, input2){
   var val1 = input1.value;
@@ -290,8 +325,9 @@ if (iFichier !== null) {
 /**      CAPTCHA       **/
 /** ****************** **/
 //Listener input sur saisie du captcha
-iCaptcha.addEventListener("input", setCaptcha);
-
+if (iCaptcha !== null) {
+  iCaptcha.addEventListener("input", setCaptcha);
+}
 function setCaptcha(){
   var msg;
   if(checkCaptcha()){
@@ -321,7 +357,11 @@ function checkCaptcha(){
 //   Random captcha
 // ------------------
 //Appel de la fonction à chaque chargement de la page pour générer nouveaux chiffres
-randCaptcha();
+var cheminComplet = document.location.href;
+var NomDuFichier = cheminComplet.substring(cheminComplet.lastIndexOf("/")+1);
+if (NomDuFichier == "contact-acces.html" || NomDuFichier == "recrutement.html") {
+  randCaptcha();  
+}
 
 //Déclaration en dehors de randCaptcha() pour être utlisés dans checkCaptcha()
 var nb1, nb2;
@@ -346,16 +386,18 @@ function alea_nb(max){
 var btnSent = document.getElementById("btnSent");
 var msgSent = document.getElementById("msgSent");
 
-btnSent.addEventListener("click", function(e){
-  e.preventDefault();
-  var msg;  
-  
-  if(!checkEmptyInputs() && checkCaptcha()){
-    msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> " + iCivilite.value + " " + iNom.value + ", notre équipe reviendra vers vous le plus rapidement possible.";      
-    msgSent.innerHTML = msg;
-  }
-  
-});
+if (btnSent !== null) {
+  btnSent.addEventListener("click", function(e){
+    e.preventDefault();
+    var msg;  
+    
+    if(!checkEmptyInputs() && checkCaptcha()){
+      msg = "Votre message a bien été envoyé, vous allez en recevoir une copie à l'adresse "+  iEmail1.value +" d'ici quelques minutes.<br> " + iCivilite.value + " " + iNom.value + ", notre équipe reviendra vers vous le plus rapidement possible.";      
+      msgSent.innerHTML = msg;
+    }
+    
+  });  
+}
 
 /** ****************** **
  *
