@@ -1,7 +1,6 @@
 body {
   font-family: "Alegreya Sans", sans-serif;
   color: #1b3e82;
-  overflow-x: hidden;
 }
 
 .container {
@@ -508,11 +507,13 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
 
 .test-anim, .test-anim1, .test-anim3 {
   position: relative;
+  overflow: hidden;
   left: -2500px;
   transition: left 1s;
 }
 .test-anim2{
   position: relative;
+  overflow: hidden;
   left: 2500px;
   transition: left 1s;
 }

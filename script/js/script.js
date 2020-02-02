@@ -18,7 +18,7 @@ function appear(a){
     document.querySelector(a).style.opacity="1";
     console.log('hello');
 }
-/* fonction who  see if an element is in the viewport */
+/* fonction pour tester si un élément est dans le viewport*/
 var isInViewport = function (elem) {
     var bounding = elem.getBoundingClientRect();
     return (
@@ -36,21 +36,46 @@ var cuisto = document.querySelector('#cuisto');
 var brasserie = document.querySelector('#brasserie');
 var degustation = document.querySelector('#degustation');
 var diner = document.querySelector('#diner');
+var confort = document.querySelector('#confort');
+var classique = document.querySelector('#classique');
+var deluxe = document.querySelector('#deluxe');
 window.addEventListener('scroll', function (event) {
 	if (isInViewport(cuisto)) {
         cuisto.style.opacity="1";
         document.querySelector(".test-anim").style.left="0"; 
     }
+    else{
+        cuisto.style.opacity="0.2";
+        document.querySelector(".test-anim").style.left="-2500px";
+    }
+}, false);
+window.addEventListener('scroll', function (event) {
     if (isInViewport(brasserie)) {
         brasserie.style.opacity="1";
-        document.querySelector(".test-anim1").style.left="0";    
+        document.querySelector(".test-anim1").style.left="0"; 
     }
+    else{
+        brasserie.style.opacity="0.2";
+        document.querySelector(".test-anim1").style.left="-2500px";
+    }
+}, false);
+window.addEventListener('scroll', function (event) {
     if (isInViewport(degustation)) {
         degustation.style.opacity="1";
-        document.querySelector(".test-anim2").style.left="0";
+        document.querySelector(".test-anim2").style.left="0"; 
     }
+    else{
+        degustation.style.opacity="0.2";
+        document.querySelector(".test-anim2").style.left="2500px";
+    }
+}, false);
+window.addEventListener('scroll', function (event) {
     if (isInViewport(diner)) {
         diner.style.opacity="1";
-        document.querySelector(".test-anim3").style.left="0";
+        document.querySelector(".test-anim3").style.left="0"; 
+    }
+    else{
+        diner.style.opacity="0.2";
+        document.querySelector(".test-anim3").style.left="-2500px";
     }
 }, false);
