@@ -49,15 +49,18 @@ a {
 
 /* Chargement des img en bgc */
 #event {
-  background: url(../images/section_event/event.jpg);
+  background-image: url(../images/section_event/event.jpg);
+  background-size: cover;
 }
 
 #actua {
   background-image: url(../images/section_event/actu.jpg);
+  background-size: cover;
 }
 
 #press {
   background-image: url(../images/section_event/press.jpg);
+  background-size: cover;
 }
 
 /* 
