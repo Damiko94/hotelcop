@@ -405,6 +405,10 @@ footer a:hover,
     display: flex;
     justify-content: center;
   }
+  /* ajout dans le média query, pour augmenter la taille des caractères en version mobile*/
+  html{
+    font-size: 1.5em;
+  }
 }
 
 /*nouveau media query pour la mosaique d'image*/
