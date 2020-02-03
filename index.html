@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     <!-- Etendue en affichage large -->
     <!-- Réduite en médium et centré -->
-    <nav class="navbar navbar-expand-lg sticky-top text-light">
+    <nav class="navbar navbar-expand-md sticky-top text-light">
       
       <!-- LOGO -->
       <!-- Toujours visible -->
@@ -37,7 +37,8 @@
       <!-- BUTTON PANIER -->
       <!-- Toujours visible -->
       <!-- Active BS Modal -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
+      <div class="d-flex flex-nowrap">
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button></div>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -348,17 +349,17 @@
   <section class="d-flex my-5 px-0" id="actu">
     <div class="container">
       <div class="row px-0">
-        <figure id="event" class="col-lg-4" onclick="document.location='actualites-evenements.html'">
+        <figure id="event" class="col-md-4" onclick="document.location='actualites-evenements.html'">
           <figcaption class="d-flex align-items-center justify-content-center">
             <h2>Evénements</h2>
           </figcaption>
         </figure>
-        <figure id="actua" class="col-lg-4" onclick="document.location='actualites-evenements.html'">
+        <figure id="actua" class="col-md-4" onclick="document.location='actualites-evenements.html'">
           <figcaption class="d-flex align-items-center justify-content-center">
             <h2>Actualités</h2>
           </figcaption>
         </figure>
-        <figure id="press" class="col-lg-4" onclick="document.location='presse.html'">
+        <figure id="press" class="col-md-4" onclick="document.location='presse.html'">
           <figcaption class="d-flex align-items-center justify-content-center">
             <h2>Presse</h2>
           </figcaption>
