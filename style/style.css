@@ -112,6 +112,10 @@ h2 {
 /**********/
 /* FOOTER */
 /**********/
+#print-link{
+  cursor: pointer;
+}
+
 footer {
   width: auto;
 }
@@ -258,7 +262,8 @@ a:hover {
 section a:hover,
 .nav-item a span:hover,
 footer a:hover,
-.dropdown-item:hover {
+.dropdown-item:hover,
+#print-link:hover {
   text-decoration: none;
   transition: 0.3s;
   color: darkgoldenrod;
@@ -267,16 +272,12 @@ footer a:hover,
 /*****section chambres*******/
 
 #chambre-index {
-
-
   background: url(../images/chambres/chambre3lg.jpg);
 }
 
 /*****section restaurant*******/
 
 #resto-index {
-
-
   background: url(../images/resto/resto-lg.jpeg);
 }
 
@@ -290,8 +291,6 @@ footer a:hover,
 /*****section spa*******/
 
 #spa-index {
-
-
   background: url(../images/spa/spa.jpeg);
 }
 
