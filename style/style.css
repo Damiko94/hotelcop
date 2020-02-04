@@ -344,6 +344,10 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-sm.jpeg);
   }
+  /* ajout dans le média query, pour augmenter la taille des caractères en version mobile*/
+  html{
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -400,10 +404,6 @@ footer a:hover,
   section .gallery {
     display: flex;
     justify-content: center;
-  }
-  /* ajout dans le média query, pour augmenter la taille des caractères en version mobile*/
-  html{
-    font-size: 1.5em;
   }
 }
 
