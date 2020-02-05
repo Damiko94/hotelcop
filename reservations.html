@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
@@ -110,7 +111,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -123,7 +124,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -137,7 +138,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -151,7 +152,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row no-gutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -163,12 +164,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row no-gutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -188,11 +189,11 @@
   <main>
     <section class="container">
      
-       <div class="row d-flex justify-content-center">
+       <div class="row no-gutters d-flex justify-content-center">
          <h2>Votre Réservation</h2>
        </div>
        <!-- FORMULAIRE DE RESERVATION -->
-       <div class="row d-flex justify-content-center">
+       <div class="row no-gutters d-flex justify-content-center">
         <form class="form-inline">
           <label class="form-check-label mr-2" for="date-arrivee">Date d'arrivée</label>
           <input type="date" class="form-control mr-sm-3" id="date-arrivee" value="2020-02-07" min="2020-02-07">
@@ -230,7 +231,7 @@
         </div>
         <!-- RESA CHAMBRE CLASSIQUE -->
         <form>
-        <div class="row border no-gutters">
+        <div class="row no-gutters border">
          <div class="col p-0">
            <img src="images/classique.jpg" class="img-thumbnail float-left" alt="Chambre classique">
          </div>
@@ -246,7 +247,7 @@
             </ul>
          </div>
          <div class="col-12 col-md py-0 text-right">      
-          <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+          <p class="py-0 form-row no-gutters d-flex justify-content-end">Quantité : 
             <select name="nb-classique" class="form-control form-control-sm w-25" id="nb-classique">
               <option value="0">0</option>
               <option value="1">1</option>
@@ -260,7 +261,7 @@
          </div>
         </div>
         <!-- RESA CHAMBRE CONFORT -->
-        <div class="row border no-gutters">
+        <div class="row no-gutters border">
           <div class="col p-0">
             <img src="images/pavillon2.jpg" class="img-thumbnail float-left" alt="Chambre Confort">
           </div>
@@ -276,7 +277,7 @@
              </ul>
           </div>
           <div class="col-12 col-md py-0 text-right">      
-           <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+           <p class="py-0 form-row no-gutters d-flex justify-content-end">Quantité : 
              <select name="nb-confort" class="form-control form-control-sm w-25" id="nb-confort">
                <option value="0">0</option>
                <option value="1">1</option>
@@ -290,7 +291,7 @@
           </div>
          </div>
          <!-- RESA CHAMBRE DELUXE -->
-         <div class="row border no-gutters">
+         <div class="row no-gutters border">
            <div class="col p-0">
              <img src="images/deluxe.jpg" class="img-thumbnail float-left" alt="Chambre deluxe">
            </div>
@@ -306,7 +307,7 @@
               </ul>
            </div>
            <div class="col-12 col-md py-0 text-right">      
-            <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+            <p class="py-0 form-row no-gutters d-flex justify-content-end">Quantité : 
               <select name="nb-deluxe" class="form-control form-control-sm w-25" id="nb-deluxe">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -320,7 +321,7 @@
            </div>
           </div>
           <!-- RESA CHAMBRE SUITE -->
-          <div class="row border no-gutters">
+          <div class="row no-gutters border">
             <div class="col p-0">
               <img src="images/suite.jpg" class="img-thumbnail float-left" alt="Chambre classique">
             </div>
@@ -336,7 +337,7 @@
                </ul>
             </div>
             <div class="col-12 col-md py-0 text-right">      
-             <p class="py-0 form-row d-flex justify-content-end">Quantité : 
+             <p class="py-0 form-row no-gutters d-flex justify-content-end">Quantité : 
                <select name="nb-suite" class="form-control form-control-sm w-25" id="nb-suite">
                  <option value="0">0</option>
                  <option value="1">1</option>
@@ -349,7 +350,7 @@
              </p>
             </div>
            </div>
-           <div class="row p-0 no-gutters">
+           <div class="row no-gutters p-0">
              <div class="col d-flex justify-content-end">
                <button role="button" type="submit" class="btn btn-primary">Réserver</button>
              </div>

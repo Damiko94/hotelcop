@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
@@ -111,7 +112,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -124,7 +125,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -138,7 +139,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -152,7 +153,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row no-gutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -164,12 +165,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row no-gutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -187,7 +188,7 @@
     
     <section id="avis-header">
       <div class="container d-flex justify-content-center">
-        <div class="row">
+        <div class="row no-gutters">
           <div class="col text-center p-0">
             <h2>Avis Clients</h2>
             <h3>Satistaction générale</h3>
@@ -219,7 +220,7 @@
       <!-- S'affiche avec le toggle button 'ajout d'un avis -->
       <div class="container collapse" id="formAvis">
         <form action="post">
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-1 py-1">
               <select name="ct-civilite" id="civilite" class="form-control">
                 <option value="m" selected>M.</option>
@@ -231,13 +232,13 @@
               <small id="nomHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-6 py-1">
               <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
               <small id="prenomHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-3 py-1">
               <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email" required>
               <small id="emailHelp" class="form-text text-left"></small>
@@ -247,7 +248,7 @@
               <small id="email2Help" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-6 py-1">
               <div class="custom-control-inline custom-control custom-checkbox py-0">
                 <input class="custom-control-input" type="checkbox" id="chboxHotel" value="hotel">
@@ -267,13 +268,13 @@
               </div>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-6 py-1">
               <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control" required></textarea>
               <small id="msgHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <!-- CAPTCHA -->
             <!-- Vérif user non bot -->
             <!-- A remplacer par Google Captcha -->
@@ -282,7 +283,7 @@
               <small id="captchaHelp" class="form-text text-left"></small>
             </div>
           </div>
-          <div class="form-row justify-content-center py-0">
+          <div class="form-row no-gutters justify-content-center py-0">
             <div class="col-lg-6 text-left py-1">
               <button type="submit" class="btn btn-secondary">Envoyer</button>
             </div>
@@ -309,7 +310,7 @@
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane p-0 fade show active" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
             <!-- pb-0 : retire le padding-bottom pour éviter un espace trop important avec la car du dessous lors du passage en affichage mobile -->
-            <div class="row p-0">
+            <div class="row no-gutters p-0">
               <!-- col-md-4 : une card par ligne jusqu'en affichage mid, ensuite 3 par ligne -->
               <div class="col-md-4 p-2">
                 <div class="card p-0">
@@ -327,7 +328,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile
                       </div>
@@ -352,7 +353,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (2)
                       </div>
@@ -377,7 +378,7 @@
                     <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>
@@ -402,7 +403,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant, Spa</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>
@@ -416,7 +417,7 @@
             </div>
           </div>
           <div class="tab-pane p-0 fade" id="chambres" role="tabpanel" aria-labelledby="chambres-tab">
-            <div class="row p-0 tab-pane">
+            <div class="row no-gutters p-0 tab-pane">
               <div class="col-md-4 p-2">
                 <div class="card p-0">
                   <div class="card-body">
@@ -433,7 +434,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile
                       </div>
@@ -458,7 +459,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (2)
                       </div>
@@ -483,7 +484,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant, Spa</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>
@@ -497,7 +498,7 @@
             </div> 
           </div>
           <div class="tab-pane p-0 fade" id="restaurant" role="tabpanel" aria-labelledby="restaurant-tab">
-            <div class="row p-0">
+            <div class="row no-gutters p-0">
               <div class="col-md-4 p-2">
                 <div class="card p-0">
                   <div class="card-body">
@@ -514,7 +515,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile
                       </div>
@@ -539,7 +540,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (2)
                       </div>
@@ -564,7 +565,7 @@
                     <p class="card-text p-0"><small class="text-muted">Restaurant</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>
@@ -589,7 +590,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant, Spa</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>
@@ -603,7 +604,7 @@
             </div> 
           </div>
           <div class="tab-pane p-0 fade" id="spa" role="tabpanel" aria-labelledby="spa-tab">
-            <div class="row p-0">
+            <div class="row no-gutters p-0">
               <div class="col-md-4 p-2">
                 <div class="card p-0">
                   <div class="card-body">
@@ -618,7 +619,7 @@
                     <p class="card-text p-0"><small class="text-muted">Hotel, Chambres, Restaurant, Spa</small></p>
                   </div>
                   <div class="card-footer">
-                    <div class="row p-0 m-1">
+                    <div class="row no-gutters p-0 m-1">
                       <div class="col-6 p-0">                  
                         <i class="far fa-thumbs-up pr-1"></i>Utile (12)
                       </div>

@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
@@ -111,7 +112,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -124,7 +125,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -138,7 +139,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -152,7 +153,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row no-gutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -164,12 +165,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row no-gutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -205,7 +206,7 @@
             <!-- LG : reduit sur col-6 -->
             <form method="GET" action="contact-acces.html">
 
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-1 py-1">
                   <select name="ct-civilite" id="ct-civilite" class="form-control">
                     <option selected>M.</option>
@@ -217,13 +218,13 @@
                   <small id="nomHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
                   <small id="prenomHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-3 py-1">
                   <input type="email" name="ct-email" id="ct-email" class="form-control" placeholder="Email" required>
                   <small id="emailHelp" class="form-text text-left"></small>
@@ -233,7 +234,7 @@
                   <small id="email2Help" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-3 py-1">
                   <input type="text" name="ct-entreprise" id="ct-entreprise" class="form-control" placeholder="Entreprise">
                   <small id="entrepriseHelp" class="form-text text-left"></small>
@@ -249,7 +250,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <select name="ct-categorie" id="ct-categorie" class="form-control">
                     <option value="" selected>Sélectionnez une catégorie...</option>
@@ -261,19 +262,19 @@
                   <small id="categorieHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <input type="text" name="ct-objet" id="ct-objet" placeholder="Objet du message" class="form-control" required>
                   <small id="objetHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <textarea name="ct-msg" id="ct-msg" cols="30" rows="10" placeholder="Votre message" class="form-control" required></textarea>
                   <small id="msgHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <!-- CAPTCHA -->
                 <!-- Vérif user non bot -->
                 <!-- A remplacer par Google Captcha -->
@@ -282,13 +283,13 @@
                   <small id="captchaHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 text-left py-1">
                   <button type="submit" class="btn btn-secondary" id="btnSent">Envoyer</button>
                 </div>
               </div>
             </form>
-            <div class="row justify-content-center py-0">
+            <div class="row no-gutters justify-content-center py-0">
               <div class="col-lg-6 py-1 text-left">
                 <p id="msgSent" class="text-success px-0"></p>
               </div>
@@ -300,7 +301,7 @@
       <section id="acces" class="text-center my-sm-5">
         <h2>Plan d'accès</h2>
         <div class="container">
-          <div class="row d-flex justify-content-center">
+          <div class="row no-gutters d-flex justify-content-center">
             
             <!-- TAILLE -->
             <!-- SM-MD : w-100 -->
@@ -312,7 +313,7 @@
             <!-- order-xl évite que table se trouve superposé à la map -->
             <div class="col-lg-6 order-xl-1">
               <h3>Informations complémentaires</h3>
-              <div class="row text-left py-0">
+              <div class="row no-gutters text-left py-0">
                 <div class="col py-1">
                   <p>Hotel Cop <br>
                     <i class="fas fa-map-marker-alt"></i> 1 avenue Montaigne 75008 Paris <br>

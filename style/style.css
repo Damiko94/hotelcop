@@ -326,6 +326,12 @@ footer a:hover,
 /***************/
 
 /* ajout dans les media query de differentes tailles d'images pour les sections chambres ,restaurant et spa */
+@media only screen and (max-width: 320px) {
+  html {
+  font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 576px) {
 
   /*passage des elements du footer en colonne en dessous d'une width de 576px*/
@@ -345,9 +351,6 @@ footer a:hover,
     background: url(../images/spa/spa-sm.jpeg);
   }
   /* ajout dans le média query, pour augmenter la taille des caractères en version mobile*/
-  html{
-    font-size: 1.3em;
-  }
 }
 
 @media (max-width: 768px) {
