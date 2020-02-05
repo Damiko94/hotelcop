@@ -443,31 +443,49 @@ if (btnSent !== null) {
 /** ********************* **/
 /**     RESERVATION       **/
 /** ********************* **/
-// -------------------------
-//  Date arrivée et départ
-// -------------------------
+// ---------------------------------
+//  Input : dates arrivée et départ
+// ---------------------------------
 //Affichage des dates minimales par défaut d'arrivée et de départ
 //On ne peut pas réserver une date antiérieure à auj
 var dateA = document.getElementById("date-arrivee");
 var dateD = document.getElementById("date-depart");
 
-//Nouvelle objet date : auj
-var auj = new Date();
-//padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
-var dd = String(auj.getDate()).padStart(2, '0');
-var dd1 = String(auj.getDate()+1).padStart(2, '0');
-var mm = String(auj.getMonth() + 1).padStart(2, '0');
-var yyyy = auj.getFullYear();
+if(dateA != null){
+  //Formatage US des dates
+  //Nouvelle objet date : auj
+  var auj = new Date();
+  //padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
+  var d = new Date(date[2], date[1] - 1, date[0]); 
+  console.log(d);
+  var dd = String(auj.getDate()).padStart(2, '0');
+  var dd1 = String(auj.getDate() + 1).padStart(2, '0');
+  var mm = String(auj.getMonth() + 1).padStart(2, '0');
+  var yyyy = auj.getFullYear();
+  
+  auj = yyyy + '-' + mm + '-' + dd
+  demain = yyyy + '-' + mm + '-' + dd1
+  //Affichage des dates dans l'input
+  dateA.value = auj;
+  dateD.value = demain;
+  //Parametrage des dates minimales
+  dateA.min = auj;
+  dateD.min = demain;
+}
 
-//Formatage US des dates
-auj = yyyy + '-' + mm + '-' + dd
-demain = yyyy + '-' + mm + '-' + dd1
-//Affichage des dates dans l'input
-dateA.value = auj;
-dateD.value = demain;
-//Parametrage des dates minimales
-dateA.min = auj;
-dateD.min = demain;
+// ---------------------------------
+//  Texte : dates arrivée et départ
+// ---------------------------------
+// MAJ texte de la sélection des dates
+var txtDateA = document.getElementById("resa-date-arrivee");
+var txtDateD = document.getElementById("resa-date-depart");
+var txtNbNuit = document.getElementById("resa-nb-nuits");
+
+if(txtDateA != null){  
+  txtDateA.innerHTML = dd + '/' + mm + '/' + yyyy
+  txtDateD.innerHTML = dd1 + '/' + mm + '/' + yyyy
+
+}
 
 /** ****************** **
  *
