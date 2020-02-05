@@ -458,6 +458,7 @@ if (dateA != null) {
   dateA.addEventListener("change", function(){
       setTxtDate(txtDateA, dateA);
       setTxtNbNuit();
+      setDateAD(false);
   });
 }
 
@@ -465,6 +466,7 @@ if (dateD != null) {
   dateD.addEventListener("change", function(){
       setTxtDate(txtDateD, dateD);
       setTxtNbNuit();
+      setDateAD(false);
   });
 }
 
@@ -475,18 +477,29 @@ function getDateAD(input){
 
 setDateAD();
 function setDateAD(defaut = true){
-  var j1 = '2020-02-05';
-  var j2 = '2020-02-06';    
+  //Dates par défaut
+  var auj = new Date();
+  var demain = new Date();
+  auj = getFormatDate(auj, false);
+  var demain = getFormatDate(demain);
+  //j1 = aujourd'hui (j)
+  var j1 = auj;
+  //j2 = j+1
+  var j2 = demain;    
   
   if (!defaut) {
-    j1 = getDateAD();
-    j2 = getDateAD();
+    j1 = getDateAD(dateA);
+    j2 = getDateAD(dateD);
   }
-  
-  dateA.value = j1;
-  dateA.min = j1;
-  dateD.value = j2;
-  dateD.min = j1;
+
+  if (dateA != null) {
+    dateA.value = j1;
+    
+    //La date d'arrivée = date du jour
+    dateD.value = j2;
+    dateA.min = auj;
+    dateD.min = j1;
+  }
 }
 
 setTxtDate(txtDateA, dateA);
@@ -513,25 +526,18 @@ function nbJours(j1, j2){
   return Math.ceil(diff/(1000*60*60*24));
 }
 
-function getFormatDate(j = 'j1', isUS = true){
+function getFormatDate(auj, demain = true){
   //Formatage US des dates
   //Nouvelle objet date : auj
-  var auj = new Date();
   //padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
   var dd = String(auj.getDate()).padStart(2, '0');
-  
-  if (j == 'j2') {
-    var dd = String(auj.getDate() + 1).padStart(2, '0');    
+  if (demain) {
+    dd = String(auj.getDate() + 1).padStart(2, '0');
   }
-
   var mm = String(auj.getMonth() + 1).padStart(2, '0');
   var yyyy = auj.getFullYear();
   
-  var laDate = yyyy + '-' + mm + '-' + dd;
-  // if (isUS == false) {
-  //   laDate = dd + '/' + mm + '/' + yyyy;
-  // }
-  return laDate;
+  return yyyy + '-' + mm + '-' + dd;
 }
 /** ****************** **
  *
