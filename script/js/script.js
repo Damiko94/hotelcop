@@ -450,41 +450,57 @@ if (btnSent !== null) {
 //On ne peut pas réserver une date antiérieure à auj
 var dateA = document.getElementById("date-arrivee");
 var dateD = document.getElementById("date-depart");
-
-if(dateA != null){
-  //Formatage US des dates
-  //Nouvelle objet date : auj
-  var auj = new Date();
-  //padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
-  var d = new Date(date[2], date[1] - 1, date[0]); 
-  console.log(d);
-  var dd = String(auj.getDate()).padStart(2, '0');
-  var dd1 = String(auj.getDate() + 1).padStart(2, '0');
-  var mm = String(auj.getMonth() + 1).padStart(2, '0');
-  var yyyy = auj.getFullYear();
-  
-  auj = yyyy + '-' + mm + '-' + dd
-  demain = yyyy + '-' + mm + '-' + dd1
-  //Affichage des dates dans l'input
-  dateA.value = auj;
-  dateD.value = demain;
-  //Parametrage des dates minimales
-  dateA.min = auj;
-  dateD.min = demain;
-}
-
-// ---------------------------------
-//  Texte : dates arrivée et départ
-// ---------------------------------
-// MAJ texte de la sélection des dates
 var txtDateA = document.getElementById("resa-date-arrivee");
 var txtDateD = document.getElementById("resa-date-depart");
 var txtNbNuit = document.getElementById("resa-nb-nuits");
 
-if(txtDateA != null){  
-  txtDateA.innerHTML = dd + '/' + mm + '/' + yyyy
-  txtDateD.innerHTML = dd1 + '/' + mm + '/' + yyyy
+if (dateA != null) {
+  dateA.addEventListener("change", function(){
+      setTxtDate(txtDateA, dateA);
+      setTxtNbNuit();
+  });
+}
 
+if (dateD != null) {
+  dateD.addEventListener("change", function(){
+      setTxtDate(txtDateD, dateD);
+      setTxtNbNuit();
+  });
+}
+
+//Retourne la date saisie
+function getDateAD(input){
+  return input.value;
+}
+
+setDateAD();
+function setDateAD(){
+  dateA.value = "2020-02-05";
+  dateD.value = "2020-02-06";
+}
+
+setTxtDate(txtDateA, dateA);
+setTxtDate(txtDateD, dateD);
+//MAJ affichage texte des dates arrivée et départ
+function setTxtDate(spanTxt, input){
+  spanTxt.innerHTML = getDateAD(input);
+}
+
+//MAJ affichage texte du nombre de jours
+function setTxtNbNuit(){
+  var nbj = nbJours(getDateAD(dateA), getDateAD(dateD));
+  var txt = nbj + ' nuit';
+  if(nbj > 1){txt += 's';}
+  txtNbNuit.innerHTML = txt;
+  console.log(txt);
+}
+
+//Fonction calculant la différence de jours entre 2 dates (j1 et j2)
+function nbJours(j1, j2){
+  j1 = new Date(j1);
+  j2 = new Date(j2);
+  var diff = j2.getTime() - j1.getTime();
+  return Math.ceil(diff/(1000*60*60*24));
 }
 
 /** ****************** **
