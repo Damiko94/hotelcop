@@ -2,21 +2,22 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
-    <link rel="stylesheet" href="style/bootstrap.min.css" />
-    <!-- BOOSTRAP MATERIAL DESIGN -->
-    <!-- <link rel="stylesheet" href="style/bootstrap-material-design.min.css" /> -->
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <!-- JQUERY CSS -->
+    <link rel="stylesheet" href="style/jquery-ui.min.css"/>
     <!-- GOOGLE FONT -->
-    <!-- 2 lignes pour passer le w3c validator -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
     <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css" />
     <title>Hotel Cop Paris - Avenue Montaigne</title>
+    <meta name="description" content="Page de contact et d'informations d'accés de L'HOTELCOP">
+
   </head>
   <body>
     <!-- NAVBAR -->
@@ -44,12 +45,9 @@
       </button>      
       <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
-          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
-          <li class="nav-item pr-4">
-          </li>
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-          <li class="nav-item dropdown pr-4 text-light">
+          <li class="nav-item dropdown px-4 text-light">
             <a class="nav-link dropdown-toggle active" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
@@ -66,54 +64,25 @@
               <a class="dropdown-item active" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Chambres</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
-              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
-              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
-              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
-              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
-              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
-            </div>
+          
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="chambres.html">Chambres</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Restaurant</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
-              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
-              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
-              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="restaurant.html">Restaurant</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Spa</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
-              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="spa.html">Spa</a>
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
-          <li class="nav-item dropdown pr-2 text-light text-nowrap">
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
             </div>
           </li>             
         </ul>
@@ -122,8 +91,8 @@
         <!-- Mini form inline -->
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          <input type="text" class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" id="searchbar"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search-btn"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
@@ -140,7 +109,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -153,7 +122,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -167,7 +136,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -181,7 +150,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row no-gutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -193,12 +162,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row no-gutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -216,59 +185,6 @@
     
     <!-- HEADER -->
     <header>
-      <div id="carousel-indic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-indic" data-slide-to="1"></li>
-          <li data-target="#carousel-indic" data-slide-to="2"></li>
-          <li data-target="#carousel-indic" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image Restaurant">
-            <div class="carousel-caption d-none d-md-block">
-              <h1 class="my-0 mx-auto">Hotel Cop</h1>
-              <span class="d-bloc my-0 mx-auto">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-              <p class="my-0 mx-auto">Paris</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image chambre">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Nos chambres</h5>
-              <p>Un peu sommeil ?</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image restaurant">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre restaurant</h5>
-              <p>Une petite faim ?</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="images/bar-711x200.jpg" alt="Image spa">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Notre spa</h5>
-              <p>Une petite pause ?</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Précédent</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Suivant</span>
-        </a>
-      </div>
     </header>
     <!-- FIN HEADER -->
 
@@ -285,12 +201,13 @@
             <!-- Taille form -->
             <!-- SM-MD : large -->
             <!-- LG : reduit sur col-6 -->
-            <form action="post">
-              <div class="form-row justify-content-center py-0">
+            <form method="GET" action="contact-acces.html">
+
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-1 py-1">
-                  <select name="ct-civilite" id="civilite" class="form-control">
-                    <option value="m" selected>M.</option>
-                    <option value="mme">Mme.</option>
+                  <select name="ct-civilite" id="ct-civilite" class="form-control">
+                    <option selected>M.</option>
+                    <option >Mme.</option>
                   </select>
                 </div>
                 <div class="col-lg-5 py-1">
@@ -298,29 +215,29 @@
                   <small id="nomHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
                   <input type="text" class="form-control" id="ct-prenom" placeholder="Prénom" required>
                   <small id="prenomHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-3 py-1">
-                  <input type="email" name="ct-email" id="email" class="form-control" placeholder="Email">
+                  <input type="email" name="ct-email" id="ct-email" class="form-control" placeholder="Email" required>
                   <small id="emailHelp" class="form-text text-left"></small>
                 </div>
                 <div class="col-lg-3 py-1">
-                  <input type="email" name="ct-email2" id="email2" class="form-control" placeholder="Confirmer votre email">
+                  <input type="email" name="ct-email2" id="ct-email2" class="form-control" placeholder="Confirmer votre email" required>
                   <small id="email2Help" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-3 py-1">
-                  <input type="text" name="ct-entreprise" id="entreprise" class="form-control" placeholder="Entreprise">
+                  <input type="text" name="ct-entreprise" id="ct-entreprise" class="form-control" placeholder="Entreprise">
                   <small id="entrepriseHelp" class="form-text text-left"></small>
                 </div>
                 <div class="col-lg-3 py-1">
-                  <select name="ct-pays" id="pays" class="form-control">
+                  <select name="ct-pays" id="ct-pays" class="form-control">
                     <option value="fr" selected>France</option>
                     <option value="gb">Angleterre</option>
                     <option value="ger">Allemagne</option>
@@ -330,10 +247,10 @@
                   </select>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <select name="ct-categorie" id="categorie" class="form-control">
-                    <option value="0" selected>Sélectionnez une catégorie...</option>
+                  <select name="ct-categorie" id="ct-categorie" class="form-control">
+                    <option value="" selected>Sélectionnez une catégorie...</option>
                     <option value="chambre">Chambre</option>
                     <option value="restaurant">Restaurant</option>
                     <option value="spa">Spa</option>
@@ -342,33 +259,38 @@
                   <small id="categorieHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <input type="text" name="ct-objet-email" id="objet" placeholder="Objet du message" class="form-control">
+                  <input type="text" name="ct-objet" id="ct-objet" placeholder="Objet du message" class="form-control" required>
                   <small id="objetHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 py-1">
-                  <textarea name="ct-msg" id="message" cols="30" rows="10" placeholder="Votre message" class="form-control"></textarea>
+                  <textarea name="ct-msg" id="ct-msg" cols="30" rows="10" placeholder="Votre message" class="form-control" required></textarea>
                   <small id="msgHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <!-- CAPTCHA -->
                 <!-- Vérif user non bot -->
                 <!-- A remplacer par Google Captcha -->
                 <div class="col-lg-6 py-1">
-                  <input type="text" name="ct-objet-email" id="objet" placeholder="(Captcha) Combien font 2x2 ?" class="form-control">
+                  <input type="text" name="ct-captcha" id="ct-captcha" placeholder="" class="form-control" required>
                   <small id="captchaHelp" class="form-text text-left"></small>
                 </div>
               </div>
-              <div class="form-row justify-content-center py-0">
+              <div class="form-row no-gutters justify-content-center py-0">
                 <div class="col-lg-6 text-left py-1">
-                  <button type="submit" class="btn btn-secondary">Envoyer</button>
+                  <button type="submit" class="btn btn-secondary" id="btnSent">Envoyer</button>
                 </div>
               </div>
             </form>
+            <div class="row no-gutters justify-content-center py-0">
+              <div class="col-lg-6 py-1 text-left">
+                <p id="msgSent" class="text-success px-0"></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -376,7 +298,7 @@
       <section id="acces" class="text-center my-sm-5">
         <h2>Plan d'accès</h2>
         <div class="container">
-          <div class="row d-flex justify-content-center">
+          <div class="row no-gutters d-flex justify-content-center">
             
             <!-- TAILLE -->
             <!-- SM-MD : w-100 -->
@@ -388,7 +310,7 @@
             <!-- order-xl évite que table se trouve superposé à la map -->
             <div class="col-lg-6 order-xl-1">
               <h3>Informations complémentaires</h3>
-              <div class="row text-left py-0">
+              <div class="row no-gutters text-left py-0">
                 <div class="col py-1">
                   <p>Hotel Cop <br>
                     <i class="fas fa-map-marker-alt"></i> 1 avenue Montaigne 75008 Paris <br>
@@ -477,7 +399,7 @@
           <p><a href="mentions-legales.html">Mentions légales</a></p>
           <p><a href="cgv.html">CGV</a></p>
           <p><a href="plan-site.html">Plan du site</a></p>
-          <p><a href="#">Imprimer la page</a></p>
+          <p id="print-link" onclick="printPage()">Imprimer la page</p>
         </div>
 
         <div class="foot-resp ">

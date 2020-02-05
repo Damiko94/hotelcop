@@ -2,19 +2,22 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
-    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <!-- JQUERY CSS -->
+    <link rel="stylesheet" href="style/jquery-ui.min.css"/>
     <!-- GOOGLE FONT -->
-    <!-- 2 lignes pour passer le w3c validator -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
     <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css" />
     <title>Hotel Cop Paris - Avenue Montaigne</title>
+    <meta name="description" content="Page représentant le plan du site de L'HOTELCOP.">
+
   </head>
   <body>
     <!-- NAVBAR -->
@@ -42,12 +45,9 @@
       </button>      
       <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
-          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
-          <li class="nav-item pr-4">
-          </li>
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-          <li class="nav-item dropdown pr-4 text-light">
+          <li class="nav-item dropdown px-4 text-light">
             <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
@@ -64,54 +64,25 @@
               <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Chambres</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
-              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
-              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
-              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
-              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
-              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
-            </div>
+          
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="chambres.html">Chambres</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Restaurant</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
-              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
-              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
-              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="restaurant.html">Restaurant</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Spa</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
-              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="spa.html">Spa</a>
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
-          <li class="nav-item dropdown pr-2 text-light text-nowrap">
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
             </div>
           </li>             
         </ul>
@@ -120,8 +91,8 @@
         <!-- Mini form inline -->
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          <input type="text" class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" id="searchbar"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search-btn"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
@@ -138,7 +109,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -151,7 +122,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -165,7 +136,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -179,7 +150,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row no-gutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -191,12 +162,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-gutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row no-gutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -216,7 +187,7 @@
     <section>
       <div class="container">        
         <h1 class="text-center">Plan du site</h1>
-        <div class="row justify-content-center">
+        <div class="row no-gutters justify-content-center">
           <div class="col-6 p-0">
             <h3><a href="index.html">Accueil</a></h3>
             <h3>Nous découvrir</h3>
@@ -228,25 +199,25 @@
             <a href="contact-acces.html" class="list-group-item list-group-item-action">Contact et Accès</a>            
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row no-gutters justify-content-center">
           <div class="col-6 p-0">
             <h3>Les chambres</h3>
             <a href="chambres.html" class="list-group-item list-group-item-action">Chambres</a>          
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row no-gutters justify-content-center">
           <div class="col-6 p-0">
             <h3>Le restaurant</h3>
             <a href="restaurant.html" class="list-group-item list-group-item-action">Restaurant</a>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row no-gutters justify-content-center">
           <div class="col-6 p-0">
             <h3>Le spa</h3>
             <a href="spa.html" class="list-group-item list-group-item-action">Spa</a>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row no-gutters justify-content-center">
           <div class="col-6 p-0">
             <h3>Divers</h3>
             <a href="cgv.html" class="list-group-item list-group-item-action">Conditions Générales de Ventes</a>
@@ -286,7 +257,7 @@
         <p><a href="mentions-legales.html">Mentions légales</a></p>
         <p><a href="cgv.html">CGV</a></p>
         <p><a href="plan-site.html">Plan du site</a></p>
-        <p><a href="#">Imprimer la page</a></p>
+        <p id="print-link" onclick="printPage()">Imprimer la page</p>
       </div>
 
       <div class="foot-resp ">

@@ -2,19 +2,21 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo/favicon.png" type="image/png">
     <!-- BOOSTRAP -->
-    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css"/>
+    <!-- JQUERY CSS -->
+    <link rel="stylesheet" href="style/jquery-ui.min.css"/>
     <!-- GOOGLE FONT -->
-    <!-- 2 lignes pour passer le w3c validator -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
     <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css" />
     <title>Hotel Cop Paris - Avenue Montaigne</title>
+    <meta name="description" content="Evenements au sein de l'HOTELCOP, et actualités concernant le monde de l'hotellerie.">
   </head>
   <body>
     <!-- NAVBAR -->
@@ -42,13 +44,10 @@
       </button>      
       <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
-          <!-- ajout de d-lg-flex d-md-bloc align-items-center au li, pour gerer l'alignement du menu en mode mobile-->
-          <li class="nav-item pr-4">
-          </li>
           <!-- MENU -->
           <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+          <li class="nav-item dropdown px-4 text-light">
+            <a class="nav-link dropdown-toggle active" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
               <span>Nous découvrir</span>
             </a>
             <!-- DROPDOWN ITEMS -->
@@ -57,61 +56,32 @@
             <!-- text-lg-left:left dans le menu étendu-->            
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
               <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+              <a class="dropdown-item active" href="actualites-evenements.html"><span>Actualités et événements</span></a>
               <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
               <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
               <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
               <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
             </div>
           </li>
-
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropChambres" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Chambres</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropChambres">
-              <a class="dropdown-item" href="chambres.html"><span>Découvrir nos chambres</span></a>
-              <a class="dropdown-item" href="chambres.html#classique"><span>Classique</span></a>
-              <a class="dropdown-item" href="chambres.html#confort"><span>Confort</span></a>              
-              <a class="dropdown-item" href="chambres.html#deluxe"><span>Deluxe</span></a>
-              <a class="dropdown-item" href="chambres.html#suite"><span>Suite</span></a>
-            </div>
+          
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="chambres.html">Chambres</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropRestaurant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Restaurant</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropRestaurant">
-              <a class="dropdown-item" href="restaurant.html"><span>Découvrir notre restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#brasserie"><span>Brasserie</span></a>
-              <a class="dropdown-item" href="restaurant.html#degustation"><span>Dégustation</span></a>              
-              <a class="dropdown-item" href="restaurant.html#restaurant"><span>Restaurant</span></a>
-              <a class="dropdown-item" href="restaurant.html#menus"><span>Nos menus</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="restaurant.html">Restaurant</a>
           </li>
-          <li class="nav-item dropdown pr-4 text-light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropSpa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span>Spa</span>
-            </a>
-            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropSpa">
-              <a class="dropdown-item" href="spa.html"><span>Découvrir notre spa</span></a>
-              <a class="dropdown-item" href="spa.html#detente"><span>Soin Détente</span></a>
-              <a class="dropdown-item" href="spa.html#decouverte"><span>Soin Découverte</span></a>              
-              <a class="dropdown-item" href="spa.html#relaxant"><span>Soin Relaxant</span></a>
-              <a class="dropdown-item" href="spa.html#plaisir"><span>Soin Plaisir</span></a>
-              <a class="dropdown-item" href="spa.html#evasion"><span>Soin Evasion</span></a>
-            </div>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="spa.html">Spa</a>
           </li>
           <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
           <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-          <!-- pr-2 : Ramène l'input vers la gauche ainsi évite le scroll horizontal -->
-          <li class="nav-item dropdown pr-2 text-light text-nowrap">
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
             <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span>FR</span> <i class="fas fa-globe-europe"></i>
             </a>
             <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
               <a class="dropdown-item" href="#"><span>English</span></a>
-              <a class="dropdown-item" href="#"><span>Español</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
             </div>
           </li>             
         </ul>
@@ -120,8 +90,8 @@
         <!-- Mini form inline -->
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-          <input class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          <input type="text" class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" id="searchbar"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search-btn"><i class="fas fa-search"></i></button>
         </form>
       </div>
     </nav>
@@ -139,7 +109,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row-nogutters">
               <div class="col">
                 <p>
                   1 Chambre Suite pour 2 personnes<br>
@@ -152,7 +122,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row-nogutters">
               <div class="col">
                 <p>
                   1 Diner pour 2 personnes<br>
@@ -166,7 +136,7 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row-nogutters">
               <div class="col">
                 <p>
                   1 Soin Relaxant pour 2 personnes<br>
@@ -180,7 +150,7 @@
               </div>
             </div>
             
-            <div class="row border-top">
+            <div class="row-nogutters border-top">
               <div class="col">
                 <p class="text-right">
                   TOTAL
@@ -192,12 +162,12 @@
                 </p>
               </div>
             </div>
-            <div class="row">
+            <div class="row-nogutters">
               <div class="col text-muted text-right">
                 <p>La maison ne fait pas crédit.</p>
               </div>
             </div>
-            <div class="row pl-3">
+            <div class="row-nogutters pl-3">
               <div class="col custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" name="cgv" id="cgv">
                 <label class="custom-control-label" for="cgv">J'ai lu et j'accepte les <a href="cgv.html">conditions générales de vente</a>.</label>
@@ -221,12 +191,12 @@
         <h2>Evénements</h2>
         <p>Voici un petit aperçu des derniers événements qui se sont déroulés dans notre hotel.</p>
         <!-- no-gutters : suppr row margin et padding col -->
-        <div class="row no-gutters">
+        <div class="row-nogutters">
           <!-- media query < lg : Text + vidéo superposés. >= lg : côte à côte + gestion auto de la taille des col -->
           <div class="col-12 col-lg py-0">
             <h3>Neha + Vizek</h3>
             <p>Il y a quelques semaines, nous avons eu le grand privilège, et pour le bonheur de tous, de célébrer l'union de Neha et de Vizek.</p>
-            <p>Etant à la recherche d'un lieu d'exception pour célébre leur mariage, l'Htel Cop fut l'écrin parfait pour cet événement. Quoi de plus magnifique que de s'unir dans la capitale du romantisme. L'Hotel Cop étant idéalement situé, ils ne pouvaient pas faire de meilleur choix. </p>
+            <p>Etant à la recherche d'un lieu d'exception pour célébre leur mariage, l'HotelCop fut l'écrin parfait pour cet événement. Quoi de plus magnifique que de s'unir dans la capitale du romantisme. L'Hotel Cop étant idéalement situé, ils ne pouvaient pas faire de meilleur choix. </p>
           </div>
           <div class="col-12 col-lg py-0 embed-responsive embed-responsive-16by9">
             <!-- video + poster -->
@@ -240,7 +210,7 @@
     <section>
       <div class="container text-center my-sm-5 my-0 pb-0">
         <!-- no-gutters : suppr row margin et padding col -->
-        <div class="row no-gutters">
+        <div class="row-nogutters">
           <!-- media query < lg : Text + vidéo superposés. 
             >= lg : côte à côte + gestion auto de la taille des col -->
           <div class="col-12 col-lg py-0 order-lg-1">
@@ -261,7 +231,7 @@
     <section>
       <div class="container text-center my-sm-5 my-0 pb-0">
         <!-- no-gutters : suppr row margin et padding col -->
-        <div class="row no-gutters">
+        <div class="row-nogutters">
           <!-- media query < lg : Text + vidéo superposés. >= lg : côte à côte + gestion auto de la taille des col -->
           <div class="col-12 col-lg py-0">
             <h3>Notre toute première campagne publicitaire</h3>
@@ -295,7 +265,7 @@
               <p class="card-text p-0">Pour travailler dans le secteur de l’hôtellerie, la maîtrise d’une langue vivante s’impose. Et si, en réalité, il fallait en maîtriser plusieurs ? Lesquelles privilégier dans ce cas ? Eclairage.</p>
             </div>
             <div class="card-footer">
-              <div class="row p-0 m-1">
+              <div class="row-nogutters p-0 m-1">
                 <div class="col-6 p-0">                  
                   <a href="https://www.studyrama.com/formations/specialites/hotellerie-restauration/hotellerie-comment-bien-se-former-apres-le-bac/formation-en-hotellerie-ne-pas-faire-l-impasse-sur-les-106595" target="_blank">Lire l'article</a>
                 </div>
@@ -314,7 +284,7 @@
             <p class="card-text p-0">Pour la deuxième année d'affilée, les hôteliers et restaurateurs parisiens ont connu un mois de décembre difficile. L'impact des grèves semble plus important que celui du mouvement des « gilets jaunes ».</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lesechos.fr/industrie-services/tourisme-transport/les-greves-ont-mis-sous-pression-lhotellerie-restauration-parisienne-1160136" target="_blank">Lire l'article</a>
               </div>
@@ -335,7 +305,7 @@
             </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="chambres.html">Découvrir les chambres</a>
               </div>
@@ -354,7 +324,7 @@
             <p class="card-text p-0">Les acteurs de l’hôtellerie dans le monde entier s’engagent d’avantage dans des actions en faveur du développement durable. Pour ceux qui ont pris des mesures pour réduire leur empreinte environnementale, comment assurer les objectifs sans impacter négativement l’expérience client et leurs attentes ? Comment communiquer sur les initiatives entreprises ? </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://hospitality-on.com/fr/developpement-durable-rse/est-il-possible-de-concilier-hotellerie-durable-et-confort-client" target="_blank">Lire l'article</a>
               </div>
@@ -373,7 +343,7 @@
             <p class="card-text p-0">Quentin Périnel reçoit une personnalité du monde économique autour d’un café. Michel Morauw, vice-président en France de Hyatt, est l’invité du Talk Décideurs du Figaro.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lefigaro.fr/decideurs/management/l-hotellerie-est-un-secteur-ou-tout-le-monde-a-sa-chance-20200106" target="_blank">Lire l'article</a>
               </div>
@@ -392,7 +362,7 @@
             <p class="card-text p-0">Le baromètre MKG dresse un bilan positif de l’industrie hôtelière sur l’année écoulée, malgré un dernier trimestre en demi-teinte, marqué par les mouvements sociaux.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lechotouristique.com/article/hotellerie-le-bilan-de-2019-en-5-chiffres" target="_blank">Lire l'article</a>
               </div>
@@ -411,7 +381,7 @@
             <p class="card-text p-0">Accor va devenir en 2020 actionnaire majoritaire du groupe fondé par Serge Trigano et qui connaît une croissance rapide </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lemonde.fr/economie/article/2019/12/31/mama-shelter-accelere-son-developpement-dans-l-hotellerie-lifestyle_6024467_3234.html" target="_blank">Lire l'article</a>
               </div>
@@ -430,7 +400,7 @@
             <p class="card-text p-0">L’ancien manoir de la Briandais a fait l’objet de grosses transformations depuis son rachat par Emilie Audoin et Thibaut Simonet.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.ouest-france.fr/pays-de-la-loire/missillac-44780/missillac-hotellerie-gros-travaux-au-manoir-de-la-briandais-6707735" target="_blank">Lire l'article</a>
               </div>
@@ -451,7 +421,7 @@
             </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">
                 <a href="restaurant.html">Découvrir notre restaurant</a>
               </div>
@@ -470,7 +440,7 @@
             <p class="card-text p-0">Pilgo est une jeune plate-forme d’affiliation pour les hôtels en direct, qui a manqué de ressources pour assurer son développement.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lechotouristique.com/article/hotellerie-leboncoin-absorbe-la-start-up-pilgo" target="_blank">Lire l'article</a>
               </div>
@@ -489,7 +459,7 @@
             <p class="card-text p-0">La société Osmozis annonce une levée de fonds de 4 millions d’euros par placement privé d’obligations convertibles en actions dont la valeur nominale de chacune est fixée à 11,30 €. Le tour de table a été mené par les fonds EIFFEL INVESTMENT GROUP et VATEL CAPITAL avec la participation d’autres investisseurs. L’opérateur de réseaux WiFi et LoRaWan multiservice dédié à l’hôtellerie de plein air utilisera ces fonds pour assurer sa croissance externe en Europe.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.tom.travel/2020/01/06/hotellerie-plein-air-osmosiz-leve-4-millions-euros/" target="_blank">Lire l'article</a>
               </div>
@@ -508,7 +478,7 @@
             <p class="card-text p-0">A quel secteur d’activité associerais-tu « excellence à la française », « savoir-faire » et « international » ? A l’hôtellerie-restauration bien sûr.</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.digischool.fr/lycee/parcoursup/parcoursup-formations-hotellerie-restauration-institut-paul-bocuse-37979.html" target="_blank">Lire l'article</a>
               </div>
@@ -529,7 +499,7 @@
             </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="spa.html">Découvrir le Spa</a>
               </div>
@@ -548,7 +518,7 @@
             <p class="card-text p-0">« Comment manager une équipe multiculturelle dans le secteur de l’Hôtellerie-Restauration » ?  « Comment faire prendre conscience aux futurs salariés du secteur qu’il convient d’adapter l’accueil touristique à une clientèle internationale » ?</p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lhotellerie-restauration.fr/journal/formation-ecole/2020-01/le-campus-des-metiers-et-des-qualifications-hotellerie-et-tourisme-de-montagne-a-la-decouverte-de-l.htm" target="_blank">Lire l'article</a>
               </div>
@@ -567,7 +537,7 @@
             <p class="card-text p-0">Un grand chantier est en cours au Cifa d’Auxerre. Objectif : repenser totalement son pôle hôtellerie-restauration. Un nouveau restaurant et de nouvelles cuisines doivent voir le jour au second semestre. </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="https://www.lyonne.fr/auxerre-89000/loisirs/grand-chantier-au-cifa-d-auxerre-qui-va-moderniser-son-pole-hotellerie-restauration_13721755/" target="_blank">Lire l'article</a>
               </div>
@@ -589,7 +559,7 @@
             </p>
           </div>
           <div class="card-footer">
-            <div class="row p-0 m-1">
+            <div class="row-nogutters p-0 m-1">
               <div class="col-6 p-0">                  
                 <a href="index.html">Revenir à la page d'accueil</a>
               </div>
@@ -635,7 +605,7 @@
           <p><a href="mentions-legales.html">Mentions légales</a></p>
           <p><a href="cgv.html">CGV</a></p>
           <p><a href="plan-site.html">Plan du site</a></p>
-          <p><a href="#">Imprimer la page</a></p>
+          <p id="print-link" onclick="printPage()">Imprimer la page</p>
         </div>
 
         <div class="foot-resp ">

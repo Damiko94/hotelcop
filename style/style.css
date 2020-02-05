@@ -49,15 +49,18 @@ a {
 
 /* Chargement des img en bgc */
 #event {
-  background: url(../images/section_event/event.jpg);
+  background-image: url(../images/section_event/event.jpg);
+  background-size: cover;
 }
 
 #actua {
   background-image: url(../images/section_event/actu.jpg);
+  background-size: cover;
 }
 
 #press {
   background-image: url(../images/section_event/press.jpg);
+  background-size: cover;
 }
 
 /* 
@@ -109,6 +112,10 @@ h2 {
 /**********/
 /* FOOTER */
 /**********/
+#print-link{
+  cursor: pointer;
+}
+
 footer {
   width: auto;
 }
@@ -255,7 +262,8 @@ a:hover {
 section a:hover,
 .nav-item a span:hover,
 footer a:hover,
-.dropdown-item:hover {
+.dropdown-item:hover,
+#print-link:hover {
   text-decoration: none;
   transition: 0.3s;
   color: darkgoldenrod;
@@ -264,16 +272,12 @@ footer a:hover,
 /*****section chambres*******/
 
 #chambre-index {
-
-
   background: url(../images/chambres/chambre3lg.jpg);
 }
 
 /*****section restaurant*******/
 
 #resto-index {
-
-
   background: url(../images/resto/resto-lg.jpeg);
 }
 
@@ -287,8 +291,6 @@ footer a:hover,
 /*****section spa*******/
 
 #spa-index {
-
-
   background: url(../images/spa/spa.jpeg);
 }
 
@@ -324,6 +326,12 @@ footer a:hover,
 /***************/
 
 /* ajout dans les media query de differentes tailles d'images pour les sections chambres ,restaurant et spa */
+@media only screen and (max-width: 320px) {
+  html {
+  font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 576px) {
 
   /*passage des elements du footer en colonne en dessous d'une width de 576px*/
@@ -342,6 +350,7 @@ footer a:hover,
   #spa-index {
     background: url(../images/spa/spa-sm.jpeg);
   }
+  /* ajout dans le média query, pour augmenter la taille des caractères en version mobile*/
 }
 
 @media (max-width: 768px) {
