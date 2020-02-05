@@ -474,9 +474,19 @@ function getDateAD(input){
 }
 
 setDateAD();
-function setDateAD(){
-  dateA.value = "2020-02-05";
-  dateD.value = "2020-02-06";
+function setDateAD(defaut = true){
+  var j1 = '2020-02-05';
+  var j2 = '2020-02-06';    
+  
+  if (!defaut) {
+    j1 = getDateAD();
+    j2 = getDateAD();
+  }
+  
+  dateA.value = j1;
+  dateA.min = j1;
+  dateD.value = j2;
+  dateD.min = j1;
 }
 
 setTxtDate(txtDateA, dateA);
@@ -503,6 +513,26 @@ function nbJours(j1, j2){
   return Math.ceil(diff/(1000*60*60*24));
 }
 
+function getFormatDate(j = 'j1', isUS = true){
+  //Formatage US des dates
+  //Nouvelle objet date : auj
+  var auj = new Date();
+  //padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
+  var dd = String(auj.getDate()).padStart(2, '0');
+  
+  if (j == 'j2') {
+    var dd = String(auj.getDate() + 1).padStart(2, '0');    
+  }
+
+  var mm = String(auj.getMonth() + 1).padStart(2, '0');
+  var yyyy = auj.getFullYear();
+  
+  var laDate = yyyy + '-' + mm + '-' + dd;
+  // if (isUS == false) {
+  //   laDate = dd + '/' + mm + '/' + yyyy;
+  // }
+  return laDate;
+}
 /** ****************** **
  *
  *        DAMIEN
