@@ -539,6 +539,56 @@ function getFormatDate(auj, demain = true){
   
   return yyyy + '-' + mm + '-' + dd;
 }
+
+// ---------------------------------
+//      Calcul du prix total
+// ---------------------------------
+var total = document.getElementById("resa-total");
+var prixClassic = 500;
+var prixConfort = 1000;
+var prixDeluxe = 1500;
+var prixSuite = 2000;
+
+var selectClassic = document.getElementById("nb-classique");
+var selectConfort = document.getElementById("nb-confort");
+var selectDeluxe = document.getElementById("nb-deluxe");
+var selectSuite = document.getElementById("nb-suite");
+var nbPanier = document.getElementsByClassName("nb-panier");
+
+
+function calculTotal(prix, qte){
+  var prixTotal = 0;
+  // var prixTotal = parseInt(total.value);
+  return prixTotal + prix * qte;
+}
+
+function setTxtPrixTotal(){
+  var qteClassic = parseInt(selectClassic.options[selectClassic.selectedIndex].value);
+  var qteConfort = parseInt(selectConfort.options[selectConfort.selectedIndex].value);
+  var qteDeluxe = parseInt(selectDeluxe.options[selectDeluxe.selectedIndex].value);
+  var qteSuite = parseInt(selectSuite.options[selectSuite.selectedIndex].value);
+
+  setNbPanier(qteClassic + qteConfort + qteDeluxe + qteSuite);
+
+  //Calcul prix total en fonction des qté sélectionnées
+  prix = prixClassic * qteClassic + prixConfort * qteConfort + prixDeluxe * qteDeluxe + prixSuite * qteSuite;  
+  total.innerHTML = prix + ' €';
+}
+
+//MAJ texte badge du btn panier
+function setNbPanier(nb){
+  //boucle sur les deux badges panier
+  for (let key in nbPanier) {
+    nbPanier[key].innerHTML = nb;
+  }
+}
+
+//MAJ prix total à chaque selection quantité nb chambre
+selectClassic.addEventListener("change", setTxtPrixTotal);
+selectConfort.addEventListener("change", setTxtPrixTotal);
+selectDeluxe.addEventListener("change", setTxtPrixTotal);
+selectSuite.addEventListener("change", setTxtPrixTotal);
+
 /** ****************** **
  *
  *        DAMIEN
