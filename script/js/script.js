@@ -440,6 +440,155 @@ if (btnSent !== null) {
   });  
 }
 
+/** ********************* **/
+/**     RESERVATION       **/
+/** ********************* **/
+// ---------------------------------
+//  Input : dates arrivée et départ
+// ---------------------------------
+//Affichage des dates minimales par défaut d'arrivée et de départ
+//On ne peut pas réserver une date antiérieure à auj
+var dateA = document.getElementById("date-arrivee");
+var dateD = document.getElementById("date-depart");
+var txtDateA = document.getElementById("resa-date-arrivee");
+var txtDateD = document.getElementById("resa-date-depart");
+var txtNbNuit = document.getElementById("resa-nb-nuits");
+
+if (dateA != null) {
+  dateA.addEventListener("change", function(){
+      setTxtDate(txtDateA, dateA);
+      setTxtNbNuit();
+      setDateAD(false);
+  });
+}
+
+if (dateD != null) {
+  dateD.addEventListener("change", function(){
+      setTxtDate(txtDateD, dateD);
+      setTxtNbNuit();
+      setDateAD(false);
+  });
+}
+
+//Retourne la date saisie
+function getDateAD(input){
+  return input.value;
+}
+
+setDateAD();
+function setDateAD(defaut = true){
+  //Dates par défaut
+  var auj = new Date();
+  var demain = new Date();
+  auj = getFormatDate(auj, false);
+  var demain = getFormatDate(demain);
+  //j1 = aujourd'hui (j)
+  var j1 = auj;
+  //j2 = j+1
+  var j2 = demain;    
+  
+  if (!defaut) {
+    j1 = getDateAD(dateA);
+    j2 = getDateAD(dateD);
+  }
+
+  if (dateA != null) {
+    dateA.value = j1;
+    
+    //La date d'arrivée = date du jour
+    dateD.value = j2;
+    dateA.min = auj;
+    dateD.min = j1;
+  }
+}
+
+setTxtDate(txtDateA, dateA);
+setTxtDate(txtDateD, dateD);
+//MAJ affichage texte des dates arrivée et départ
+function setTxtDate(spanTxt, input){
+  spanTxt.innerHTML = getDateAD(input);
+}
+
+//MAJ affichage texte du nombre de jours
+function setTxtNbNuit(){
+  var nbj = nbJours(getDateAD(dateA), getDateAD(dateD));
+  var txt = nbj + ' nuit';
+  if(nbj > 1){txt += 's';}
+  txtNbNuit.innerHTML = txt;
+  console.log(txt);
+}
+
+//Fonction calculant la différence de jours entre 2 dates (j1 et j2)
+function nbJours(j1, j2){
+  j1 = new Date(j1);
+  j2 = new Date(j2);
+  var diff = j2.getTime() - j1.getTime();
+  return Math.ceil(diff/(1000*60*60*24));
+}
+
+function getFormatDate(auj, demain = true){
+  //Formatage US des dates
+  //Nouvelle objet date : auj
+  //padStart() complete la date ou le num du mois d'un 0 si ils font moins de 2 caractères
+  var dd = String(auj.getDate()).padStart(2, '0');
+  if (demain) {
+    dd = String(auj.getDate() + 1).padStart(2, '0');
+  }
+  var mm = String(auj.getMonth() + 1).padStart(2, '0');
+  var yyyy = auj.getFullYear();
+  
+  return yyyy + '-' + mm + '-' + dd;
+}
+
+// ---------------------------------
+//      Calcul du prix total
+// ---------------------------------
+var total = document.getElementById("resa-total");
+var prixClassic = 500;
+var prixConfort = 1000;
+var prixDeluxe = 1500;
+var prixSuite = 2000;
+
+var selectClassic = document.getElementById("nb-classique");
+var selectConfort = document.getElementById("nb-confort");
+var selectDeluxe = document.getElementById("nb-deluxe");
+var selectSuite = document.getElementById("nb-suite");
+var nbPanier = document.getElementsByClassName("nb-panier");
+
+
+function calculTotal(prix, qte){
+  var prixTotal = 0;
+  // var prixTotal = parseInt(total.value);
+  return prixTotal + prix * qte;
+}
+
+function setTxtPrixTotal(){
+  var qteClassic = parseInt(selectClassic.options[selectClassic.selectedIndex].value);
+  var qteConfort = parseInt(selectConfort.options[selectConfort.selectedIndex].value);
+  var qteDeluxe = parseInt(selectDeluxe.options[selectDeluxe.selectedIndex].value);
+  var qteSuite = parseInt(selectSuite.options[selectSuite.selectedIndex].value);
+
+  setNbPanier(qteClassic + qteConfort + qteDeluxe + qteSuite);
+
+  //Calcul prix total en fonction des qté sélectionnées
+  prix = prixClassic * qteClassic + prixConfort * qteConfort + prixDeluxe * qteDeluxe + prixSuite * qteSuite;  
+  total.innerHTML = prix + ' €';
+}
+
+//MAJ texte badge du btn panier
+function setNbPanier(nb){
+  //boucle sur les deux badges panier
+  for (let key in nbPanier) {
+    nbPanier[key].innerHTML = nb;
+  }
+}
+
+//MAJ prix total à chaque selection quantité nb chambre
+selectClassic.addEventListener("change", setTxtPrixTotal);
+selectConfort.addEventListener("change", setTxtPrixTotal);
+selectDeluxe.addEventListener("change", setTxtPrixTotal);
+selectSuite.addEventListener("change", setTxtPrixTotal);
+
 /** ****************** **
  *
  *        DAMIEN
