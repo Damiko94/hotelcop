@@ -343,13 +343,40 @@
              </p>
             </div>
            </div>
-           <div class="row no-gutters p-0">
-             <div class="col d-flex justify-content-end">
-              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary nb-panier">3</span></button>
+
+           <div class="container">
+
+            <div class="row no-gutters p-0 d-flex align-items-center">               
+              <div class="col p-0 text-right"><p>1 Chambre Suite pour 2 personnes<br>
+                du <span class="text-gold" id="resa-date-arrivee"></span> au <span class="text-gold" id="resa-date-depart"></span><br>(<span id="resa-nb-nuits">1 nuit</span>)</p>
+              </div>
+              <div class="col-lg-2 col-sm-4 col-5 p-0 d-flex justify-content-end">
+                <p>2400€</p>
+              </div>
+           </div>
+
+            <div class="row no-gutters p-0 d-flex align-items-center">               
+                <div class="col p-0 text-right"><p>1 Chambre Suite pour 2 personnes<br>
+                 du <span class="text-gold" id="resa-date-arrivee"></span> au <span class="text-gold" id="resa-date-depart"></span><br>(<span id="resa-nb-nuits">1 nuit</span>)</p>
+                </div>
+                <div class="col-lg-2 col-sm-4 col-5 p-0 d-flex justify-content-end">
+                  <p>2400€</p>
+                </div>
              </div>
-             <div class="col-1 text-right">TOTAL</div>
-             <div class="col-2 text-center pr-2" id="resa-total">500 €</div>
+
+             <div class="row no-gutters p-0 d-flex align-items-center border-top">
+                <div class="col text-right">
+                  <button class="btn btn-primary">Valider et payer</button>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-5 d-flex justify-content-end">
+                  <p class="text-right my-auto">TOTAL</p>
+                  <p id="resa-total" class="my-auto">500€</p>
+                </div>
             </div>
+
+            </div>
+
           </form>
       </section>
     </main>
