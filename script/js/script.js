@@ -3,7 +3,7 @@
  *        DAMIEN
  *
  *  ****************** **/
-
+// fonction pour la page presse, au clic sur un article, affichage de l'artcile dasn une fentre modale
 function openModal (e){
     document.querySelector(".img-modale").setAttribute("src", "images/presse/"+e+".jpg");
     document.getElementById("modal1").style.display="flex";
@@ -41,41 +41,33 @@ var classique = document.querySelector('#classique');
 var deluxe = document.querySelector('#deluxe');
 window.addEventListener('scroll', function (event) {
 	if (isInViewport(cuisto)) {
-        cuisto.style.opacity="1";
+        resto.style.opacity="1";
         document.querySelector(".test-anim").style.left="0"; 
+        document.querySelector(".test-anim").style.opacity="1";
     }
-    else{
-        cuisto.style.opacity="0.2";
-        document.querySelector(".test-anim").style.left="-2500px";
-    }
+   
 }, false);
 window.addEventListener('scroll', function (event) {
     if (isInViewport(brasserie)) {
-        brasserie.style.opacity="1";
+        brass.style.opacity="1";
         document.querySelector(".test-anim1").style.left="0"; 
+        document.querySelector(".test-anim1").style.opacity="1"; 
     }
-    else{
-        brasserie.style.opacity="0.2";
-        document.querySelector(".test-anim1").style.left="-2500px";
-    }
+    
 }, false);
 window.addEventListener('scroll', function (event) {
     if (isInViewport(degustation)) {
-        degustation.style.opacity="1";
+        degust.style.opacity="1";
         document.querySelector(".test-anim2").style.left="0"; 
+        document.querySelector(".test-anim2").style.opacity="1"; 
     }
-    else{
-        degustation.style.opacity="0.2";
-        document.querySelector(".test-anim2").style.left="2500px";
-    }
+    
 }, false);
 window.addEventListener('scroll', function (event) {
     if (isInViewport(diner)) {
-        diner.style.opacity="1";
+        din.style.opacity="1";
         document.querySelector(".test-anim3").style.left="0"; 
+        document.querySelector(".test-anim3").style.opacity="1"; 
     }
-    else{
-        diner.style.opacity="0.2";
-        document.querySelector(".test-anim3").style.left="-2500px";
-    }
+    
 }, false);

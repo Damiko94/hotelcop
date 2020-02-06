@@ -509,11 +509,20 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   position: relative;
   overflow: hidden;
   left: -2500px;
-  transition: left 1s;
+  transition: left 1.5s;
+  opacity: 0.3;
+  transition: 3s;
 }
 .test-anim2{
   position: relative;
   overflow: hidden;
   left: 2500px;
-  transition: left 1s;
+  transition: left 1.5s;
+  opacity: 0.3;
+  transition: 3s;
+}
+/*css pour faire apparaitre le texte à coté des photos des sections restaurant lors du scroll*/
+#resto, #brass, #degust, #din {
+  opacity: 0;
+  transition: 2s;
 }
