@@ -38,7 +38,7 @@
       <!-- BUTTON PANIER -->
       <!-- Toujours visible -->
       <!-- Active BS Modal -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary nb-panier">3</span></button>
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>      
@@ -193,9 +193,9 @@
        <div class="row no-gutters d-flex justify-content-center">
         <form class="form-inline">
           <label class="form-check-label mr-2" for="date-arrivee">Date d'arrivée</label>
-          <input type="date" class="form-control mr-sm-3" id="date-arrivee" value="2020-02-07" min="2020-02-07">
-          <label class="form-check-label mr-2" for="date-arrivee">Date d'arrivée</label>
-          <input type="date" class="form-control mr-sm-3" id="date-arrivee" value="2020-02-07" min="2020-02-07">
+          <input type="date" class="form-control mr-sm-3" id="date-arrivee">
+          <label class="form-check-label mr-2" for="date-depart">Date de départ</label>
+          <input type="date" class="form-control mr-sm-3" id="date-depart">
                 
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="check-restaurant">
@@ -223,8 +223,8 @@
       </section>
       
       <section class="container">
-        <div class="row no-gutters">
-          <h3>Voici notre sélection pour la période du <span id="resa-date-arrivee">07/02/2020</span> au <span id="resa-date-depart">07/02/2020</span> (<span id="resa-nb-nuits">1 nuit</span>)</h3>
+        <div class="row no-gutters justify-content-center">
+          <h3>Voici notre sélection pour la période du <span class="text-gold" id="resa-date-arrivee"></span> au <span class="text-gold" id="resa-date-depart"></span> (<span id="resa-nb-nuits">1 nuit</span>)</h3>
         </div>
         <!-- RESA CHAMBRE CLASSIQUE -->
         <form>
@@ -250,7 +250,6 @@
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="4">4</option>
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
@@ -281,7 +280,6 @@
                <option value="2">2</option>
                <option value="3">3</option>
                <option value="4">4</option>
-               <option value="4">4</option>
                <option value="5">5</option>
              </select>
            </p>
@@ -310,7 +308,6 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="4">4</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
@@ -341,7 +338,6 @@
                  <option value="2">2</option>
                  <option value="3">3</option>
                  <option value="4">4</option>
-                 <option value="4">4</option>
                  <option value="5">5</option>
                </select>
              </p>
@@ -349,7 +345,7 @@
            </div>
            <div class="row no-gutters p-0">
              <div class="col d-flex justify-content-end">
-               <button role="button" type="submit" class="btn btn-primary">Réserver</button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary nb-panier">3</span></button>
              </div>
              <div class="col-1 text-right">TOTAL</div>
              <div class="col-2 text-center pr-2" id="resa-total">500 €</div>
