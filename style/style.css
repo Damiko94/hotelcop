@@ -531,29 +531,32 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   background-color: white;
 }
 /*CSS pour l'apparition des photos en chacher en axe x, sur les pages avec photos et articles en présentation en zig-zag */
-#main, #cuisto, #brasserie, #degustation, #diner{
-  opacity: 0.2;
-  transition: opacity 1s;
-}
 
-.test-anim, .test-anim1, .test-anim3, .test-anim5 {
-  position: relative;
-  overflow: hidden;
-  left: -2000px;
-  transition: left 2s;
-  opacity: 0;
-  transition: 3s;
-}
-.test-anim2, .test-anim4{
-  position: relative;
-  overflow: hidden;
-  left: 2000px;
-  transition: left 2s;
-  opacity: 0;
-  transition: 3s;
-}
-/*css pour faire apparaitre le texte à coté des photos des sections restaurant lors du scroll*/
-#restau, #brass, #degust, #din, #classi, #conf, #deluxe, #suite {
-  opacity: 0;
-  transition: 2s;
+@media (min-width: 576px){
+  #main, #cuisto, #brasserie, #degustation, #diner{
+    opacity: 0.2;
+    transition: opacity 1s;
+  }
+
+  .test-anim, .test-anim1, .test-anim3, .test-anim5 {
+    position: relative;
+    overflow: hidden;
+    left: -2000px;
+    transition: left 2s;
+    opacity: 0;
+    transition: 3s;
+  }
+  .test-anim2, .test-anim4{
+    position: relative;
+    overflow: hidden;
+    left: 2000px;
+    transition: left 2s;
+    opacity: 0;
+    transition: 3s;
+  }
+  /*css pour faire apparaitre le texte à coté des photos des sections restaurant lors du scroll*/
+  #restau, #brass, #degust, #din, #classi, #conf, #deluxe, #suite {
+    opacity: 0;
+    transition: 2s;
+  }
 }
