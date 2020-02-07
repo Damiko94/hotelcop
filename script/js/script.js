@@ -589,8 +589,3 @@ selectConfort.addEventListener("change", setTxtPrixTotal);
 selectDeluxe.addEventListener("change", setTxtPrixTotal);
 selectSuite.addEventListener("change", setTxtPrixTotal);
 
-/** ****************** **
- *
- *        DAMIEN
- *
- *  ****************** **/

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FAVICON -->
@@ -13,92 +12,91 @@
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Cinzel&display=swap" rel="stylesheet"/>
     <!-- FONT AWESOME -->
-    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css" />
+    <link type="text/css" rel="stylesheet" href="style/fontawesome-css/all.min.css"/>
     <!-- CSS -->
     <link type="text/css" rel="stylesheet" href="style/style.css" />
     <title>Hotel Cop Paris - Avenue Montaigne</title>
-    <meta name="description" content="Page de présentation de l'espace de restauration de L'HOTELCOP">
-</head>
+    <meta name="description" content="Page de contact et d'informations d'accés de L'HOTELCOP">
 
-<body>
+  </head>
+  <body>
     <!-- NAVBAR -->
     <!-- Etendue en affichage large -->
     <!-- Réduite en médium et centré -->
     <nav class="navbar navbar-expand-lg sticky-top text-light">
-
-        <!-- LOGO -->
-        <!-- Toujours visible -->
-        <a href="index.html" class="navbar-brand text-light">
-            <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
-        </a>
-        <!-- BTN RESERVER -->
-        <!-- Toujours visible -->
-        <!-- Envoie user vers page de réservation -->
-        <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
-        <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
+      
+      <!-- LOGO -->
+      <!-- Toujours visible -->
+      <a href="index.html" class="navbar-brand text-light">
+        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+      </a>
+      <!-- BTN RESERVER -->
+      <!-- Toujours visible -->
+      <!-- Envoie user vers page de réservation -->
+      <!-- JS : Change text en RESERVATION(1) si user a commencé à réserver  -->
+      <!-- avec (1) nb prestations sélectionnées. Ici 1. -->
       <a href="reservations.html" class="btn btn-primary mr-2">Réserver</a>
       <!-- BUTTON PANIER -->
       <!-- Toujours visible -->
       <!-- Active BS Modal -->
       <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanier"><i class="fas fa-shopping-cart"></i> Panier <span class="badge badge-primary">3</span></button>
-        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
-            <ul class="navbar-nav">
-              <!-- MENU -->
-              <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
-              <li class="nav-item dropdown px-4 text-light">
-                <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
-                  <span>Nous découvrir</span>
-                </a>
-                <!-- DROPDOWN ITEMS -->
-                <!-- Liens amenants vers les pages nommées-->
-                <!-- text-center: centré dans le menu reduit -->
-                <!-- text-lg-left:left dans le menu étendu-->            
-                <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
-                  <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
-                  <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
-                  <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
-                  <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
-                  <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
-                  <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
-                </div>
-              </li>
-              
-              <li class="nav-item pr-4">
-                <a class="nav-link" href="chambres.html">Chambres</a>
-              </li>
-              <li class="nav-item pr-4">
-                <a class="nav-link active" href="restaurant.html">Restaurant</a>
-              </li>
-              <li class="nav-item pr-4">
-                <a class="nav-link" href="spa.html">Spa</a>
-              </li>
-              <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
-              <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
-              <li class="nav-item dropdown pr-4 text-light text-nowrap">
-                <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span>FR</span> <i class="fas fa-globe-europe"></i>
-                </a>
-                <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
-                  <a class="dropdown-item" href="#"><span>English</span></a>
-                  <a class="dropdown-item" href="#"><span>Español</span></a>              
-                </div>
-              </li>             
-            </ul>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="collapse navbar-collapse text-center justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- MENU -->
+          <!-- Menu des différentes sections du site, chang. de langue, rech. dans le site -->
+          <li class="nav-item dropdown px-4 text-light">
+            <a class="nav-link dropdown-toggle" href="#" id="dropAboutUs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">              
+              <span>Nous découvrir</span>
+            </a>
+            <!-- DROPDOWN ITEMS -->
+            <!-- Liens amenants vers les pages nommées-->
+            <!-- text-center: centré dans le menu reduit -->
+            <!-- text-lg-left:left dans le menu étendu-->            
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropAboutUs">
+              <a class="dropdown-item" href="qui-sommmes-nous.html"><span>Qui sommes nous ?</span></a>
+              <a class="dropdown-item" href="actualites-evenements.html"><span>Actualités et événements</span></a>
+              <a class="dropdown-item" href="presse.html"><span>Presse</span></a>
+              <a class="dropdown-item" href="avis-clients.html"><span>Les avis clients</span></a>
+              <a class="dropdown-item" href="recrutement.html"><span>Recrutement</span></a>
+              <a class="dropdown-item" href="contact-acces.html"><span>Contact et accès</span></a>
+            </div>
+          </li>
+          
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="chambres.html">Chambres</a>
+          </li>
+          <li class="nav-item pr-4">
+            <a class="nav-link active" href="restaurant.html">Restaurant</a>
+          </li>
+          <li class="nav-item pr-4">
+            <a class="nav-link" href="spa.html">Spa</a>
+          </li>
+          <!-- OPTION CHANGEMENT DE LANGUE : FR, EN ou ES -->
+          <!-- text-nowrap : évite que le globe passe sous le text avant l'apparition du menu reduit -->
+          <li class="nav-item dropdown pr-4 text-light text-nowrap">
+            <a class="nav-link dropdown-toggle" href="#" id="dropLangues" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>FR</span> <i class="fas fa-globe-europe"></i>
+            </a>
+            <div class="dropdown-menu text-center text-lg-left" aria-labelledby="dropLangues">
+              <a class="dropdown-item" href="#"><span>English</span></a>
+              <a class="dropdown-item" href="#"><span>Español</span></a>              
+            </div>
+          </li>             
+        </ul>
         
         <!-- BARRE DE RECHERCHE -->
         <!-- Mini form inline -->
         <!-- flex-nowrap : évite que le btn passe sous l'input avant l'apparition du menu réduit -->
         <form class="form-inline my-2 my-lg-0 justify-content-center flex-nowrap">
-            <input type="text" class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" id="searchbar"/>
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search-btn"><i class="fas fa-search"></i></button>
-          </form>
-        </div>
-      </nav>
-      <!-- FIN NAVBAR -->
+          <input type="text" class="form-control mr-sm-2" placeholder="Saisir votre recherche" aria-label="Search" id="searchbar"/>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <!-- FIN NAVBAR -->
     <!-- MODAL PANIER -->
     <!-- En dehors de la NAV -->
     <div class="modal fade" id="modalPanier" tabindex="1" role="dialog" aria-labelledby="labelPanier" aria-hidden="true">
@@ -184,58 +182,57 @@
       </div>
     </div>  
     <!-- FIN MODAL PANIER -->
-    
-    <!-- HEADER -->
-    <header>
-        <div id="carousel-indic" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-indic" data-slide-to="1"></li>
-                <li data-target="#carousel-indic" data-slide-to="2"></li>
+<!-- HEADER -->
+<header>
+  <div id="carousel-indic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#carousel-indic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-indic" data-slide-to="1"></li>
+          <li data-target="#carousel-indic" data-slide-to="2"></li>
 
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/resto/resto-bis.jpeg" alt="Image Restaurant" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h1 class="my-0 mx-auto">Hotel Cop</h1>
-                        <span class="d-bloc my-0 mx-auto">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </span>
-                        <p class="my-0 mx-auto">Paris</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/resto/brasserie-bis.jpg" alt="Image restaurant" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Une petite faim</h5>
-                        <p>déguster nos délicieux plats</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/resto/resto3-bis.jpg" alt="Image restaurant" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Une cuisine haute Gamme</h5>
-                        <p>Vos papilles ne redemanderons</p>
-                    </div>
-                </div>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="d-block w-100" src="images/resto/resto-bis.jpeg" alt="Image Restaurant" />
+              <div class="carousel-caption d-none d-md-block">
+                  <h1 class="my-0 mx-auto">Hotel Cop</h1>
+                  <span class="d-bloc my-0 mx-auto">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </span>
+                  <p class="my-0 mx-auto">Paris</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="images/resto/brasserie-bis.jpg" alt="Image restaurant" />
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Une petite faim</h5>
+                  <p>déguster nos délicieux plats</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="images/resto/resto3-bis.jpg" alt="Image restaurant" />
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Une cuisine haute Gamme</h5>
+                  <p>Vos papilles ne redemanderons</p>
+              </div>
+          </div>
 
-            </div>
-            <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-            </a>
-        </div>
-    </header>
-    <!-- FIN HEADER -->
+      </div>
+      <a class="carousel-control-prev" href="#carousel-indic" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-indic" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Suivant</span>
+      </a>
+  </div>
+</header>
+<!-- FIN HEADER -->
     <main class="container">
         <div class="text-center mt-5 w-50 mx-auto">
             <h1>Au Jardin Délices</h1>
@@ -243,231 +240,252 @@
                 laissez vos papilles être cajolées par la cuisine exceptionnelle de l'Hotelcop.</p>
         </div>
         <!----------------------- section presentation du chef------------------------>
-        <section id="restaurant" class=" container d-flex  align-items-center mb-sm-5 mt-sm-5 px-0 my-5">
-            <img src="images/resto/cuisto1.jpg" alt="cuisinier étoilé" class="img-fluid">
-            <div id="resto" class="col-lg-5 flex-wrap">
-                <h2 class="text-center">Notre chef étoilés</h2>
-                <p>
-                    Hotelcop Paris est ravi de vous présenter son Chef Exécutif, Jerome Legourmet.<br>
+        <section class="container">
+            <div class="row no-gutters text-center p-0">
+                <div class="col-lg-7 test-anim">
+                    <img src="images/resto/cuisto1.jpg" alt="cuisinier étoilé" class="img-fluid">
+                </div>
+                <div id="resto" class="col-lg-5">
+                    <h2 class="text-center">Notre chef étoilés</h2>
+                    <p>
+                        Hotelcop Paris est ravi de vous présenter son Chef Exécutif, Jerome Legourmet.<br>
 
-                    Formé à l’école française de gastronomie Grégoire-Ferrandi à Paris, Jerome Legourmet débute en
-                    apprentissage aux côtés
-                    du Chef Henri Charvet au Comte de Gascogne, restaurant étoilé en région parisienne. A l’âge de 18
-                    ans,
-                    il s’envole vers
-                    Londres, avide de découvrir le monde, aux côtés du Chef français Michel Bourdin au Connaught puis
-                    dans
-                    l’équipe de
-                    Gordon Ramsay au Claridge’s, qui obtient sa 1ère étoile au Guide Michelin.<br><br>
+                        Formé à l’école française de gastronomie Grégoire-Ferrandi à Paris, Jerome Legourmet débute en
+                        apprentissage aux côtés
+                        du Chef Henri Charvet au Comte de Gascogne, restaurant étoilé en région parisienne. A l’âge de
+                        18
+                        ans,
+                        il s’envole vers
+                        Londres, avide de découvrir le monde, aux côtés du Chef français Michel Bourdin au Connaught
+                        puis
+                        dans
+                        l’équipe de
+                        Gordon Ramsay au Claridge’s, qui obtient sa 1ère étoile au Guide Michelin.<br><br>
 
-                    En 2004, il rejoint les équipes d’Alain Ducasse à l’hôtel de Paris, dans la brigade du restaurant
-                    Louis
-                    XV à Monaco. Il
-                    collaborera ensuite en tant que Chef Adjoint au Dorchester, 3 étoiles au Guide Michelin à Londres.
-                    Il
-                    rejoindra en 2013
-                    les cuisines de la Cour jardin en tant que Chef de Cuisine au Plaza Athénée puis se verra proposer
-                    les
-                    rênes de l’IDAM,
-                    au Musée des Arts Islamique à Doha, où il restera 2 ans et demi.<br><br>
+                        En 2004, il rejoint les équipes d’Alain Ducasse à l’hôtel de Paris, dans la brigade du
+                        restaurant
+                        Louis
+                        XV à Monaco. Il
+                        collaborera ensuite en tant que Chef Adjoint au Dorchester, 3 étoiles au Guide Michelin à
+                        Londres.
+                        Il
+                        rejoindra en 2013
+                        les cuisines de la Cour jardin en tant que Chef de Cuisine au Plaza Athénée puis se verra
+                        proposer
+                        les
+                        rênes de l’IDAM,
+                        au Musée des Arts Islamique à Doha, où il restera 2 ans et demi.<br><span
+                            id="cuisto"></span><br>
 
-                    En Novembre 2016, Frédéric Larquemin devient le Chef Exécutif du Jardin Délices au sein de
-                    l'Hotelcop
-                    Paris.
-                </p>
+                        En Novembre 2016, Frédéric Larquemin devient le Chef Exécutif du Jardin Délices au sein de
+                        l'Hotelcop
+                        Paris.
+                    </p>
+                    </div>
+                </section> <!--+++++++++++++++++++++++gallerie d'immages de plats++++++++++++++++++-->
+                        <div class="d-flex flex-column justify-content-center text-center">
+                            <h3>Quelques Photos de nos plats</h3>
+                            <p class="font-italic">Seulement pour vous mettre l'eau à la bouche</p>
+                        </div>
+                        <section class="gallery justify-content-center mb-4">
+                            <div class="item v3 h4">
+                                <img src="images/resto/menus/plat1.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v4 h2">
+                                <img src="images/resto/menus/plat2.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v2 h3">
+                                <img src="images/resto/menus/plat3.jpg">
+                            </div>
+                            <div class="item v4 h4">
+                                <img src="images/resto/menus/plat4.jpg">
+                            </div>
+                            <div class="item v2 h4">
+                                <img src="images/resto/menus/plat5.jpg">
+                            </div>
+                            <div class="item v3 h4">
+                                <img src="images/resto/menus/plat6.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v2 h3">
+                                <img src="images/resto/menus/plat7.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v3 h3">
+                                <img src="images/resto/menus/plat8.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v3 h2">
+                                <img src="images/resto/menus/plat9.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v4 h4">
+                                <img src="images/resto/menus/plat10.jpeg">
+                            </div>
+                            <div class="item v2 h4">
+                                <img src="images/resto/menus/plat11.jpg">
+                            </div>
+                            <div class="d-none d-lg-block item v2 h3">
+                                <img src="images/resto/menus/plat12.jpg">
+                            </div>
+                            <div class="d-none d-lg-block d-none item v2 h2">
+                                <img src="images/resto/menus/plat13.jpg">
+                            </div>
+                        </section>
 
-            </div>
-        </section>
-        <!--+++++++++++++++++++++++gallerie d'immages de plats++++++++++++++++++-->
-        <div class="d-flex flex-column justify-content-center text-center">
-            <h3>Quelques Photos de nos plats</h3>
-            <p class="font-italic">Seulement pour vous mettre l'eau à la bouche</p>
+                        <!-- SEPARATEUR -->
+                        <div id="separ" class="container w-50 my-lg-5"></div>
+
+                        <!--++++++++++++LES DIFFERENTS ESPACE DE RESTAURATION+++++++++++++++++-->
+
+                        <!--+++++++++++++++++++++++ LA BRASSERIE +++++++++++++++++++++++++++++++-->
+                        <!--ajout d'une classe test-anim1 pour l'apparition de l'image onscroll-->
+                        <section class="container">
+                            <div class="row no-gutters text-center p-0">
+                                <div class="test-anim1 col-lg-8"><img src=" images/resto/brasserie2bis.jpg"
+                                        alt="brasserie" class="img-fluid">
+                                </div>
+                                <div class="col-lg-4" id="brass">
+                                    <h3>Notre brasserie</h3>
+                                    <p>Un espace conviviale, idéal pour un déjeuner en famille ou d'affaire.
+                                        Retrouvez ici tous la gastronomie classique des brasserie traditionnelles
+                                        parisiennes, en
+                                        version
+                                        Hotelcop
+                                        biensur.
+                                        Les plats de notre brasserie sont biensur élaborer sous la direction attentive
+                                        de notre chef
+                                        étoilé.<br>
+                                    </p>
+                                    <p>Il est possible de déguster les plats de notre brasserie 12h à 19h30.</p>
+                                    <a href="images/resto/menus/menu_dejeuner.pdf"
+                                        download="menu dejeuner.pdf">Télécharger le menu <i
+                                            class="fas fa-file-download"></i></a><span id="brasserie"></span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--++++++++++++++++ESPACE DEGUSTATION+++++++++++++++++++-->
+                        <!--ajout d'une classe test-anim2 pour l'apparition de l'image onscroll-->
+                        <section class="container">
+                            <div class="parent-anim row no-gutters text-center p-0">
+                                <div class="test-anim2 col-lg-8 order-lg-1"><img src="images/resto/resto2.jpeg"
+                                        class="img-fluid" alt="restaurant">
+                                </div>
+                                <div class="col-lg-4 order-lg-0" id="degust">
+                                    <h3>Après-midi Dégustation</h3>
+                                    <p>Une petite faim dans entre le déjêuner et le dîner,
+                                        nous avons une carte spécialement conçue pour vos envies de l'après-midi.
+                                    </p>
+                                    <p>
+                                        Notre chef patissier sera ravit de vous faire déguster ses chefs d'oeuvres
+                                        culinaires tout au
+                                        long
+                                        de l'après midi.<br>
+                                        Vous pourrez agrémenter votre après-midi avec toutes les gourmandises préparer
+                                        avec soins par
+                                        nos
+                                        cuisiniers passionnés.</p>
+                                    <p>
+                                        Votre espace degustation est ouvert de 14h à 18h30.
+                                    </p>
+                                    <a href="images/resto/menus/menu_dejeuner.pdf"
+                                        download="menu dejeuner.pdf">Télécharger le menu <i
+                                            class="fas fa-file-download"></i></a><span id="degustation"></span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--++++++++++++++++ESPACE DINER+++++++++++++++++++-->
+                        <!--ajout d'une classe test-anim3 pour l'apparition de l'image onscroll-->
+                        <section class="container">
+                            <div class="row no-gutters text-center p-0">
+                                <div class="test-anim3 col-lg-8"><img src="images/resto/resto4.jpeg" class="img-fluid"
+                                        alt="restaurant"></div>
+                                <div class="col-lg-4" id="din">
+                                    <h3>Pour Dîner</h3>
+                                    <p>
+                                        La restaurant gastronomique de l'hotelcop vous offrira la plus exquise des
+                                        expériences
+                                        culinaire.
+                                        Notre chef étoilés sera satisfaire les papilles les plus éxigentes, la
+                                        réputation des mets les
+                                        plus fins servis au Jardin Délices n'est plus à faire. Si vous sejourner à
+                                        l'hotelcop
+                                        ou simplement si vous voulez savourer la plus exquise des cuisines, laissez vous
+                                        tenter.
+                                    </p>
+                                    <p>
+                                        Le jardin Délices vous acceuil tous les jours de 19h à 00h.
+                                    </p>
+                                    <a href="images/resto/menus/menu_dejeuner.pdf"
+                                        download="menu dejeuner.pdf">Télécharger le menu <i
+                                            class="fas fa-file-download"></i></a><span id="diner"></span>
+                                </div>
+
+                        </section>
+
+</main>
+       <!-- FOOTER -->
+    <footer class="text-center">
+      <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
+      <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
+        <div class="foot-resp">
+          <p>Hotel Cop</p>
+          <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008 Paris</a></p>
+          <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
+
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-sms"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <div class="foot-resp">
+        <p><a href="contact-acces.html">Contact et accès</a></p>
+        <p><a href="presse.html">Presse</a></p>
+        <p><a href="recrutement.html">Recrutement</a></p>
+        <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
+      </div>
+
+      <div class="foot-resp">
+        <p><a href="mentions-legales.html">Mentions légales</a></p>
+        <p><a href="cgv.html">CGV</a></p>
+        <p><a href="plan-site.html">Plan du site</a></p>
+        <p id="print-link" onclick="printPage()">Imprimer la page</p>
+      </div>
+
+        <div class="foot-resp ">
+          <p class="d-bloc">Newsletter</p>
+          <!-- ajout de -lg à form-control pour reduire la width de l'input-->
+          <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
+            <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter" id="mailNewsletter" placeholder="Saisir votre email"/>
+            <button id="btnNewsletter" type="submit" class="d-bloc btn btn-secondary">Valider</button>
+          </form>
         </div>
-        <section class="gallery justify-content-center mb-4">
-            <div class="item v3 h4">
-                <img src="images/resto/menus/plat1.jpg">
-            </div>
-            <div class="d-none d-lg-block item v4 h2">
-                <img src="images/resto/menus/plat2.jpg">
-            </div>
-            <div class="d-none d-lg-block item v2 h3">
-                <img src="images/resto/menus/plat3.jpg">
-            </div>
-            <div class="item v4 h4">
-                <img src="images/resto/menus/plat4.jpg">
-            </div>
-            <div class="item v2 h4">
-                <img src="images/resto/menus/plat5.jpg">
-            </div>
-            <div class="item v3 h4">
-                <img src="images/resto/menus/plat6.jpg">
-            </div>
-            <div class="d-none d-lg-block item v2 h3">
-                <img src="images/resto/menus/plat7.jpg">
-            </div>
-            <div class="d-none d-lg-block item v3 h3">
-                <img src="images/resto/menus/plat8.jpg">
-            </div>
-            <div class="d-none d-lg-block item v3 h2">
-                <img src="images/resto/menus/plat9.jpg">
-            </div>
-            <div class="d-none d-lg-block item v4 h4">
-                <img src="images/resto/menus/plat10.jpeg">
-            </div>
-            <div class="item v2 h4">
-                <img src="images/resto/menus/plat11.jpg">
-            </div>
-            <div class="d-none d-lg-block item v2 h3">
-                <img src="images/resto/menus/plat12.jpg">
-            </div>
-            <div class="d-none d-lg-block d-none item v2 h2">
-                <img src="images/resto/menus/plat13.jpg">
-            </div>
-        </section>
+      </div>
+    </div>
 
-        <!-- SEPARATEUR -->
-        <div id="separ" class="container w-50 my-lg-5"></div>
+      <div class="col pb-3 mt-5 text-center">
+        <p><a href="index.html" class="navbar-brand text-light">
+          <img src="images/logo/HotelCop-logo-white.png" alt="Logo" class="logo-sm">
+        </a></p>
+        <p>
+          Hotel Cop 2020 - Tous Droits réservés <br>
+          <small class="text-muted">Designed and built with all the love <i class="fas fa-heart"></i> in the world by MT & DG</small> 
+        </p>
+      </div>
+    </footer>
+    <!-- FIN FOOTER -->
 
-        <!--++++++++++++LES DIFFERENTS ESPACE DE RESTAURATION+++++++++++++++++-->
+  <!-- JQUERY -->
+  <script src="script/jquery/jquery-3.4.1.js"></script>
+  <script src="script/jquery/jquery-ui.min.js"></script>
 
-        <!--+++++++++++++++++++++++ LA BRASSERIE +++++++++++++++++++++++++++++++-->
-        <section class="container">
-            <div class="row no-gutters text-center p-0">
-                <div class="col-lg-8"><img src=" images/resto/brasserie2bis.jpg" alt="brasserie" class="img-fluid">
-                </div>
-                <div class="col-lg-4">
-                    <h3>Notre brasserie</h3>
-                    <p>Un espace conviviale, idéal pour un déjeuner en famille ou d'affaire.
-                        Retrouvez ici tous la gastronomie classique des brasserie traditionnelles parisiennes, en
-                        version
-                        Hotelcop
-                        biensur.
-                        Les plats de notre brasserie sont biensur élaborer sous la direction attentive de notre chef
-                        étoilé.<br>
-                    </p>
-                    <p>Il est possible de déguster les plats de notre brasserie 12h à 19h30.</p>
-                    <a href="images/resto/menus/menu_dejeuner.pdf" download="menu dejeuner.pdf">Télécharger le menu <i
-                            class="fas fa-file-download"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!--++++++++++++++++ESPACE DEGUSTATION+++++++++++++++++++-->
-        <section class="container">
-            <div class="row no-gutters text-center p-0">
-                <div class="col-lg-8 order-lg-1"><img src="images/resto/resto2.jpeg" class="img-fluid" alt="restaurant">
-                </div>
-                <div class="col-lg-4 order-lg-0">
-                    <h3>Après-midi Dégustation</h3>
-                    <p>Une petite faim dans entre le déjêuner et le dîner,
-                        nous avons une carte spécialement conçue pour vos envies de l'après-midi.
-                    </p>
-                    <p>
-                        Notre chef patissier sera ravit de vous faire déguster ses chefs d'oeuvres culinaires tout au
-                        long
-                        de l'après midi.<br>
-                        Vous pourrez agrémenter votre après-midi avec toutes les gourmandises préparer avec soins par
-                        nos
-                        cuisiniers passionnés.</p>
-                    <p>
-                        Votre espace degustation est ouvert de 14h à 18h30.
-                    </p>
-                    <a href="images/resto/menus/menu_dejeuner.pdf" download="menu dejeuner.pdf">Télécharger le menu <i
-                            class="fas fa-file-download"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!--++++++++++++++++ESPACE DINER+++++++++++++++++++-->
-        <section class="container">
-            <div class="row no-gutters text-center p-0">
-                <div class="col-lg-8"><img src="images/resto/resto4.jpeg" class="img-fluid" alt="restaurant"></div>
-                <div class="col-lg-4">
-                    <h3>Pour Dîner</h3>
-                    <p>
-                        La restaurant gastronomique de l'hotelcop vous offrira la plus exquise des expériences
-                        culinaire.
-                        Notre chef étoilés sera satisfaire les papilles les plus éxigentes, la réputation des mets les
-                        plus fins servis au Jardin Délices n'est plus à faire. Si vous sejourner à l'hotelcop
-                        ou simplement si vous voulez savourer la plus exquise des cuisines, laissez vous tenter.
-                    </p>
-                    <p>
-                        Le jardin Délices vous acceuil tous les jours de 19h à 00h.
-                    </p>
-                    <a href="images/resto/menus/menu_dejeuner.pdf" download="menu dejeuner.pdf">Télécharger le menu <i
-                            class="fas fa-file-download"></i></a>
-                </div>
-
-        </section>
-
-    </main>
-        <!-- FOOTER -->
-        <footer class="text-center">
-            <!-- pour le responsive, mettre le parent des div en flex-wrap et une width en css, on obtient un comportement responsive -->
-            <div id="haut-footer" class="d-flex flex-wrap justify-content-around">
-                <div class="foot-resp">
-                    <p>Hotel Cop</p>
-                    <p><a href="https://goo.gl/maps/jGTdKaNQYnjzAHgN9" target="_blank">1 avenue Montaigne 75008
-                            Paris</a>
-                    </p>
-                    <p><a href="tel:+33175000000">+33 (0)1 75 00 00 00</a></p>
-
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://fr.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fas fa-sms"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-
-                <div class="foot-resp">
-                    <p><a href="contact-acces.html">Contact et accès</a></p>
-                    <p><a href="presse.html">Presse</a></p>
-                    <p><a href="recrutement.html">Recrutement</a></p>
-                    <p><a href="actualites-evenements.html">Evénements et actualités</a></p>
-                </div>
-
-                <div class="foot-resp">
-                    <p><a href="mentions-legales.html">Mentions légales</a></p>
-                    <p><a href="cgv.html">CGV</a></p>
-                    <p><a href="plan-site.html">Plan du site</a></p>
-                    <p id="print-link" onclick="printPage()">Imprimer la page</p>
-                </div>
-
-                <div class="foot-resp ">
-                    <p class="d-bloc">Newsletter</p>
-                    <!-- ajout de -lg à form-control pour reduire la width de l'input-->
-                    <form id="newsl" class="form-inline d-lg-flex d-md-bloc justify-content-center flex-nowrap">
-                        <input type="email" class="d-bloc form-control mr-sm-2" name="mailNewsletter"
-                            id="mailNewsletter" placeholder="Saisir votre email" />
-                        <button id="btnNewsletter" type="submit" class=" d-bloc btn btn-secondary">Valider</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col pb-3 mt-5 text-center">
-                <p><a href="index.html" class="navbar-brand text-light">
-                        <img src="images/logo/HotelCop-logo-white.png" alt="Logo" height="45px" width="45px">
-                    </a></p>
-                <p>Hotel Cop 2020 - Tous Droits réservés</p>
-            </div>
-        </footer>
-        <!-- FIN FOOTER -->
-
-        <!-- JQUERY -->
-        <script src="script/jquery/jquery-3.4.1.js"></script>
-        <script src="script/jquery/jquery-ui.min.js"></script>
-
-        <!-- BOOTSTRAP -->
-        <script src="script/js/bootstrap.bundle.min.js"></script>
-        <!-- SCRIPT -->
-        <script src="script/js/script.js"></script>
-
-        <!--style popur tester la mozaique de photos -->
-
-        <!--script pour la gallery photo de plats-->
-
+  <!-- BOOTSTRAP -->
+  <script src="script/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT -->
+  <script src="script/js/script.damien.js"></script>
+  <script src="script/js/script.js"></script>
 </body>
 
 </html>
