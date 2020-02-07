@@ -1,4 +1,4 @@
-body {
+body, .ui-autocomplete {
   font-family: "Alegreya Sans", sans-serif;
   color: #1b3e82;
 }
@@ -484,4 +484,22 @@ footer a:hover,
 l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres */
 #separ {
   border-bottom: 3px solid #0d1f41;
+}
+
+/**********************/
+/*       jQuery       */
+/*   UI Autocomplete  */
+/**********************/
+.ui-autocomplete { 
+  z-index:2000 !important; 
+  position: fixed;
+}
+.ui-menu .ui-menu-item-wrapper{
+  background-color: #0d1f41;
+  color: #dde2ed;
+}
+
+.ui-menu .ui-menu-item-wrapper:hover{
+  border: none;
+  color: goldenrod;
 }
