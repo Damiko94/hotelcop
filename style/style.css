@@ -523,8 +523,8 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
 }
 .window-modale{
   overflow: auto;
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   max-width: calc(100vw -10px);
   max-height: calc(100vh -10px);
   padding: 10px;
@@ -536,7 +536,7 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   transition: opacity 1s;
 }
 
-.test-anim, .test-anim1, .test-anim3 {
+.test-anim, .test-anim1, .test-anim3, .test-anim5 {
   position: relative;
   overflow: hidden;
   left: -2000px;
@@ -544,7 +544,7 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   opacity: 0;
   transition: 3s;
 }
-.test-anim2{
+.test-anim2, .test-anim4{
   position: relative;
   overflow: hidden;
   left: 2000px;
@@ -553,7 +553,7 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
   transition: 3s;
 }
 /*css pour faire apparaitre le texte à coté des photos des sections restaurant lors du scroll*/
-#resto, #brass, #degust, #din {
+#restau, #brass, #degust, #din, #classi, #conf, #deluxe, #suite {
   opacity: 0;
   transition: 2s;
 }

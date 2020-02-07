@@ -32,16 +32,10 @@ var isInViewport = function (elem) {
 * selectionne un element et vérifie si il se trouve sur l'écran au moment du scroll
 * s'il l'élement se trouve sur l'écran, déclanchement d'une animation, pour faire apparaitre une image au du texte
 */
-var cuisto = document.querySelector('#cuisto');
-var brasserie = document.querySelector('#brasserie');
-var degustation = document.querySelector('#degustation');
-var diner = document.querySelector('#diner');
-var confort = document.querySelector('#confort');
-var classique = document.querySelector('#classique');
-var deluxe = document.querySelector('#deluxe');
+
 window.addEventListener('scroll', function (event) {
 if (isInViewport(cuisto)) {
-      resto.style.opacity="1";
+      restau.style.opacity="1";
       document.querySelector(".test-anim").style.left="0"; 
       document.querySelector(".test-anim").style.opacity="1";
   }
@@ -70,4 +64,32 @@ window.addEventListener('scroll', function (event) {
       document.querySelector(".test-anim3").style.opacity="1"; 
   }
   
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(classique)) {
+      classi.style.opacity="1";
+      document.querySelector(".test-anim2").style.left="0"; 
+      document.querySelector(".test-anim2").style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(confort)) {
+      conf.style.opacity="1";
+      document.querySelector(".test-anim1").style.left="0"; 
+      document.querySelector(".test-anim1").style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(lux)) {
+      deluxe.style.opacity="1";
+      document.querySelector(".test-anim4").style.left="0"; 
+      document.querySelector(".test-anim4").style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(sui)) {
+      suite.style.opacity="1";
+      document.querySelector(".test-anim5").style.left="0"; 
+      document.querySelector(".test-anim5").style.opacity="1";
+  }
 }, false);
