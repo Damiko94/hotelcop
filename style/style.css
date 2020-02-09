@@ -555,7 +555,7 @@ l'id sert d'ancre pour le lien "voir les détails" dans chaque sections chambres
     transition: 3s;
   }
   /*css pour faire apparaitre le texte à coté des photos des sections restaurant lors du scroll*/
-  #restau, #brass, #degust, #din, #classi, #conf, #deluxe, #suite {
+  #restau, #brass, #degust, #din, #classi, #conf, #deluxe, #suite, #chambres, #resto, #spas, #actu, #loca, #caracteristique, #separ ,#histoire, #reputation, #environement{
     opacity: 0;
     transition: 2s;
   }

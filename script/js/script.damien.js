@@ -32,14 +32,13 @@ var isInViewport = function (elem) {
 * selectionne un element et vérifie si il se trouve sur l'écran au moment du scroll
 * s'il l'élement se trouve sur l'écran, déclanchement d'une animation, pour faire apparaitre une image au du texte
 */
-
+// animation de la page restaurant
 window.addEventListener('scroll', function (event) {
 if (isInViewport(cuisto)) {
       restau.style.opacity="1";
       document.querySelector(".test-anim").style.left="0"; 
       document.querySelector(".test-anim").style.opacity="1";
-  }
- 
+    }    
 }, false);
 window.addEventListener('scroll', function (event) {
   if (isInViewport(brasserie)) {
@@ -63,8 +62,8 @@ window.addEventListener('scroll', function (event) {
       document.querySelector(".test-anim3").style.left="0"; 
       document.querySelector(".test-anim3").style.opacity="1"; 
   }
-  
 }, false);
+// animation de la page chambres
 window.addEventListener('scroll', function (event) {
   if (isInViewport(classique)) {
       classi.style.opacity="1";
@@ -92,4 +91,42 @@ window.addEventListener('scroll', function (event) {
       document.querySelector(".test-anim5").style.left="0"; 
       document.querySelector(".test-anim5").style.opacity="1";
   }
+}, false);
+// animation page d'acceuil
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(chambres)) {
+      chambres.style.opacity="1";
+      document.querySelector(".test-anim2").style.left="0"; 
+      document.querySelector(".test-anim2").style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(resto)) {
+      resto.style.opacity="1";
+      document.querySelector(".test-anim3").style.left="0"; 
+      document.querySelector(".test-anim3").style.opacity="1"; 
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(spas)) {
+      spas.style.opacity="1";
+      document.querySelector(".test-anim4").style.left="0"; 
+      document.querySelector(".test-anim4").style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(actu)) {
+      actu.style.opacity="1";
+  }
+  if (isInViewport(loca)) {
+     loca.style.opacity="1";
+  }
+}, false);
+window.addEventListener('scroll', function (event) {
+  if (isInViewport(separ)) {
+    separ.style.opacity="1";
+  }
+  if (isInViewport(caracteristique)) {
+    caracteristique.style.opacity="1";
+  }    
 }, false);
